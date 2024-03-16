@@ -39,6 +39,7 @@ plugins=(
   encode64
   gh
   git
+  httpie
   isodate
   node
   npm
