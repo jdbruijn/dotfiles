@@ -1,0 +1,64 @@
+#!/bin/sh
+#
+# ...
+
+
+DOTFILES="${HOME}/.dotfiles"
+
+link_files() {
+  source="${1}"
+  dest="${2}"
+  if [ -h "${dest}" ]; then
+    echo " WARN: symlink for \"${dest}\" already exists"
+  else
+    echo " INFO: symlink \"${source}\" to \"${dest}\""
+    ln -s "${DOTFILES}/${source}" "${dest}"
+  fi
+}
+
+assert_macos() {
+  if [ "$(uname -s)" != "Darwin" ]
+  then
+    echo "FATAL: macOS not detected, aborting bootstrap"
+    exit 1
+  fi
+}
+
+sync_dotfiles() {
+  rsync \
+    --exclude ".DS_Store" \
+    --exclude ".git/" \
+    --exclude ".github/" \
+    --exclude "node_modules/" \
+    --archive \
+    --human-readable \
+    --no-perms \
+    . "${DOTFILES}";
+
+  link_files ".editorconfig" "${HOME}/.editorconfig"
+  link_files ".gitignore" "${HOME}/.gitignore"
+  link_files "zsh/.zshrc" "${HOME}/.zshrc"
+  link_files "vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
+}
+
+install_homebrew() {
+  if test ! "$(which brew)"
+  then
+    echo " INFO: installing Homebrew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+}
+
+install_software() {
+  echo " INFO: installing software with Homebrew Bundle"
+  HOMEBREW_COLOR=1 brew bundle --quiet | sed -u '/^Using/d' | sed -u 's/^/       /'
+}
+
+assert_macos
+sync_dotfiles
+install_homebrew
+install_software
+source zsh/install
+source macos
+
+exit 0

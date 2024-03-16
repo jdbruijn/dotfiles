@@ -1,0 +1,156 @@
+{
+  "name": "dotfiles",
+  "version": "0.1.0",
+  "private": true,
+  "description": "dotfiles, software and macOS defaults",
+  "homepage": "https://github.com/jdbruijn/dotfiles#readme",
+  "bugs": {
+    "url": "https://github.com/jdbruijn/dotfiles/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdbruijn/dotfiles.git"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": "Jeroen de Bruijn",
+  "type": "module",
+  "scripts": {
+    "build": "",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{vue,css,less,scss,html,htm,json,md,markdown,yml,yaml}\" --log-level warn",
+    "format:check": "prettier --ignore-path .gitignore --check \"**/*.{vue,css,less,scss,html,htm,json,md,markdown,yml,yaml}\" --log-level warn",
+    "lint": "npm run format:check",
+    "lint:fix": "npm run format",
+    "prepare": "husky .github/husky",
+    "test": ""
+  },
+  "commitlint": {
+    "extends": [
+      "@vidavidorra"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "release": {
+    "branches": [
+      "main",
+      {
+        "name": "beta",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "releaseRules": [
+            {
+              "type": "perf",
+              "release": "patch"
+            },
+            {
+              "type": "revert",
+              "release": "patch"
+            },
+            {
+              "type": "docs",
+              "release": "patch"
+            },
+            {
+              "type": "chore",
+              "release": false
+            },
+            {
+              "type": "refactor",
+              "release": "patch"
+            },
+            {
+              "type": "test",
+              "release": "patch"
+            },
+            {
+              "type": "build",
+              "release": "patch"
+            },
+            {
+              "type": "ci",
+              "release": "patch"
+            }
+          ]
+        }
+      ],
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "prettier --write CHANGELOG.md"
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ],
+    "preset": "conventionalcommits",
+    "presetConfig": {
+      "types": [
+        {
+          "type": "feat",
+          "section": "Features"
+        },
+        {
+          "type": "fix",
+          "section": "Bug Fixes"
+        },
+        {
+          "type": "perf",
+          "section": "Performance Improvements"
+        },
+        {
+          "type": "revert",
+          "section": "Reverts"
+        },
+        {
+          "type": "docs",
+          "section": "Documentation"
+        },
+        {
+          "type": "style",
+          "section": "Styles"
+        },
+        {
+          "type": "chore",
+          "section": "Miscellaneous Chores",
+          "hidden": true
+        },
+        {
+          "type": "refactor",
+          "section": "Code Refactoring"
+        },
+        {
+          "type": "test",
+          "section": "Tests"
+        },
+        {
+          "type": "build",
+          "section": "Build System"
+        },
+        {
+          "type": "ci",
+          "section": "Continuous Integration"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.0.3",
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/exec": "6.0.3",
+    "@semantic-release/git": "10.0.1",
+    "@vidavidorra/commitlint-config": "6.0.5",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.2",
+    "prettier": "3.2.5",
+    "semantic-release": "23.0.2"
+  }
+}

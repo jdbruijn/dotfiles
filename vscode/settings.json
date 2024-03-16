@@ -1,0 +1,23 @@
+{
+  "files.associations": {
+    ".env*": "dotenv"
+  },
+  "editor.rulers": [80],
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
+      }
+    ]
+  },
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.formatOnSave": true,
+  "cmake.showOptionsMovedNotification": false,
+  "dotenv.enableAutocloaking": true,
+  "terminal.integrated.scrollback": 1000000
+}
