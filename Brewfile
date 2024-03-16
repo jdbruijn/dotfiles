@@ -27,6 +27,7 @@ brew 'rustup'
 brew 'stlink'
 brew 'wget'
 brew 'wireshark'
+brew 'zoxide'
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
 

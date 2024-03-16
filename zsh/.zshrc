@@ -49,6 +49,7 @@ plugins=(
   urltools
   vscode
   web-search
+  zoxide
   zsh-interactive-cd
 )
 
