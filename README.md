@@ -1,7 +1,5 @@
 # Dotfiles <!-- omit in toc -->
 
-
-
 ---
 
 [![Renovate enabled](https://img.shields.io/badge/Renovate-enabled-brightgreen?logo=renovatebot&logoColor&style=flat-square)](https://renovatebot.com)
