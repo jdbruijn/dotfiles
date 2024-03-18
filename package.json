@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "description": "dotfiles, software and macOS defaults",
-  "homepage": "https://github.com/jdbruijn/dotfiles#readme",
+  "homepage": "https://github.com/vidavidorra/dotfiles#readme",
   "bugs": {
-    "url": "https://github.com/jdbruijn/dotfiles/issues"
+    "url": "https://github.com/vidavidorra/dotfiles/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jdbruijn/dotfiles.git"
+    "url": "git+https://github.com/vidavidorra/dotfiles.git"
   },
   "license": "GPL-3.0-or-later",
   "author": "Jeroen de Bruijn",

@@ -4,7 +4,7 @@
 
 [![Renovate enabled](https://img.shields.io/badge/Renovate-enabled-brightgreen?logo=renovatebot&logoColor&style=flat-square)](https://renovatebot.com)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079?style=flat-square)](https://github.com/semantic-release/semantic-release)
-[![License](https://img.shields.io/github/license/jdbruijn/dotfiles?style=flat-square)](LICENSE.md)
+[![License](https://img.shields.io/github/license/vidavidorra/dotfiles?style=flat-square)](LICENSE.md)
 
 - [Install](#install)
 - [Usage](#usage)
@@ -15,7 +15,7 @@
 ## Install
 
 ```shell
-$ git clone https://github.com/jdbruijn/dotfiles.git
+$ git clone https://github.com/vidavidorra/dotfiles.git
 $ cd dotfiles
 $ ./bootstrap
 ```
@@ -26,7 +26,7 @@ TBD
 
 ## Contributing
 
-Please [create an issue](https://github.com/jdbruijn/dotfiles/issues/new/choose) if you have a bug report or feature proposal, or [create a discussion](https://github.com/jdbruijn/dotfiles/discussions) if you have a question. If you like this project, please consider giving it a star ⭐
+Please [create an issue](https://github.com/vidavidorra/dotfiles/issues/new/choose) if you have a bug report or feature proposal, or [create a discussion](https://github.com/vidavidorra/dotfiles/discussions) if you have a question. If you like this project, please consider giving it a star ⭐
 
 Refer to the [contributing guide](https://github.com/vidavidorra/.github/blob/main/CONTRIBUTING.md) detailed information about other contributions, like pull requests.
 
@@ -35,7 +35,7 @@ Refer to the [contributing guide](https://github.com/vidavidorra/.github/blob/ma
 
 ## Security policy
 
-Please refer to the [Security Policy on GitHub](https://github.com/jdbruijn/dotfiles/security/) for the security policy.
+Please refer to the [Security Policy on GitHub](https://github.com/vidavidorra/dotfiles/security/) for the security policy.
 
 ## License
 
