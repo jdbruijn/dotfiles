@@ -19,5 +19,9 @@
   "editor.formatOnSave": true,
   "cmake.showOptionsMovedNotification": false,
   "dotenv.enableAutocloaking": true,
-  "terminal.integrated.scrollback": 1000000
+  "terminal.integrated.scrollback": 1000000,
+  "[typescript]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo"
+  },
+  "xo.format.enable": true
 }
