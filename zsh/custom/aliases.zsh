@@ -13,3 +13,6 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # Use lsd
 alias ls='lsd'
+
+# Git
+alias glolnc='glol --grep="^chore" --invert-grep'
