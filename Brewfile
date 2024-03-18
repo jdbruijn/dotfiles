@@ -33,6 +33,7 @@ brew 'zsh-syntax-highlighting'
 
 cask '1password'
 cask 'alfred'
+cask 'beekeeper-studio'
 cask 'docker'
 cask 'dropbox'
 cask 'flux'
