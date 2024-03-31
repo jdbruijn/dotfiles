@@ -2,29 +2,31 @@
 #
 # ...
 
-
 DOTFILES="${HOME}/.dotfiles"
 
 link_files() {
-  source="${1}"
+  source="${DOTFILES}/${1}"
   dest="${2}"
-  if [ -h "${dest}" ]; then
-    echo " WARN: symlink for \"${dest}\" already exists"
-  else
+
+  if [ -e "${dest}" ] && [ ! -h "${dest}" ]; then
+    echo " WARN: symlink failed, \"${dest}\" exists and is not a symlink"
+  elif [ -h "${dest}" ] && [ "$(readlink "${dest}")" != "${source}" ]; then
+    echo " WARN: symlink failed, \"${dest}\" linked to another path"
+  elif [ ! -e "${dest}" ]; then
     echo " INFO: symlink \"${source}\" to \"${dest}\""
-    ln -s "${DOTFILES}/${source}" "${dest}"
+    ln -s "${source}" "${dest}"
   fi
 }
 
 assert_macos() {
-  if [ "$(uname -s)" != "Darwin" ]
-  then
+  if [ "$(uname -s)" != "Darwin" ]; then
     echo "FATAL: macOS not detected, aborting bootstrap"
     exit 1
   fi
 }
 
 sync_dotfiles() {
+  echo " INFO: syncing dotfiles"
   rsync \
     --exclude ".DS_Store" \
     --exclude ".git/" \
@@ -42,8 +44,7 @@ sync_dotfiles() {
 }
 
 install_homebrew() {
-  if test ! "$(which brew)"
-  then
+  if test ! "$(which brew)"; then
     echo " INFO: installing Homebrew"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
