@@ -59,6 +59,9 @@ sync_dotfiles
 install_homebrew
 install_software
 source zsh/install
-source macos
+
+if [ -z "${NO_MACOS}" ]; then
+  source macos
+fi
 
 exit 0
