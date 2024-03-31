@@ -31,6 +31,7 @@ brew 'zoxide'
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
 
+cask '1password-cli'
 cask '1password'
 cask 'alfred'
 cask 'beekeeper-studio'
