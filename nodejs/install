@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+# Install global Node.js packages.
+install_npm_packages() {
+  echo " INFO: installing global Node.js packages"
+  npm install --global \
+    npm-check-updates \
+    tsx \
+    typescript \
+    wscat \
+    | sed -u 's/^/       /'
+}
+
+install_npm_packages
