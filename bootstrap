@@ -39,6 +39,7 @@ sync_dotfiles() {
 
   link_files ".editorconfig" "${HOME}/.editorconfig"
   link_files ".gitignore" "${HOME}/.gitignore"
+  link_files "git/.gitconfig" "${HOME}/.gitconfig"
   link_files "zsh/.zshrc" "${HOME}/.zshrc"
   link_files "vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
 }
