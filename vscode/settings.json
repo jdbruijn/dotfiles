@@ -1,7 +1,10 @@
 {
-  "files.associations": {
-    ".env*": "dotenv"
+  "[typescript]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo"
   },
+  "cmake.showOptionsMovedNotification": false,
+  "dotenv.enableAutocloaking": true,
+  "editor.formatOnSave": true,
   "editor.rulers": [80],
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -13,15 +16,14 @@
       }
     ]
   },
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  "workbench.startupEditor": "none",
-  "workbench.iconTheme": "material-icon-theme",
-  "editor.formatOnSave": true,
-  "cmake.showOptionsMovedNotification": false,
-  "dotenv.enableAutocloaking": true,
-  "terminal.integrated.scrollback": 1000000,
-  "[typescript]": {
-    "editor.defaultFormatter": "samverschueren.linter-xo"
+  "files.associations": {
+    ".env*": "dotenv"
   },
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.scrollback": 1000000,
+  "window.autoDetectColorScheme": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.preferredLightColorTheme": "Solarized Light",
+  "workbench.startupEditor": "none",
   "xo.format.enable": true
 }
