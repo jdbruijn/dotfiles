@@ -1,5 +1,11 @@
 # Dotfiles <!-- omit in toc -->
 
+dotfiles, software and macOS defaults.
+
+- Install macOS applications, using [**Homebrew**](https://brew.sh/).
+- Configure macOS settings.
+- Setup terminal environment with [Oh My Zsh](https://ohmyz.sh/) and [Powerlevel10k](https://github.com/romkatv/powerlevel10k).
+
 ---
 
 [![Renovate enabled](https://img.shields.io/badge/Renovate-enabled-brightgreen?logo=renovatebot&logoColor&style=flat-square)](https://renovatebot.com)
