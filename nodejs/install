@@ -4,7 +4,7 @@
 
 install_npm_packages() {
   echo " INFO: installing global Node.js packages"
-  npm install --global \
+  npm install --silent --global \
     npm-check-updates \
     tsx \
     typescript \
