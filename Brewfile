@@ -26,7 +26,6 @@ brew 'rsync'
 brew 'rustup'
 brew 'stlink'
 brew 'wget'
-brew 'wireshark'
 brew 'zoxide'
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
@@ -60,6 +59,7 @@ cask 'tunnelblick'
 cask 'veracrypt'
 cask 'visual-studio-code'
 cask 'vlc'
+cask 'wireshark'
 
 # Install App Store applications
 mas 'Amphetamine', id: 937_984_704
