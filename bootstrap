@@ -1,8 +1,16 @@
 #!/bin/sh
 #
-# ...
+# Bootstrap a new macOS machine, installing dotfiles, software and configuring
+# macOS defaults.
 
 DOTFILES="${HOME}/.dotfiles"
+
+assert_macos() {
+  if [ "$(uname -s)" != "Darwin" ]; then
+    echo "FATAL: macOS not detected, aborting bootstrap"
+    exit 1
+  fi
+}
 
 link_files() {
   source="${DOTFILES}/${1}"
@@ -15,13 +23,6 @@ link_files() {
   elif [ ! -e "${dest}" ]; then
     echo " INFO: symlink \"${source}\" to \"${dest}\""
     ln -s "${source}" "${dest}"
-  fi
-}
-
-assert_macos() {
-  if [ "$(uname -s)" != "Darwin" ]; then
-    echo "FATAL: macOS not detected, aborting bootstrap"
-    exit 1
   fi
 }
 

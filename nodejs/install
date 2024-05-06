@@ -1,6 +1,7 @@
 #!/bin/sh
 #
 # Install global Node.js packages.
+
 install_npm_packages() {
   echo " INFO: installing global Node.js packages"
   npm install --global \

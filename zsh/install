@@ -1,4 +1,6 @@
 #!/bin/sh
+#
+# Install Oh My Zsh and configure iTerm2 font.
 
 install_oh_my_zsh() {
   if [ ! -d "${ZSH}" ]; then
