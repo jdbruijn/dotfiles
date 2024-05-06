@@ -1,3 +1,22 @@
+## [1.0.0-beta.2](https://github.com/vidavidorra/dotfiles/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2024-05-06)
+
+### Features
+
+- add `.gitconfig` to linked dotfiles ([356af93](https://github.com/vidavidorra/dotfiles/commit/356af937ed71fc10309f04d1d8300be00cdff5a8))
+- add global Node.js packages ([500b868](https://github.com/vidavidorra/dotfiles/commit/500b8689e3210d2a5e430a4afba31a6c5f954f46))
+- **vscode:** auto switch theme, using `Solarized Light` for the light theme ([71e37f2](https://github.com/vidavidorra/dotfiles/commit/71e37f2a71b7ed5f36d49c06ae023292ef39dbca))
+
+### Bug Fixes
+
+- **brew:** install wireshark as cask to get the UI in addition to the CLI ([b445963](https://github.com/vidavidorra/dotfiles/commit/b445963986560953e5febc39b79937dc4988ee77))
+- **nodejs:** silently install packages to reduce useless console output ([d900864](https://github.com/vidavidorra/dotfiles/commit/d9008647fcbf3237b4ebdcf69223a777eba0ee4e))
+- **rust:** add cargo to `PATH` ([8a5a470](https://github.com/vidavidorra/dotfiles/commit/8a5a470b27816773ab5d7949b232e58af16cd461))
+- **vscode:** remove `rust-syntax` as syntax is already included in `rust-analyzer` ([5eb069d](https://github.com/vidavidorra/dotfiles/commit/5eb069d3d82dbd2104e37fa5f40fc007cf472462))
+
+### Documentation
+
+- add bullet points ([978c5b9](https://github.com/vidavidorra/dotfiles/commit/978c5b990d9ffce67c48e3e9ac05f62d89db3d28))
+
 ## 1.0.0-beta.1 (2024-03-31)
 
 ### Features
