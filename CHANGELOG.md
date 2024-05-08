@@ -1,3 +1,18 @@
+## [1.0.0-beta.3](https://github.com/vidavidorra/dotfiles/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2024-05-08)
+
+### Features
+
+- add global Python packages ([d70a5ac](https://github.com/vidavidorra/dotfiles/commit/d70a5ac17b94ef556f435ad04a0145c129d68a86))
+- **brew:** add `pipx`, with its `PATH`, and `python@3.12` ([0cb09bd](https://github.com/vidavidorra/dotfiles/commit/0cb09bdd85f290ee2f5e6766b87c65e3dd3674d8))
+
+### Bug Fixes
+
+- clarify warning message for existing symlink ([a70eb5b](https://github.com/vidavidorra/dotfiles/commit/a70eb5b2342ae300006ced628fb39e5008bd0d09))
+
+### Styles
+
+- format Homebrew install command ([1d594b7](https://github.com/vidavidorra/dotfiles/commit/1d594b7aaec8bae4c3649589d8e2efb1b1b53080))
+
 ## [1.0.0-beta.2](https://github.com/vidavidorra/dotfiles/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2024-05-06)
 
 ### Features

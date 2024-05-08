@@ -1,6 +1,6 @@
 {
   "name": "dotfiles",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "private": true,
   "description": "dotfiles, software and macOS defaults",
   "homepage": "https://github.com/vidavidorra/dotfiles#readme",
