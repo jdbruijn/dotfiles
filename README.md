@@ -34,7 +34,7 @@ TBD
 
 Please [create an issue](https://github.com/vidavidorra/dotfiles/issues/new/choose) if you have a bug report or feature proposal, or [create a discussion](https://github.com/vidavidorra/dotfiles/discussions) if you have a question. If you like this project, please consider giving it a star ⭐
 
-Refer to the [contributing guide](https://github.com/vidavidorra/.github/blob/main/CONTRIBUTING.md) detailed information about other contributions, like pull requests.
+Refer to the [contributing guide](https://github.com/vidavidorra/.github/blob/main/CONTRIBUTING.md) for detailed information about other contributions, like pull requests.
 
 [![Conventional Commits: 1.0.0](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow?style=flat-square)](https://conventionalcommits.org)
 [![Code style](https://img.shields.io/badge/code_style-Prettier-ff69b4?logo=prettier&style=flat-square)](https://github.com/prettier/prettier)
