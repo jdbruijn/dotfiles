@@ -54,7 +54,9 @@ install_homebrew() {
 
 install_software() {
   echo " INFO: installing software with Homebrew Bundle"
-  HOMEBREW_COLOR=1 brew bundle --quiet | sed -u '/^Using/d' | sed -u 's/^/       /'
+  HOMEBREW_COLOR=1 brew bundle --quiet \
+    | sed -u '/^Using/d' \
+    | sed -u 's/^/       /'
 }
 
 assert_macos
