@@ -64,6 +64,7 @@ sync_dotfiles
 install_homebrew
 install_software
 source nodejs/install
+source python/install
 source zsh/install
 
 if [ -z "${NO_MACOS}" ]; then
