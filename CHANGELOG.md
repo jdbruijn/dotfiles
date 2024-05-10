@@ -1,3 +1,9 @@
+## [1.0.0-beta.4](https://github.com/vidavidorra/dotfiles/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2024-05-10)
+
+### Features
+
+- **vscode:** add Selected Lines Count extension ([6bf4bb8](https://github.com/vidavidorra/dotfiles/commit/6bf4bb80e51ae329d0fe6e38e1a2d4208516b2a0))
+
 ## [1.0.0-beta.3](https://github.com/vidavidorra/dotfiles/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2024-05-08)
 
 ### Features
