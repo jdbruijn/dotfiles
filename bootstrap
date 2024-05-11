@@ -54,7 +54,9 @@ install_homebrew() {
 
 install_software() {
   echo " INFO: installing software with Homebrew Bundle"
-  HOMEBREW_COLOR=1 brew bundle --quiet \
+  HOMEBREW_COLOR=1 brew bundle \
+    --file="macos/Brewfile" \
+    --quiet \
     | sed -u '/^Using/d' \
     | sed -u 's/^/       /'
 }
@@ -68,7 +70,7 @@ source python/install
 source zsh/install
 
 if [ -z "${NO_MACOS}" ]; then
-  source macos
+  source macos/settings
 fi
 
 exit 0
