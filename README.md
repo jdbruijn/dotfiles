@@ -20,11 +20,19 @@ dotfiles, software and macOS defaults.
 
 ## Install
 
+> [!CAUTION]
+> Use at your own risk! These dotfiles the macOS settings and install software. Always review the code and settings before using these dotfiles unless you know what it entails.
+
+Install the dotfiles using Git and the bootstrap script.
+
 ```shell
 $ git clone https://github.com/vidavidorra/dotfiles.git
 $ cd dotfiles
 $ ./bootstrap
 ```
+
+> [!NOTE]
+> These dotfiles are used with macOS Sonoma. So, there is no guarantee that these work on any other macOS versions.
 
 ## Usage
 
