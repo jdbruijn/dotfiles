@@ -1,3 +1,9 @@
+## [1.0.0-beta.5](https://github.com/vidavidorra/dotfiles/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2024-05-11)
+
+### Documentation
+
+- add basic usage ([a4f3eb0](https://github.com/vidavidorra/dotfiles/commit/a4f3eb0493aa1f8d8a41bac8948a981a078d331f))
+
 ## [1.0.0-beta.4](https://github.com/vidavidorra/dotfiles/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2024-05-10)
 
 ### Features
