@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/vidavidorra/dotfiles/compare/v1.0.0...v1.1.0) (2024-05-16)
+
+### Features
+
+- **brew:** add `balenaetcher` ([dfe44c9](https://github.com/vidavidorra/dotfiles/commit/dfe44c93e8eedbdf3736be021036d7a7e4067c58))
+
 ## 1.0.0 (2024-05-11)
 
 ### Features
