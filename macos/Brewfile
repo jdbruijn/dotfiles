@@ -34,6 +34,7 @@ brew 'zsh-syntax-highlighting'
 
 cask '1password-cli'
 cask '1password'
+cask 'adobe-acrobat-reader'
 cask 'alfred'
 cask 'alt-tab'
 cask 'balenaetcher'
