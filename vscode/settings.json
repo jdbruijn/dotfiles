@@ -17,7 +17,8 @@
     ]
   },
   "files.associations": {
-    ".env*": "dotenv"
+    ".env*": "dotenv",
+    "*.mdx": "markdown"
   },
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.integrated.scrollback": 1000000,
