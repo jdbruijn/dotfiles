@@ -1,3 +1,9 @@
+## [1.3.0](https://github.com/vidavidorra/dotfiles/compare/v1.2.0...v1.3.0) (2024-05-28)
+
+### Features
+
+- **vscode:** associate `.mdx` files with the Markdown language ([a83a309](https://github.com/vidavidorra/dotfiles/commit/a83a30900cb28cfb602e15bc6b5ec363e112d5e8))
+
 ## [1.2.0](https://github.com/vidavidorra/dotfiles/compare/v1.1.0...v1.2.0) (2024-05-28)
 
 ### Features
