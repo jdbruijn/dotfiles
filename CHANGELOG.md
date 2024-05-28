@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/vidavidorra/dotfiles/compare/v1.1.0...v1.2.0) (2024-05-28)
+
+### Features
+
+- **brew:** add Adobe Acrobat Reader ([765136b](https://github.com/vidavidorra/dotfiles/commit/765136b9a08ccfc6bc69aa56eae8704519934acc))
+
 ## [1.1.0](https://github.com/vidavidorra/dotfiles/compare/v1.0.0...v1.1.0) (2024-05-16)
 
 ### Features
