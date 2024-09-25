@@ -152,5 +152,8 @@
     "lint-staged": "15.2.10",
     "prettier": "3.3.3",
     "semantic-release": "24.1.1"
+  },
+  "overrides": {
+    "conventional-changelog-conventionalcommits": ">= 8.0.0"
   }
 }
