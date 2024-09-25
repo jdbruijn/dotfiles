@@ -1,3 +1,9 @@
+## [1.3.1](https://github.com/vidavidorra/dotfiles/compare/v1.3.0...v1.3.1) (2024-09-25)
+
+### Bug Fixes
+
+- remove undesired `work_in_progress` function from the `git` plugin ([8c773d6](https://github.com/vidavidorra/dotfiles/commit/8c773d69097961b730cb0e1c2728fea18c5ebf44))
+
 ## [1.3.0](https://github.com/vidavidorra/dotfiles/compare/v1.2.0...v1.3.0) (2024-05-28)
 
 ### Features
