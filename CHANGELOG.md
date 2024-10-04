@@ -1,3 +1,9 @@
+## [1.4.0](https://github.com/vidavidorra/dotfiles/compare/v1.3.1...v1.4.0) (2024-10-04)
+
+### Features
+
+- **brew:** add ChatGPT ([ec084b1](https://github.com/vidavidorra/dotfiles/commit/ec084b1cfe7cf8a0acd865d799068be6c48319b1))
+
 ## [1.3.1](https://github.com/vidavidorra/dotfiles/compare/v1.3.0...v1.3.1) (2024-09-25)
 
 ### Bug Fixes
