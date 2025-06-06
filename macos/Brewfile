@@ -67,7 +67,6 @@ cask 'vlc'
 cask 'wireshark'
 
 # Install App Store applications
-mas 'Amphetamine', id: 937_984_704
 mas 'Greenshot', id: 1_103_915_944 # Paid
 mas 'Magnet', id: 441_258_766 # Paid
 mas 'WireGuard', id: 1_451_685_025
