@@ -67,7 +67,6 @@ cask 'vlc'
 cask 'wireshark'
 
 # Install App Store applications
-mas 'Magnet', id: 441_258_766 # Paid
 mas 'WireGuard', id: 1_451_685_025
 
 # Install Visual Studio Code extensions
