@@ -1,3 +1,18 @@
+## [1.5.0](https://github.com/vidavidorra/dotfiles/compare/v1.4.0...v1.5.0) (2025-06-07)
+
+### Features
+
+- **brew:** remove Magnet, use Raycast's built-in window management instead ([1f80bd7](https://github.com/vidavidorra/dotfiles/commit/1f80bd76c8d34a07d82408360bf5c52bf4cca545))
+- **brew:** replace Greenshot with Shottr, which is free and has a better editor ([0e6ff0a](https://github.com/vidavidorra/dotfiles/commit/0e6ff0a1ebd0c903a4798fcc4b08e26e5ba0a7ab))
+- **brew:** replace iTerm2 with the beta version ([51fcc21](https://github.com/vidavidorra/dotfiles/commit/51fcc211cc4a506e2522260d0a9f3ccc54247527))
+- **brew:** replace Veracrypt with the FUSE-T variant, and of course replace macFUSE with FUSE-T ([18eb555](https://github.com/vidavidorra/dotfiles/commit/18eb5552fe16f39ad82c781041dd503a1360a819))
+- **brew:** use Raycast instead of Alfred ([7a0fca3](https://github.com/vidavidorra/dotfiles/commit/7a0fca3e304ec7166fd97dc1169f4088491fe685))
+
+### Bug Fixes
+
+- **brew:** remove Kap as I haven't used it in over a year ([d4ebbc9](https://github.com/vidavidorra/dotfiles/commit/d4ebbc90b27e0f94c77a7acb8bf8deeb13d103a7))
+- remove Amphetamine as Raycast has the Coffee extension ([bd30935](https://github.com/vidavidorra/dotfiles/commit/bd30935930ddbbac41af73cc93da6c0c19d60917))
+
 ## [1.4.0](https://github.com/vidavidorra/dotfiles/compare/v1.3.1...v1.4.0) (2024-10-04)
 
 ### Features
