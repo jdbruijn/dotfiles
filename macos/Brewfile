@@ -58,6 +58,7 @@ cask 'qgis'
 cask 'rar'
 cask 'raycast'
 cask 'sequel-ace'
+cask 'shottr'
 cask 'steam'
 cask 'tunnelblick'
 cask 'veracrypt-fuse-t'
@@ -66,7 +67,6 @@ cask 'vlc'
 cask 'wireshark'
 
 # Install App Store applications
-mas 'Greenshot', id: 1_103_915_944 # Paid
 mas 'Magnet', id: 441_258_766 # Paid
 mas 'WireGuard', id: 1_451_685_025
 
