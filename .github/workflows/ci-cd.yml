@@ -8,11 +8,11 @@ on:
   pull_request: null
 jobs:
   lint-commit-messages:
-    uses: vidavidorra/.github/.github/workflows/lint-commit-messages.yml@7e6650a5e8a73461cc69cbe9298d082d2101373f # v5.0.51
+    uses: vidavidorra/.github/.github/workflows/lint-commit-messages.yml@3472812d775ad4b6801be8fd0418c2363fb7e8f9 # v5.0.52
   lint:
-    uses: vidavidorra/.github/.github/workflows/node-lint.yml@7e6650a5e8a73461cc69cbe9298d082d2101373f # v5.0.51
+    uses: vidavidorra/.github/.github/workflows/node-lint.yml@3472812d775ad4b6801be8fd0418c2363fb7e8f9 # v5.0.52
   release:
-    uses: vidavidorra/.github/.github/workflows/release.yml@7e6650a5e8a73461cc69cbe9298d082d2101373f # v5.0.51
+    uses: vidavidorra/.github/.github/workflows/release.yml@3472812d775ad4b6801be8fd0418c2363fb7e8f9 # v5.0.52
     needs:
       - lint-commit-messages
       - lint
