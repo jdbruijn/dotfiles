@@ -1,10 +1,10 @@
 [include]
   path = ~/.gitconfig.local
-[credential]
-  helper = osxkeychain
 [init]
   defaultBranch = main
 [pull]
   ff = only
-[url "ssh://git@github.com/"]
-  insteadOf = https://github.com/
+[push]
+  autoSetupRemote = true
+[rebase]
+  updateRefs = true
