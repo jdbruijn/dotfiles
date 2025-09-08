@@ -1,6 +1,16 @@
 #!/bin/sh
 #
-# Install global Node.js packages.
+# Install Node.js version manager and global Node.js packages.
+
+install_nvm() {
+  echo " INFO: installing Node.js version manager"
+  curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh \
+    | NVM_DIR="${HOME}/.nvm" PROFILE=/dev/null /bin/bash \
+    | sed -u 's/^/    [node.js] /'
+
+  . "${HOME}/.nvm/nvm.sh" # Load nvm so it can be used in the install scripts.
+  nvm install node
+}
 
 install_npm_packages() {
   echo " INFO: installing global Node.js packages"
@@ -8,8 +18,8 @@ install_npm_packages() {
     npm-check-updates \
     tsx \
     typescript \
-    wscat \
-    | sed -u 's/^/       /'
+    wscat
 }
 
+install_nvm
 install_npm_packages
