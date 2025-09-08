@@ -45,27 +45,9 @@ sync_dotfiles() {
   link_files "vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
 }
 
-install_homebrew() {
-  if test ! "$(which brew)"; then
-    echo " INFO: installing Homebrew"
-    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh \
-      | NONINTERACTIVE=1 /bin/bash \
-      | sed -u 's/^/    [homebrew] /'
-  fi
-}
-
-install_software() {
-  echo " INFO: installing software with Homebrew Bundle"
-  brew bundle \
-    --file="macos/Brewfile" \
-    --quiet \
-    | sed -u 's/^/    [homebrew] /'
-}
-
 assert_macos
 sync_dotfiles
-install_homebrew
-install_software
+source homebrew/install
 source nodejs/install
 source zsh/install
 

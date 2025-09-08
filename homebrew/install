@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# Install Homebrew and software with Homebrew.
+
+install_homebrew() {
+  if test ! "$(which brew)"; then
+    echo " INFO: installing Homebrew"
+    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh \
+      | NONINTERACTIVE=1 /bin/bash \
+      | sed -u 's/^/    [homebrew] /'
+  fi
+}
+
+install_software() {
+  echo " INFO: installing software with Homebrew Bundle"
+  brew bundle \
+    --file="homebrew/Brewfile" \
+    --quiet \
+    | sed -u 's/^/    [homebrew] /'
+}
+
+install_homebrew
+install_software
