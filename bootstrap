@@ -48,17 +48,18 @@ sync_dotfiles() {
 install_homebrew() {
   if test ! "$(which brew)"; then
     echo " INFO: installing Homebrew"
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh \
+      | NONINTERACTIVE=1 /bin/bash \
+      | sed -u 's/^/    [homebrew] /'
   fi
 }
 
 install_software() {
   echo " INFO: installing software with Homebrew Bundle"
-  HOMEBREW_COLOR=1 brew bundle \
+  brew bundle \
     --file="macos/Brewfile" \
     --quiet \
-    | sed -u '/^Using/d' \
-    | sed -u 's/^/       /'
+    | sed -u 's/^/    [homebrew] /'
 }
 
 assert_macos
