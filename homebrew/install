@@ -8,6 +8,13 @@ install_homebrew() {
     curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh \
       | NONINTERACTIVE=1 /bin/bash \
       | sed -u 's/^/    [homebrew] /'
+
+    # Add Homebrew to the path so it can be used in the install scripts.
+    if [ "$(uname -s)" = "Darwin" ]; then
+      export PATH="/opt/homebrew/bin:$PATH"
+     else
+      export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+    fi
   fi
 }
 
