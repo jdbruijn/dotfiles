@@ -4,11 +4,12 @@
 
 install_nvm() {
   echo " INFO: installing Node.js version manager"
+  export NVM_DIR="${HOME}/.nvm"
   curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh \
-    | NVM_DIR="${HOME}/.nvm" PROFILE=/dev/null /bin/bash \
+    | PROFILE=/dev/null /bin/bash \
     | sed -u 's/^/    [node.js] /'
 
-  . "${HOME}/.nvm/nvm.sh" # Load nvm so it can be used in the install scripts.
+  . "${NVM_DIR}/nvm.sh" # Load nvm so it can be used in the install scripts.
   nvm install node
 }
 
