@@ -42,6 +42,9 @@ sync_dotfiles() {
   link_files ".gitignore" "${HOME}/.gitignore"
   link_files "git/.gitconfig" "${HOME}/.gitconfig"
   link_files "zsh/.zshrc" "${HOME}/.zshrc"
+
+  mkdir -p "${HOME}/.config"
+  link_files "zsh/starship.toml" "${HOME}/.config/starship.toml"
   link_files "vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
 }
 
@@ -49,7 +52,6 @@ assert_macos
 sync_dotfiles
 source homebrew/install
 source nodejs/install
-source zsh/install
 
 if [ -z "${NO_MACOS}" ]; then
   source macos/settings
