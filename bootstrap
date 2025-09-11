@@ -5,13 +5,6 @@
 
 DOTFILES="${HOME}/.dotfiles"
 
-assert_macos() {
-  if [ "$(uname -s)" != "Darwin" ]; then
-    echo "FATAL: macOS not detected, aborting bootstrap"
-    exit 1
-  fi
-}
-
 link_files() {
   source="${DOTFILES}/${1}"
   dest="${2}"
@@ -48,13 +41,12 @@ sync_dotfiles() {
   link_files "vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
 }
 
-assert_macos
 sync_dotfiles
-source homebrew/install
-source nodejs/install
+./homebrew/install
+./nodejs/install
 
-if [ -z "${NO_MACOS}" ]; then
-  source macos/settings
+if [ "$(uname -s)" = "Darwin" ] && [ -z "${NO_MACOS}" ]; then
+  ./macos/settings
 fi
 
 exit 0
