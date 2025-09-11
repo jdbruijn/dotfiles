@@ -1,5 +1,12 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Inserts a blank line between shell prompts
+# Don't inserts a blank line between shell prompts.
 add_newline = false
+
+# Add time, without the "at" prefix.
+time.disabled = false
+time.format = '[$time]($style) '
+
+# Add exit code of the last command, if non-zero.
+status.disabled = false
