@@ -37,6 +37,8 @@ sync_dotfiles() {
   link_files "zsh/.zshrc" "${HOME}/.zshrc"
 
   mkdir -p "${HOME}/.config"
+  mkdir -p "${HOME}/.config/ghostty"
+  link_files "ghostty/config" "${HOME}/.config/ghostty/config"
   link_files "zsh/starship.toml" "${HOME}/.config/starship.toml"
   link_files "vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
 }
