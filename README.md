@@ -36,7 +36,7 @@ $ ./install
 
 ## Usage
 
-To update the dotfiles locally, pull the latest changes from GitHub and run the bootstrap script again. The `NO_MACOS` environment variable can be used to skip the macOS settings, e.g. `NO_MACOS=1 ./install`.
+To update the dotfiles locally, pull the latest changes from GitHub and run the bootstrap script again.
 
 ```shell
 $ git pull

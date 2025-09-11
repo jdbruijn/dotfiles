@@ -56,7 +56,7 @@ sync_dotfiles
 ./homebrew/install
 ./nodejs/install
 
-if [ "$(uname -s)" = "Darwin" ] && [ -z "${NO_MACOS}" ]; then
+if is_macos; then
   ./macos/settings
 fi
 
