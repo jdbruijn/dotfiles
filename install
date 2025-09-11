@@ -2,7 +2,7 @@
 #
 # Install the dotfiles, software and configurations.
 
-DOTFILES="${HOME}/.dotfiles"
+DOTFILES="${HOME}/.config/dotfiles"
 
 link_files() {
   source="${DOTFILES}/${1}"
@@ -20,6 +20,7 @@ link_files() {
 
 sync_dotfiles() {
   echo " INFO: syncing dotfiles"
+  mkdir -p "${DOTFILES}"
   rsync \
     --exclude ".DS_Store" \
     --exclude ".git/" \
@@ -35,7 +36,6 @@ sync_dotfiles() {
   link_files "git/.gitconfig" "${HOME}/.gitconfig"
   link_files "zsh/.zshrc" "${HOME}/.zshrc"
 
-  mkdir -p "${HOME}/.config"
   mkdir -p "${HOME}/.config/ghostty"
   link_files "ghostty/config" "${HOME}/.config/ghostty/config"
   link_files "zsh/starship.toml" "${HOME}/.config/starship.toml"

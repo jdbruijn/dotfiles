@@ -4,7 +4,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Load the dotfiles' Zsh files.
-for file ("${HOME}/.dotfiles/zsh/"**/*.zsh); do
+for file ("${HOME}/.config/dotfiles/zsh/"**/*.zsh); do
   . "${file}"
 done
 
