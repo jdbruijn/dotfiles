@@ -1,7 +1,6 @@
 #!/bin/sh
 #
-# Bootstrap a new macOS machine, installing dotfiles, software and configuring
-# macOS defaults.
+# Install the dotfiles, software and configurations.
 
 DOTFILES="${HOME}/.dotfiles"
 

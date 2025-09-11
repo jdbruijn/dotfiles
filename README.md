@@ -1,10 +1,10 @@
 # Dotfiles <!-- omit in toc -->
 
-dotfiles, software and macOS defaults.
+dotfiles, software and configurations for Linux and macOS.
 
-- Install macOS applications, using [**Homebrew**](https://brew.sh/).
-- Configure macOS settings.
-- Setup terminal environment with [Oh My Zsh](https://ohmyz.sh/) and [Powerlevel10k](https://github.com/romkatv/powerlevel10k).
+- Install applications, using [**Homebrew**](https://brew.sh/).
+- Setup terminal environment with [**Starship**](https://starship.rs/).
+- Configure macOS default settings.
 
 ---
 
@@ -21,14 +21,14 @@ dotfiles, software and macOS defaults.
 ## Install
 
 > [!CAUTION]
-> Use at your own risk! These dotfiles the macOS settings and install software. Always review the code and settings before using these dotfiles unless you know what it entails.
+> Use at your own risk! These dotfiles install software and update macOS settings. Always read the code and settings before using these dotfiles.
 
 Install the dotfiles using Git and the bootstrap script.
 
 ```shell
 $ git clone https://github.com/vidavidorra/dotfiles.git
 $ cd dotfiles
-$ ./bootstrap
+$ ./install
 ```
 
 > [!NOTE]
@@ -36,11 +36,11 @@ $ ./bootstrap
 
 ## Usage
 
-To update the dotfiles locally, pull the latest changes from GitHub and run the bootstrap script again. The `NO_MACOS` environment variable can be used to skip the macOS settings, e.g. `NO_MACOS=1 ./bootstrap`.
+To update the dotfiles locally, pull the latest changes from GitHub and run the bootstrap script again. The `NO_MACOS` environment variable can be used to skip the macOS settings, e.g. `NO_MACOS=1 ./install`.
 
 ```shell
 $ git pull
-$ ./bootstrap
+$ ./install
 ```
 
 ## Contributing
