@@ -55,6 +55,7 @@ sync_dotfiles() {
 sync_dotfiles
 ./homebrew/install
 ./nodejs/install
+./rust/install
 
 if is_macos; then
   ./macos/settings
