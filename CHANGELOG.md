@@ -1,3 +1,35 @@
+## [1.6.0](https://github.com/jdbruijn/dotfiles/compare/v1.5.0...v1.6.0) (2025-09-12)
+
+### Features
+
+- add Docker file, with dotfiles intalled in Ubuntu ([e7b61ff](https://github.com/jdbruijn/dotfiles/commit/e7b61ff447527006a412bec7d816704b86e3e670))
+- **bootstrap:** make installations under non-macOS possible ([924bd0f](https://github.com/jdbruijn/dotfiles/commit/924bd0f64b9b6140ec86ae53bc74cf81088bf2a8))
+- **brew:** move Homebrew bundle and installation to its own subdirectory ([9ca0343](https://github.com/jdbruijn/dotfiles/commit/9ca0343f0817ae27724702fc94e89de44a05fcbb))
+- **brew:** removed unused software and VSCode extensions ([6ee447b](https://github.com/jdbruijn/dotfiles/commit/6ee447be0667ecff2003fa77374e16f6ce8ac004))
+- **brew:** replace Google Chrome with Brave ([a2f84a9](https://github.com/jdbruijn/dotfiles/commit/a2f84a97eac74532bd377c51aab6169dbedaff8a))
+- **git:** enable rerere "reuse recorded resolution" ([52b3be0](https://github.com/jdbruijn/dotfiles/commit/52b3be08bfe138952d7dfc748e6cc16d30ece928))
+- **git:** update ignores from gitignore.io and remove unnecessary global languages and tools ([abaa41e](https://github.com/jdbruijn/dotfiles/commit/abaa41e10932f8040254e4a7bc7afda61bb1b452))
+- **install:** add VSCode settings file to the right location under Linux ([673994e](https://github.com/jdbruijn/dotfiles/commit/673994e71eb2a9c067291df571bde68cb4f10fe5))
+- **install:** move files from `$HOME/.dotfiles` to `$HOME/.config/dotfiles` ([7b12049](https://github.com/jdbruijn/dotfiles/commit/7b12049e46618cb03cfd218f356cc1a8879beddf))
+- **install:** rename `bootstrap` to `install` ([0b91514](https://github.com/jdbruijn/dotfiles/commit/0b91514a5d026420a868f19543022ec772b21b09))
+- remove Python, which I no longer use ([55e17ad](https://github.com/jdbruijn/dotfiles/commit/55e17ad40801931ea64a4f9ca2c19e830eb7741d))
+- replace iTerm2 with Ghostty ([15e43d0](https://github.com/jdbruijn/dotfiles/commit/15e43d060b6b36ab69d1e935b1ff57302ab1f19b))
+- replace Oh My Zsh with Starship ([b660ea9](https://github.com/jdbruijn/dotfiles/commit/b660ea948d14119295973a48b1568396d1d57367))
+- **starship:** add time and exit code to the prompt ([fc8a0e1](https://github.com/jdbruijn/dotfiles/commit/fc8a0e116489dcf3f0b6262eb7331d191c52b902))
+- **zsh:** add aliases for docker, docker-desktop, git, isodate and vscode ([c2cd019](https://github.com/jdbruijn/dotfiles/commit/c2cd0197ab75280c4f0ba94099a1c6e57f6a2d59))
+
+### Bug Fixes
+
+- **bootstrap:** clarify output by indenting sub-installation outputs ([809df74](https://github.com/jdbruijn/dotfiles/commit/809df746ac16c8e6600d1ce9bfc176aef917cc5b))
+- **brew:** add `brew` to the path, so it can be used in the install scripts ([35cbe6e](https://github.com/jdbruijn/dotfiles/commit/35cbe6ee3501656983467f60cf59c2bf4b310171))
+- **brew:** remove taps that have been moved to core ([cb28262](https://github.com/jdbruijn/dotfiles/commit/cb28262be36811275f4b07c3177d9004e146cb6d))
+- **git:** move SSH to local git configuration ([e9512e2](https://github.com/jdbruijn/dotfiles/commit/e9512e2d701a26b5ec5eecb78489d14578e7b407))
+- **macos:** remove need for sudo by not killing applications ([7ee043b](https://github.com/jdbruijn/dotfiles/commit/7ee043bac787091e2df16b767f80b9687274c96a))
+- **nodejs:** export `NVM_DIR` for the nvm and Node.js installation ([0cbd95a](https://github.com/jdbruijn/dotfiles/commit/0cbd95adc1b57d63053683e07e4f796f68a21876))
+- **nodejs:** install the Node.js version manager, `nvm`, using its install script ([0a1e333](https://github.com/jdbruijn/dotfiles/commit/0a1e333fdc95d2e49e15bef54b28ab31bbe73196))
+- **zsh:** remove powerlevel10k remains ([2b6ac25](https://github.com/jdbruijn/dotfiles/commit/2b6ac2538655d00f912ee20123eb6042aa46e939))
+- **zsh:** use `HOMEBREW_PREFIX` for the Homebrew path ([355bbed](https://github.com/jdbruijn/dotfiles/commit/355bbedc1ab7f12c7e40c5f40bf543f3abc260f2))
+
 ## [1.5.0](https://github.com/jdbruijn/dotfiles/compare/v1.4.0...v1.5.0) (2025-06-07)
 
 ### Features
