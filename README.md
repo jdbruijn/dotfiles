@@ -21,9 +21,9 @@ dotfiles, software and configurations for Linux and macOS.
 ## Install
 
 > [!CAUTION]
-> Use at your own risk! These dotfiles install software and update macOS settings. Always read the code and settings before using these dotfiles.
+> Use at your own risk! These dotfiles install software and update macOS settings. Always read the code and settings before using these dotfiles. These dotfiles are only tested and used on the latest macOS version. 
 
-Install the dotfiles using Git and the bootstrap script.
+Install the dotfiles using Git and the installation script. The dotfiles will be installed in `$HOME/.config/dotfiles` and linked to the `HOME` directory as needed. During the the synchronisation step of the installation, non-excluded files will be deleted from the destination directory, `$HOME/.config/dotfiles`, to prevent lingering dotfiles.
 
 ```shell
 $ git clone https://github.com/jdbruijn/dotfiles.git
@@ -31,17 +31,16 @@ $ cd dotfiles
 $ ./install
 ```
 
-> [!NOTE]
-> These dotfiles are used with macOS Sonoma. So, there is no guarantee that these work on any other macOS versions.
-
 ## Usage
 
-To update the dotfiles locally, pull the latest changes from GitHub and run the bootstrap script again.
+To update the dotfiles, pull the latest changes and run the installation script again. The installation is idempotent, making it possible to use the installation script for updates as well.
 
 ```shell
 $ git pull
 $ ./install
 ```
+
+The Zsh configuration can be extended using the [`zsh/custom/`](./zsh/custom/) directory. You can place additional Zsh files in [`zsh/custom/`](./zsh/custom/) directory of the cloned repository, which will be synchronised to `$HOME/.config/dotfiles/zsh/custom/`, or directly in the `$HOME/.config/dotfiles/zsh/custom/` directory. Using either directory for the custom Zsh configuration, the synchronisation step of the installation will honour your custom configuration and not delete any of the files in this directory.
 
 ## Contributing
 

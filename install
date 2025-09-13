@@ -32,9 +32,23 @@ sync_dotfiles() {
     --exclude ".git/" \
     --exclude ".github/" \
     --exclude "node_modules/" \
+    --exclude "zsh/custom/" \
     --human-readable \
     --no-perms \
-    . "${DOTFILES}";
+    --itemize-changes \
+    . "${DOTFILES}" \
+    | sed -u 's/^/    [sync] /'
+
+  echo " INFO: syncing custom Zsh files (zsh/custom)"
+  rsync \
+    --archive \
+    --exclude ".DS_Store" \
+    --exclude ".gitignore" \
+    --human-readable \
+    --no-perms \
+    --itemize-changes \
+    ./zsh/custom/ "${DOTFILES}/zsh/custom/" \
+    | sed -u 's/^/    [sync] /'
 
   link_files ".editorconfig" "${HOME}/.editorconfig"
   link_files ".gitignore" "${HOME}/.gitignore"
