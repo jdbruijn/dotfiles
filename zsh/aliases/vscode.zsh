@@ -8,46 +8,27 @@
 #   https://github.com/SteelShot
 #   https://github.com/AliSajid
 
-# Verify if any manual user choice of VS Code exists first.
-if [[ -n "$VSCODE" ]] && ! which $VSCODE &>/dev/null; then
-  echo "'$VSCODE' flavour of VS Code not detected."
-  unset VSCODE
-fi
-
-# Otherwise, try to detect a flavour of VS Code.
-if [[ -z "$VSCODE" ]]; then
-  if which code &>/dev/null; then
-    VSCODE=code
-  elif which code-insiders &>/dev/null; then
-    VSCODE=code-insiders
-  elif which codium &>/dev/null; then
-    VSCODE=codium
-  else
-    return
-  fi
-fi
-
 function vsc {
   if (( $# )); then
-    $VSCODE $@
+    code $@
   else
-    $VSCODE .
+    code .
   fi
 }
 
-alias vsca="$VSCODE --add"
-alias vscd="$VSCODE --diff"
-alias vscg="$VSCODE --goto"
-alias vscn="$VSCODE --new-window"
-alias vscr="$VSCODE --reuse-window"
-alias vscw="$VSCODE --wait"
-alias vscu="$VSCODE --user-data-dir"
-alias vscp="$VSCODE --profile"
+alias vsca="code --add"
+alias vscd="code --diff"
+alias vscg="code --goto"
+alias vscn="code --new-window"
+alias vscr="code --reuse-window"
+alias vscw="code --wait"
+alias vscu="code --user-data-dir"
+alias vscp="code --profile"
 
-alias vsced="$VSCODE --extensions-dir"
-alias vscie="$VSCODE --install-extension"
-alias vscue="$VSCODE --uninstall-extension"
+alias vsced="code --extensions-dir"
+alias vscie="code --install-extension"
+alias vscue="code --uninstall-extension"
 
-alias vscv="$VSCODE --verbose"
-alias vscl="$VSCODE --log"
-alias vscde="$VSCODE --disable-extensions"
+alias vscv="code --verbose"
+alias vscl="code --log"
+alias vscde="code --disable-extensions"
