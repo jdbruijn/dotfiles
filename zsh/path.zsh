@@ -1,7 +1,7 @@
 if [ "$(uname -s)" = "Darwin" ]; then
-  export PATH="/opt/homebrew/bin:$PATH"
+  export PATH="/opt/homebrew/bin:${PATH}"
 else
-  export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+  export PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
 fi
 
 export PATH="$(brew --prefix rustup)/bin:${PATH}"
