@@ -11,7 +11,7 @@ done
 eval "$(starship init zsh)"
 
 # Initialise completion.
-autoload -U compinit && compinit
+autoload -Uz compinit && compinit
 
 # Load plugins
 . "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
