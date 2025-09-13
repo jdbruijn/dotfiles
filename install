@@ -26,11 +26,12 @@ sync_dotfiles() {
   echo " INFO: syncing dotfiles"
   mkdir -p "${DOTFILES}"
   rsync \
+    --archive \
+    --delete \
     --exclude ".DS_Store" \
     --exclude ".git/" \
     --exclude ".github/" \
     --exclude "node_modules/" \
-    --archive \
     --human-readable \
     --no-perms \
     . "${DOTFILES}";
