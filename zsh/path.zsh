@@ -4,4 +4,4 @@ else
   export PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
 fi
 
-export PATH="$(brew --prefix rustup)/bin:${PATH}"
+export PATH="${PATH}:$(brew --prefix rustup)/bin"
