@@ -1,3 +1,15 @@
+## [1.7.0](https://github.com/jdbruijn/dotfiles/compare/v1.6.0...v1.7.0) (2025-09-13)
+
+### Features
+
+- add rust toolchain installation ([6106f1a](https://github.com/jdbruijn/dotfiles/commit/6106f1aedc00104b7a50dd7be630554889272d9b))
+- replace `gpg-suite` with `gnupg` ([320e29c](https://github.com/jdbruijn/dotfiles/commit/320e29c20077d02aa711fe07b1db7fa88c608a61))
+- **zsh:** add git `git_current_branch` function ([92361e0](https://github.com/jdbruijn/dotfiles/commit/92361e0b4ee412a680cb0f0311c94a0f205398c4))
+
+### Bug Fixes
+
+- **rust:** add toolchains to path ([7040a6a](https://github.com/jdbruijn/dotfiles/commit/7040a6a3610e6abe7bcb9f60172d4e9ffdca2bc0))
+
 ## [1.6.0](https://github.com/jdbruijn/dotfiles/compare/v1.5.0...v1.6.0) (2025-09-12)
 
 ### Features
