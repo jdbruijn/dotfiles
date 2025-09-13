@@ -1,3 +1,9 @@
+## [1.8.0](https://github.com/jdbruijn/dotfiles/compare/v1.7.0...v1.8.0) (2025-09-13)
+
+### Features
+
+- **git:** sign tags with GPG ([8f380f1](https://github.com/jdbruijn/dotfiles/commit/8f380f11139f7aa0108dfd576c7a4ca3889d9b7e))
+
 ## [1.7.0](https://github.com/jdbruijn/dotfiles/compare/v1.6.0...v1.7.0) (2025-09-13)
 
 ### Features
