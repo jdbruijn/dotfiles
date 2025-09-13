@@ -3,7 +3,9 @@
   "[typescript]": {
     "editor.defaultFormatter": "samverschueren.linter-xo"
   },
-  "cmake.showOptionsMovedNotification": false,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "dotenv.enableAutocloaking": true,
   "editor.formatOnSave": true,
   "editor.rulers": [80],
