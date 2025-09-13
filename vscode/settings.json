@@ -16,8 +16,14 @@
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.integrated.scrollback": 1000000,
   "window.autoDetectColorScheme": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.preferredLightColorTheme": "Solarized Light",
+  "icontheme.lightIconTheme": "catppuccin-latte",
+  "icontheme.darkIconTheme": "catppuccin-frappe",
+  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.preferredLightColorTheme": "Catppuccin Latte",
+  "workbench.preferredDarkColorTheme": "Catppuccin Frappé",
+  "editor.semanticHighlighting.enabled": true,
+  "terminal.integrated.minimumContrastRatio": 1,
+  "window.titleBarStyle": "custom",
   "workbench.startupEditor": "none",
   "xo.format.enable": true
 }
