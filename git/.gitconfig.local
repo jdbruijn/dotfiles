@@ -1,8 +1,10 @@
 [commit]
-  gpgsign = true
+  gpgSign = true
+[tag]
+  gpgSign = true
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
 [user]
   name = Alan Moore
   email = amoore@example.com
-  signingkey = 12345678
+  signingKey = 12345678
