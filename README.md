@@ -21,7 +21,7 @@ dotfiles, software and configurations for Linux and macOS.
 ## Install
 
 > [!CAUTION]
-> Use at your own risk! These dotfiles install software and update macOS settings. Always read the code and settings before using these dotfiles. These dotfiles are only tested and used on the latest macOS version. 
+> Use at your own risk! These dotfiles install software and update macOS settings. Always read the code and settings before using these dotfiles. These dotfiles are only tested and used on the latest macOS version.
 
 Install the dotfiles using Git and the installation script. The dotfiles will be installed in `$HOME/.config/dotfiles` and linked to the `HOME` directory as needed. During the the synchronisation step of the installation, non-excluded files will be deleted from the destination directory, `$HOME/.config/dotfiles`, to prevent lingering dotfiles.
 
