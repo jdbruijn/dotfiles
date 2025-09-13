@@ -9,3 +9,6 @@ export LC_ALL='en_GB.UTF-8';
 # Increase the shell history size.
 export HISTSIZE='1000000'
 export HISTFILESIZE="${HISTSIZE}"
+
+# Set the TTY for GPG, so it can use interactive prompts.
+export GPG_TTY="$(tty)"
