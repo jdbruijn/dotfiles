@@ -57,6 +57,7 @@ mas 'WireGuard', id: 1_451_685_025
 # Install Visual Studio Code extensions
 vscode 'catppuccin.catppuccin-vsc-icons'
 vscode 'catppuccin.catppuccin-vsc'
+vscode 'streetsidesoftware.code-spell-checker'
 vscode 'github.copilot-chat'
 vscode 'github.copilot'
 vscode 'dotenv.dotenv-vscode'

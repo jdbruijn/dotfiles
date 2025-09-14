@@ -15,6 +15,7 @@
   },
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.integrated.scrollback": 1000000,
+  "cSpell.language": "en-GB",
   "window.autoDetectColorScheme": true,
   "icontheme.lightIconTheme": "catppuccin-latte",
   "icontheme.darkIconTheme": "catppuccin-frappe",
