@@ -28,7 +28,7 @@ configure() {
   # Actions after taking a screenshot.
   defaults write cc.ffitch.shottr afterGrabShow -bool true
   defaults write cc.ffitch.shottr afterGrabCopy -bool true
-  defaults write cc.ffitch.shottr afterGrabSave -bool true
+  defaults write cc.ffitch.shottr afterGrabSave -bool false
 
   # Show the editor after taking a screenshot.
   defaults write cc.ffitch.shottr areaCaptureMode -string editor
