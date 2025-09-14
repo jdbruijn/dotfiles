@@ -1,3 +1,25 @@
+## [1.9.0](https://github.com/jdbruijn/dotfiles/compare/v1.8.0...v1.9.0) (2025-09-14)
+
+### Features
+
+- **brew:** add `openssh` ([a699ea0](https://github.com/jdbruijn/dotfiles/commit/a699ea0b651807ad017ae47d8ae6a976bbe22847))
+- **vscode:** add spell checker ([6e02110](https://github.com/jdbruijn/dotfiles/commit/6e021108a1ffc6aaad1d3b34fea390c79b208fbc))
+- **vscode:** use Catppuccin colour and icon theme ([be9ad61](https://github.com/jdbruijn/dotfiles/commit/be9ad61722a2e1ee911792609db2f9989c28828a))
+- **zsh:** add `custom` directory for custom Zsh configuration ([f9e8abc](https://github.com/jdbruijn/dotfiles/commit/f9e8abc94d3fb6a42af3e4f31cc404fef67a50b3))
+
+### Bug Fixes
+
+- **install:** delete non-existing dotfiles in the destination during the sync ([da6866c](https://github.com/jdbruijn/dotfiles/commit/da6866c719b4bc49c9e1c7d8ece542395f5bd5e3))
+- **vscode:** remove dotenv cloaking config, which is probably not needed ([d6f114b](https://github.com/jdbruijn/dotfiles/commit/d6f114b2a406f61e8a758f9e7525c86c03447935))
+- **vscode:** set default formatter for Markdown to Prettier ([c687dad](https://github.com/jdbruijn/dotfiles/commit/c687dadaf60dc562f20187e97e562f0fc0b4d17e))
+- **zsh:** add explicit `-Uz` options to autoload, which are both added impicitly anyways ([dd83e9b](https://github.com/jdbruijn/dotfiles/commit/dd83e9b06fccd970850d14a7e7f17b3ea9cb56b6))
+- **zsh:** append the Rust paths instead of prepending it ([ca4fc99](https://github.com/jdbruijn/dotfiles/commit/ca4fc9935c6c7d4f4f22c86d65e0cd350944aee8))
+- **zsh:** explicitly use `code` for the VSCode aliases ([7142fc9](https://github.com/jdbruijn/dotfiles/commit/7142fc9ad04c252175ec38506f3c3700487dd782))
+
+### Documentation
+
+- add documentation for GPG and SSH setup ([fff4e24](https://github.com/jdbruijn/dotfiles/commit/fff4e2467ce30efd263f3d5833c9d515eee670e6))
+
 ## [1.8.0](https://github.com/jdbruijn/dotfiles/compare/v1.7.0...v1.8.0) (2025-09-13)
 
 ### Features
