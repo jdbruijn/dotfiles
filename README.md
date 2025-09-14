@@ -14,6 +14,8 @@ dotfiles, software and configurations for Linux and macOS.
 
 - [Install](#install)
 - [Usage](#usage)
+  - [Custom **Zsh** configurations](#custom-zsh-configurations)
+  - [**Git** configuration](#git-configuration)
 - [Contributing](#contributing)
 - [Security policy](#security-policy)
 - [License](#license)
@@ -31,6 +33,11 @@ $ cd dotfiles
 $ ./install
 ```
 
+Some manual steps might still be required, depending on your desired setup and configuration, after the installation. In the [`docs`](./docs/) directory there is documentation for the steps I have taken for my own configuration, which contains the following.
+
+- [GPG](./docs/GPG.md)
+- [SSH](./docs/SSH.md)
+
 ## Usage
 
 To update the dotfiles, pull the latest changes and run the installation script again. The installation is idempotent, making it possible to use the installation script for updates as well.
@@ -40,7 +47,13 @@ $ git pull
 $ ./install
 ```
 
-The Zsh configuration can be extended using the [`zsh/custom/`](./zsh/custom/) directory. You can place additional Zsh files in [`zsh/custom/`](./zsh/custom/) directory of the cloned repository, which will be synchronised to `$HOME/.config/dotfiles/zsh/custom/`, or directly in the `$HOME/.config/dotfiles/zsh/custom/` directory. Using either directory for the custom Zsh configuration, the synchronisation step of the installation will honour your custom configuration and not delete any of the files in this directory.
+### Custom [**Zsh**][zsh] configurations
+
+The [**Zsh**][zsh] configuration can be extended using the [`zsh/custom/`](./zsh/custom/) directory. You can place additional [**Zsh**][zsh] files in [`zsh/custom/`](./zsh/custom/) directory of the cloned repository, which will be synchronised to `$HOME/.config/dotfiles/zsh/custom/`, or directly in the `$HOME/.config/dotfiles/zsh/custom/` directory. Using either directory for the custom [**Zsh**][zsh] configuration, the synchronisation step of the installation will honour your custom configuration and not delete any of the files in this directory.
+
+### [**Git**][git] configuration
+
+For the [**Git**][git] user configuration, please create a new `.gitconfig.local` file in your home directory. You can use the [`git/.gitconfig.local`](./git/.gitconfig.local) file as a template and update it's contents.
 
 ## Contributing
 
@@ -80,3 +93,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 The full text of the license is available in the [LICENSE](LICENSE.md) file in this repository and [online](https://www.gnu.org/licenses/gpl.html).
 
 </details>
+
+[git]: https://git-scm.com/
+[zsh]: https://www.zsh.org/

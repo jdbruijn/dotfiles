@@ -1,0 +1,152 @@
+# GPG <!-- omit in toc -->
+
+- [Generate your GPG key](#generate-your-gpg-key)
+- [Signing Git commits and tags](#signing-git-commits-and-tags)
+- [Secret key and revocation certificate](#secret-key-and-revocation-certificate)
+
+# Generate your GPG key
+
+Create a new GPG key, interactively, using the following command. For most purposes, the default options are good to use.
+
+```shell
+gpg --full-generate-key
+```
+
+At the time of writing, September 2025, these were the default options.
+
+- Cryptographic algorithm: `ECC (sign and encrypt)`.
+- Elliptic curve: `Curve 25519`.
+- Key is valid for: `0` (does not expire).
+
+Show the fingerprint and key ID using the following command. A lot of commands use the key ID to specify the key, so it's useful to have this on hand. The key ID is the hexadecimal characters after the cryptographic algorithm in the `pub` section and is just the last sixteen characters of the fingerprint, without spaces. In the rest of the document we'll use `06B4B8C3D53C9037` as an example of the key ID.
+
+```shell
+gpg --fingerprint --keyid-format=long
+```
+
+<details><summary>Fingerprint and key ID example</summary>
+
+In this example the key ID is `06B4B8C3D53C9037` and the fingerprint is `F587 57F4 1B4F 5D2B 30FB  B376 06B4 B8C3 D53C 9037`.
+
+```shell
+pub   ed25519/06B4B8C3D53C9037 2025-09-13 [SC]
+      Key fingerprint = F587 57F4 1B4F 5D2B 30FB  B376 06B4 B8C3 D53C 9037
+uid                 [ultimate] Alan Moore <amoore@example.com>
+sub   cv25519/74BF2268D4468146 2025-09-13 [E]
+```
+
+</details>
+
+Export the public key using the following command.
+
+```shell
+gpg --armor --export 06B4B8C3D53C9037
+```
+
+<details><summary>Public key example</summary>
+
+```
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEaMXCSBYJKwYBBAHaRw8BAQdA71YnGIYHbIJS/d2p66J9X8X6pEezU8+zKsJY
+CGeWKTa0H0FsYW4gTW9vcmUgPGFtb29yZUBleGFtcGxlLmNvbT6IkwQTFgoAOxYh
+BPWHV/QbT10rMPuzdga0uMPVPJA3BQJoxcJIAhsDBQsJCAcCAiICBhUKCQgLAgQW
+AgMBAh4HAheAAAoJEAa0uMPVPJA3XK0A/AsGADUCGsK0d8CJs2KnsbXittV9fWoI
+YY4jFprgnRNYAQCcTZjsz/BIexOQlzvtHELiDtg51SHMg8rUfJWab0P2Crg4BGjF
+wkgSCisGAQQBl1UBBQEBB0BVHvtXvq8qZGczfZDyVyJvvE5qIa6vzwEXeSEz0BHV
+DwMBCAeIeAQYFgoAIBYhBPWHV/QbT10rMPuzdga0uMPVPJA3BQJoxcJIAhsMAAoJ
+EAa0uMPVPJA31k4BAOarT0SA+oThfebc5tO1R2ovZcEQX3NQP17keQVCDB0iAP95
+epiF+owiJwr+uQN0z4MRKgkKbUIEwgVgOvDtia26Bw==
+=ybvJ
+-----END PGP PUBLIC KEY BLOCK-----
+```
+
+</details>
+
+# Signing [Git][git] commits and tags
+
+To use the GPG key to sign [Git][git] commits and tags, we need to let [Git][git] know about this key. To do this, set the key ID as the [`user.signingKey`](https://git-scm.com/docs/git-config#Documentation/git-config.txt-usersigningKey) and set [`commit.gpgSign`](https://git-scm.com/docs/git-config#Documentation/git-config.txt-commitgpgSign) and [`tag.gpgSign`](https://git-scm.com/docs/git-config#Documentation/git-config.txt-taggpgSign) to `true` in the `.gitconfig` file. These options are shown in the following, stripped down, `.gitconfig` as an example.
+
+> [!TIP]
+> If you're using these dotfiles, make sure to use the `~/.gitconfig.local` file.
+
+```ini
+[commit]
+  gpgSign = true
+[tag]
+  gpgSign = true
+[user]
+  email = amoore@example.com
+  signingKey = 06B4B8C3D53C9037
+```
+
+If you're using [**GitHub**][github], you also need to add the public key there so it can verify the commits and tags. To do this, follow the steps described in the [Adding a GPG key to your GitHub account](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-gpg-key-to-your-github-account) page from the [**GitHub**][github] documentation. In short, this boils down the the following steps.
+
+> [!NOTE]
+> The [`user.email`](https://git-scm.com/docs/git-config#Documentation/git-config.txt-useremail) in your `.gitconfig` should be the same email as the GPG key. Additionally, this email must be registered on [**GitHub**][github].
+
+1. Go to your user settings.
+2. In the _SSH and GPG keys_ section, click on _New GPG key_.
+3. In the `Title` field, enter a recognisable name for the key, e.g. `personal MacBook`. [**GitHub**][github] also shows the key ID in the _GPG keys_ overview, so no need to include that in the title.
+4. In the `Key` field, copy the **public** key that was exported above.
+
+# Secret key and revocation certificate
+
+To prevent your keys from getting lost, it's recommended to backup both the secret key and a revocation certificate in a secure place.
+
+> [!CAUTION]
+> Always keep the secret key and the revocation certificate in a secure place. This can, for example, be in a secure [**VeraCrypt**](https://veracrypt.jp/) container on cloud service, like Google Drive, or a USB drive.
+
+Export the secret key using the following command. This will export the secret key directly into an file, `06B4B8C3D53C9037-secret.asc`. If you prefer to store it as text, you can remove the `--output` option or `cat` the file. Be careful with this as the terminal sessions might be recorded.
+
+```shell
+gpg --output 06B4B8C3D53C9037-secret.asc --armor --export-secret-key 06B4B8C3D53C9037
+```
+
+<details><summary>Secret key example</summary>
+
+```shell
+$ cat 06B4B8C3D53C9037-secret.asc
+-----BEGIN PGP PRIVATE KEY BLOCK-----
+
+lIYEaMXCSBYJKwYBBAHaRw8BAQdA71YnGIYHbIJS/d2p66J9X8X6pEezU8+zKsJY
+CGeWKTb+BwMCwXdzWp/srh/9njYV89q8lr9Z0uEa/CXH9Wv+M6NRcZtoqtjmnEdD
+3loY6V7SR0WcpjXVOkFV8hHQhEb2BySwU0bJBsW+qb1DkluqvCy2MrQfQWxhbiBN
+b29yZSA8YW1vb3JlQGV4YW1wbGUuY29tPoiTBBMWCgA7FiEE9YdX9BtPXSsw+7N2
+BrS4w9U8kDcFAmjFwkgCGwMFCwkIBwICIgIGFQoJCAsCBBYCAwECHgcCF4AACgkQ
+BrS4w9U8kDdcrQD8CwYANQIawrR3wImzYqexteK21X19aghhjiMWmuCdE1gBAJxN
+mOzP8Eh7E5CXO+0cQuIO2DnVIcyDytR8lZpvQ/YKnIsEaMXCSBIKKwYBBAGXVQEF
+AQEHQFUe+1e+rypkZzN9kPJXIm+8Tmohrq/PARd5ITPQEdUPAwEIB/4HAwL6tY2L
+0eLqvf2e8Qj+NtdTjVTPyiOIDBXWcSCFsdUeOCcWaLS6sdRW4FcWXAsqjvH+fhL+
+6TqzpyMQCFmH1oN7gRI+vsElo/U2rqU8EGYNiHgEGBYKACAWIQT1h1f0G09dKzD7
+s3YGtLjD1TyQNwUCaMXCSAIbDAAKCRAGtLjD1TyQN9ZOAQDmq09EgPqE4X3m3ObT
+tUdqL2XBEF9zUD9e5HkFQgwdIgD/eXqYhfqMIicK/rkDdM+DESoJCm1CBMIFYDrw
+7Ymtugc=
+=PGDd
+-----END PGP PRIVATE KEY BLOCK-----
+```
+
+</details>
+
+Create the revocation certificate, interactively, using the following command. It will ask for a reason, which we of course don't have at this point in time. You can create a revocation certificate with no reason specified, or even create one for each reason.
+
+```shell
+gpg --output 06B4B8C3D53C9037-revoke.asc --armor --gen-revoke 06B4B8C3D53C9037
+```
+
+<details><summary>Revocation certificate example</summary>
+
+```shell
+$ cat 06B4B8C3D53C9037-revoke.asc
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: This is a revocation certificate
+
+iHgEIBYKACAWIQT1h1f0G09dKzD7s3YGtLjD1TyQNwUCaMaM2AIdAAAKCRAGtLjD
+1TyQN6pUAQC1DeapqxC8hzQyYs8yhwsL59aN/3Joi2de0zOGaQOggQEAm1j6sboO
+UnSi4oJ6v/HTsBsJG8I9AmZ3tbH0CvGEnQ8=
+=mhWf
+-----END PGP PUBLIC KEY BLOCK-----
+```
+
+[git]: https://git-scm.com/
+[github]: https://github.com/
