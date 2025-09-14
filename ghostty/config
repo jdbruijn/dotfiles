@@ -1,1 +1,6 @@
+# See https://ghostty.org/docs/config/reference for the available options.
+
 theme = dark:catppuccin-frappe,light:catppuccin-latte
+
+# Disable the auto-update functionality. Updates will be handled by Homebrew.
+auto-update = off
