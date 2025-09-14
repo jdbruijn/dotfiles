@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# Configure the Menu Bar.
+
+configure() {
+  echo " INFO: configure the Menu Bar"
+
+  # Display the time with seconds.
+  defaults write com.apple.menuextra.clock ShowSeconds -bool true
+}
+
+configure

@@ -1,0 +1,48 @@
+#!/bin/sh
+#
+# Configure the Finder.
+
+configure() {
+  echo " INFO: configure the Finder"
+
+  # Use list view.
+  defaults write com.apple.finder FXPreferredViewStyle -string Nlsv
+  defaults write com.apple.finder FXPreferredSearchViewStyle -string Nlsv
+
+  # Show all file extensions.
+  defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+  # Show a path bar at the bottom of the window.
+  defaults write com.apple.finder ShowPathbar -bool true
+
+  # Open new windows in ~/Downloads.
+  defaults write com.apple.finder NewWindowTarget -string PfLo
+  defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads"
+
+  # Set the default search scope to the current folder.
+  defaults write com.apple.finder FXDefaultSearchScope -string SCcf
+
+  # Keep folders on top when sorting by name.
+  defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+  # Disable Window animations and Get Info animations
+  defaults write com.apple.finder DisableAllAnimations -bool true
+
+  # Remove items from the Trash after 30 days.
+  defaults write com.apple.finder FXRemoveOldTrashItems -bool true
+
+  # Hide all icons from the Desktop
+  defaults write com.apple.finder CreateDesktop -bool false
+
+  # Don't show icons on the desktop
+  defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+  defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+  defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+  defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+}
+
+
+configure
+
+# Kill the Dock to load the changes.
+killall Finder

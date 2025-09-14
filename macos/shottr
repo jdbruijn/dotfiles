@@ -1,0 +1,69 @@
+#!/bin/sh
+#
+# Configure Shottr, https://shottr.cc/.
+
+
+disable_keyboard_shortcut() {
+  key="${1}"
+  name="${2}"
+  echo " INFO: disable keyboard shortcut ${name} (symbolic hotkey ID ${key})"
+  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys \
+    -dict-add "${key}" "<dict><key>enabled</key><false/></dict>"
+}
+
+configure() {
+  echo " INFO: configure Shottr"
+
+  # Configure the screenshots folder.
+  screenshots_folder="${HOME}/Pictures/Shottr"
+  mkdir -p "${screenshots_folder}"
+  defaults write cc.ffitch.shottr defaultFolder -string "${screenshots_folder}"
+
+  # Save files as PNG.
+  defaults write cc.ffitch.shottr saveFormat -string PNG
+
+  # Disable downscale to 1x when saving.
+  defaults write cc.ffitch.shottr downscaleOnSave -bool false
+
+  # Actions after taking a screenshot.
+  defaults write cc.ffitch.shottr afterGrabShow -bool true
+  defaults write cc.ffitch.shottr afterGrabCopy -bool true
+  defaults write cc.ffitch.shottr afterGrabSave -bool true
+
+  # Show the editor after taking a screenshot.
+  defaults write cc.ffitch.shottr areaCaptureMode -string editor
+
+  # Automatically close the thumbnail, only relevant for "preview" mode of
+  # "areaCaptureMode".
+  defaults write cc.ffitch.shottr thumbnailClosing -string auto
+
+  # Configure hotkey ⇧⌘4 for fullscreen screenshot.
+  defaults write cc.ffitch.shottr KeyboardShortcuts_fullscreen \
+    -string "{\"carbonModifiers\":768,\"carbonKeyCode\":21}"
+  # Configure hotkey ⇧⌘1 for area screenshot.
+  defaults write cc.ffitch.shottr KeyboardShortcuts_area \
+    -string "{\"carbonModifiers\":768,\"carbonKeyCode\":18}"
+  # Configure hotkey ⇧⌘2 for repeat area screenshot.
+  defaults write cc.ffitch.shottr KeyboardShortcuts_repeatArea \
+    -string "{\"carbonModifiers\":768,\"carbonKeyCode\":19}"
+  # Configure hotkey ⇧⌘3 for any window screenshot.
+  defaults write cc.ffitch.shottr KeyboardShortcuts_anyWindow \
+    -string "{\"carbonModifiers\":768,\"carbonKeyCode\":20}"
+
+  # Keep the window on top.
+  defaults write cc.ffitch.shottr alwaysOnTop -bool true
+
+  # Actions on Esc.
+  defaults write cc.ffitch.shottr copyOnEsc -bool true
+  defaults write cc.ffitch.shottr saveOnEsc -bool true
+}
+
+disable_keyboard_shortcut 28  '⇧⌘3'
+disable_keyboard_shortcut 29 '^⇧⌘3'
+disable_keyboard_shortcut 30  '⇧⌘4'
+disable_keyboard_shortcut 31 '^⇧⌘4'
+disable_keyboard_shortcut 184 '⇧⌘5'
+configure
+
+killall Shottr
+open -a Shottr
