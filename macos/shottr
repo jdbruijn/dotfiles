@@ -56,6 +56,9 @@ configure() {
   # Actions on Esc.
   defaults write cc.ffitch.shottr copyOnEsc -bool true
   defaults write cc.ffitch.shottr saveOnEsc -bool true
+
+  # Close on ⌘Q, keeping Shottr in the Menu Bar.
+  defaults write cc.ffitch.shottr cmdQAction -string close
 }
 
 disable_keyboard_shortcut 28  '⇧⌘3'
