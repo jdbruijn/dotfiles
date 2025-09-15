@@ -1,0 +1,66 @@
+#!/bin/sh
+#
+# Configure the Dock.
+
+configure() {
+  echo " INFO: configure the Dock"
+
+  # Automatically hide and show the Dock.
+  defaults write com.apple.dock autohide -bool true
+
+  # Remove the autohide delay, the Dock appears instantly.
+  defaults write com.apple.dock autohide-delay -float 0
+
+  # Set the animation time.
+  defaults write com.apple.dock autohide-time-modifier -float 0.25
+
+  # Set the icon tile size.
+  defaults write com.apple.dock tilesize -int 48
+
+  # Don't show recent items.
+  defaults write com.apple.dock show-recents -bool false
+
+  # Position at the bottom of the screen.
+  defaults write com.apple.dock orientation -string bottom
+
+  # Minimise windows using genie effect.
+  defaults write com.apple.dock mineffect -string genie
+
+  # Disable icon magnification.
+  defaults write com.apple.dock magnification -bool false
+
+  # Wipe all, default, app icons.
+  defaults write com.apple.dock persistent-apps -array
+  defaults write com.apple.dock persistent-others -array
+
+  # Minimise windows into its application icon.
+  defaults write com.apple.dock minimize-to-application -bool true
+}
+
+dock_app() {
+  app="${1}"
+  echo " INFO: docking ${app}"
+
+  defaults write com.apple.dock persistent-apps -array-add "
+  <dict>
+    <key>tile-data</key>
+    <dict>
+      <key>file-data</key>
+      <dict>
+        <key>_CFURLString</key>
+        <string>${app}</string>
+        <key>_CFURLStringType</key>
+        <integer>0</integer>
+      </dict>
+    </dict>
+  </dict>"
+}
+
+configure
+dock_app "/Applications/Google Chrome.app"
+dock_app "/Applications/Ghostty.app"
+dock_app "/Applications/Visual Studio Code.app"
+dock_app "/Applications/Notion.app"
+
+# Kill the Dock to load the changes.
+killall Dock
