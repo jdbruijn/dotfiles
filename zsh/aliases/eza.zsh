@@ -1,0 +1,8 @@
+alias ls='eza --icons'
+alias l='eza --icons'
+alias ll='eza --icons --binary --long'
+alias la='eza --icons --binary --long --all'
+alias lt='eza --icons --tree'
+alias llt='eza --icons --binary --long --tree'
+alias lta='eza --icons --binary --tree --all'
+alias llta='eza --icons --binary --long --tree --all'
