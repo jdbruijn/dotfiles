@@ -11,8 +11,5 @@ alias nr='npm run --silent'
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-# Use lsd
-alias ls='lsd'
-
 # Git
 alias glolnc='glol --grep="^chore" --invert-grep'
