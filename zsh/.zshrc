@@ -9,7 +9,6 @@ for file ("${HOME}/.config/dotfiles/zsh/"**/*.zsh); do
 done
 
 eval "$(brew shellenv)"
-eval "$(starship init zsh)"
 
 # Initialise completion.
 autoload -Uz compinit && compinit
