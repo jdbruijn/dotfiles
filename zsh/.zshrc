@@ -8,6 +8,7 @@ for file ("${HOME}/.config/dotfiles/zsh/"**/*.zsh); do
   . "${file}"
 done
 
+eval "$(brew shellenv)"
 eval "$(starship init zsh)"
 
 # Initialise completion.
