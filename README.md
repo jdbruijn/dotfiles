@@ -51,6 +51,8 @@ $ ./install
 
 The [**Zsh**][zsh] configuration can be extended using the [`zsh/custom/`](./zsh/custom/) directory. You can place additional [**Zsh**][zsh] files in [`zsh/custom/`](./zsh/custom/) directory of the cloned repository, which will be synchronised to `$HOME/.config/dotfiles/zsh/custom/`, or directly in the `$HOME/.config/dotfiles/zsh/custom/` directory. Using either directory for the custom [**Zsh**][zsh] configuration, the synchronisation step of the installation will honour your custom configuration and not delete any of the files in this directory.
 
+`path.zsh` files in the custom configuration are sourced at the beginning of the [**Zsh**][zsh] configuration. These files should only be used to export the `PATH`.
+
 ### [**Git**][git] configuration
 
 For the [**Git**][git] user configuration, please create a new `.gitconfig.local` file in your home directory. You can use the [`git/.gitconfig.local`](./git/.gitconfig.local) file as a template and update it's contents.
