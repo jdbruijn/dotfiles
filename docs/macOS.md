@@ -1,7 +1,6 @@
 # macOS <!-- omit in toc -->
 
 - [Keyboard shortcuts](#keyboard-shortcuts)
-  - [Screenshots with **Shottr**](#screenshots-with-shottr)
   - [Removed system keyboard shortcuts](#removed-system-keyboard-shortcuts)
 - [Configuration](#configuration)
 
@@ -9,27 +8,30 @@
 
 The following keyboard shortcuts are configured.
 
-## Screenshots with [**Shottr**][shottr]
-
-The following keyboard shortcuts are configured for [**Shottr**][shottr].
-
-- ⇧⌘1 take an area screenshot.
-- ⇧⌘2 take an area screenshot, repeating the previous area.
-- ⇧⌘3 take a window screenshot, with selection of the window.
-- ⇧⌘4 take a fullscreen screenshot.
+| Key    | App                    | Functionality                                           |
+| ------ | ---------------------- | ------------------------------------------------------- |
+| ⇧⌘1    | [**Shottr**][shottr]   | Take an area screenshot.                                |
+| ⇧⌘2    | [**Shottr**][shottr]   | Take an area screenshot, repeating the previous area.   |
+| ⇧⌘3    | [**Shottr**][shottr]   | Take a window screenshot, with selection of the window. |
+| ⇧⌘4    | [**Shottr**][shottr]   | Take a fullscreen screenshot.                           |
+| ⌘Space | [**Raycast**][raycast] | Show the Raycast launcher.                              |
+| ⇧⌘C    | [**Raycast**][raycast] | Show clipboard history.                                 |
+| ⇧⌘V    | [**Raycast**][raycast] | Past sequentially from clipboard.                       |
 
 ## Removed system keyboard shortcuts
 
 The system shortcuts shown in the following table are removed.
 
-| Key  | Functionality                                  | Reason                           |
-| ---- | ---------------------------------------------- | -------------------------------- |
-| ⇧⌘3  | Save picture of screen as a file               | Replaced by [**Shottr**][shottr] |
-| ⌃⇧⌘3 | Copy picture of screen to the clipboard        |                                  |
-| ⇧⌘4  | Save picture of selected area as a file        | Replaced by [**Shottr**][shottr] |
-| ⌃⇧⌘4 | Copy picture of selected area to the clipboard |                                  |
-| ⇧⌘5  | Screenshot and recording options               | Replaced by [**Shottr**][shottr] |
-| ⌥⌘D  | Turn Dock hiding on/off                        |                                  |
+| Key     | Functionality                                  | Reason                             |
+| ------- | ---------------------------------------------- | ---------------------------------- |
+| ⇧⌘3     | Save picture of screen as a file               | Replaced by [**Shottr**][shottr]   |
+| ⌃⇧⌘3    | Copy picture of screen to the clipboard        |                                    |
+| ⇧⌘4     | Save picture of selected area as a file        | Replaced by [**Shottr**][shottr]   |
+| ⌃⇧⌘4    | Copy picture of selected area to the clipboard |                                    |
+| ⇧⌘5     | Screenshot and recording options               | Replaced by [**Shottr**][shottr]   |
+| ⌘Space  | Show Spotlight search                          | Replaced by [**Raycast**][raycast] |
+| ⌥⌘Space | Show Finder search window                      |                                    |
+| ⌥⌘D     | Turn Dock hiding on/off                        |                                    |
 
 # Configuration
 
@@ -49,4 +51,5 @@ To use the [`macOS-defaults`][macos-defaults] tool to record configuration chang
 4. Go back to the terminal where you started the script and press any key to stop recording. A diff of the configuration changes will be shown. Additionally you can view the complete configuration in `diffs` directory.
 
 [shottr]: https://shottr.cc/
+[raycast]: https://www.raycast.com/
 [macos-defaults]: https://github.com/yannbertrand/macos-defaults

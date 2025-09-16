@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# Configure Raycast, https://www.raycast.com/.
+
+configure() {
+  echo " INFO: configure Raycast"
+
+  . "${DOTFILES}/macos/disable-keyboard-shortcut"
+  disable_keyboard_shortcut 'raycast' 64 '⌘Space'
+  disable_keyboard_shortcut 'raycast' 65 '⌥⌘Space'
+
+  # Configure the hotkey ⌘Space for opening Raycast.
+  defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49"
+}
+
+configure
+killall Raycast && sleep 1 && open -a Raycast
