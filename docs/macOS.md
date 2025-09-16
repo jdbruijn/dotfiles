@@ -32,6 +32,18 @@ The system shortcuts shown in the following table are removed.
 | ⌘Space  | Show Spotlight search                          | Replaced by [**Raycast**][raycast] |
 | ⌥⌘Space | Show Finder search window                      |                                    |
 | ⌥⌘D     | Turn Dock hiding on/off                        |                                    |
+| ⌘M      | Windows, minimize                              |                                    |
+| ⌃🌐F    | Windows, fill                                  |                                    |
+| ⌃🌐C    | Windows, center                                |                                    |
+| ⌃🌐R    | Windows, return to previous size               |                                    |
+| ⌃🌐←    | Windows, tile left half                        |                                    |
+| ⌃🌐→    | Windows, tile right half                       |                                    |
+| ⌃🌐↑    | Windows, tile top half                         |                                    |
+| ⌃🌐↓    | Windows, tile bottom half                      |                                    |
+| ⌃⇧🌐←   | Windows, arrange left and right                |                                    |
+| ⌃⇧🌐→   | Windows, arrange right and left                |                                    |
+| ⌃⇧🌐↑   | Windows, arrange top and bottom                |                                    |
+| ⌃⇧🌐↓   | Windows, arrange bottom and top                |                                    |
 
 # Configuration
 

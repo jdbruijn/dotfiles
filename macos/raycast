@@ -9,6 +9,19 @@ configure() {
   disable_keyboard_shortcut 'raycast' 64 '⌘Space'
   disable_keyboard_shortcut 'raycast' 65 '⌥⌘Space'
 
+  disable_keyboard_shortcut 'raycast' 233 '⌘M'
+  disable_keyboard_shortcut 'raycast' 237 '⌃🌐F'
+  disable_keyboard_shortcut 'raycast' 238 '⌃🌐C'
+  disable_keyboard_shortcut 'raycast' 239 '⌃🌐R'
+  disable_keyboard_shortcut 'raycast' 240 '⌃🌐←'
+  disable_keyboard_shortcut 'raycast' 241 '⌃🌐→'
+  disable_keyboard_shortcut 'raycast' 242 '⌃🌐↑'
+  disable_keyboard_shortcut 'raycast' 243 '⌃🌐↓'
+  disable_keyboard_shortcut 'raycast' 248 '⇧⌃🌐←'
+  disable_keyboard_shortcut 'raycast' 249 '⇧⌃🌐→'
+  disable_keyboard_shortcut 'raycast' 250 '⇧⌃🌐↑'
+  disable_keyboard_shortcut 'raycast' 251 '⇧⌃🌐↓'
+
   # Configure the hotkey ⌘Space for opening Raycast.
   defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49"
 }

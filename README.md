@@ -2,8 +2,9 @@
 
 dotfiles, software and configurations for Linux and macOS.
 
-- Install applications, using [**Homebrew**](https://brew.sh/).
+- Install applications using [**Homebrew**](https://brew.sh/).
 - Setup terminal environment with [**Starship**](https://starship.rs/).
+- Manage tool versions using [**mise**](https://mise.jdx.dev/).
 - Configure macOS default settings.
 
 ---
