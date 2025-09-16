@@ -41,8 +41,5 @@ configure() {
   defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 }
 
-
 configure
-
-# Kill the Dock to load the changes.
 killall Finder

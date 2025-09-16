@@ -9,15 +9,15 @@ is_macos() {
 }
 
 link_files() {
-  source="${DOTFILES}/${1}"
-  dest="${2}"
+  local source="${DOTFILES}/${1}"
+  local dest="${2}"
 
   if [ -e "${dest}" ] && [ ! -h "${dest}" ]; then
     echo " WARN: symlink failed, \"${dest}\" exists and is not a symlink"
   elif [ -h "${dest}" ] && [ "$(readlink "${dest}")" != "${source}" ]; then
     echo " WARN: symlink failed, \"${dest}\" is linked to another path"
   elif [ ! -e "${dest}" ]; then
-    echo " INFO: symlink \"${source}\" to \"${dest}\""
+    echo "    [sync] symlink \"${source}\" to \"${dest}\""
     ln -s "${source}" "${dest}"
   fi
 }

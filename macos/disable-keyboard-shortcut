@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# Disable a keyboard shortcut by its symbolic hotkey ID.
+
+disable_keyboard_shortcut() {
+  local group="${1}"
+  local key="${2}"
+  local name="${3}"
+  echo "    [${group}] disable keyboard shortcut ${name} (symbolic hotkey ID ${key})"
+
+  defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys \
+    -dict-add "${key}" "<dict><key>enabled</key><false/></dict>"
+}

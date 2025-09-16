@@ -2,6 +2,25 @@
 #
 # Configure the Dock.
 
+dock_app() {
+  local app="${1}"
+  echo "    [dock] docking ${app}"
+
+  defaults write com.apple.dock persistent-apps -array-add "
+  <dict>
+    <key>tile-data</key>
+    <dict>
+      <key>file-data</key>
+      <dict>
+        <key>_CFURLString</key>
+        <string>${app}</string>
+        <key>_CFURLStringType</key>
+        <integer>0</integer>
+      </dict>
+    </dict>
+  </dict>"
+}
+
 configure() {
   echo " INFO: configure the Dock"
 
@@ -35,32 +54,13 @@ configure() {
 
   # Minimise windows into its application icon.
   defaults write com.apple.dock minimize-to-application -bool true
-}
 
-dock_app() {
-  app="${1}"
-  echo " INFO: docking ${app}"
-
-  defaults write com.apple.dock persistent-apps -array-add "
-  <dict>
-    <key>tile-data</key>
-    <dict>
-      <key>file-data</key>
-      <dict>
-        <key>_CFURLString</key>
-        <string>${app}</string>
-        <key>_CFURLStringType</key>
-        <integer>0</integer>
-      </dict>
-    </dict>
-  </dict>"
+  # Dock apps.
+  dock_app "/Applications/Google Chrome.app"
+  dock_app "/Applications/Ghostty.app"
+  dock_app "/Applications/Visual Studio Code.app"
+  dock_app "/Applications/Notion.app"
 }
 
 configure
-dock_app "/Applications/Google Chrome.app"
-dock_app "/Applications/Ghostty.app"
-dock_app "/Applications/Visual Studio Code.app"
-dock_app "/Applications/Notion.app"
-
-# Kill the Dock to load the changes.
 killall Dock
