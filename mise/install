@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# Install mise.
+
+install_mise() {
+  echo " INFO: installing mise"
+  . ./homebrew/path
+  mise install | sed -u 's/^/    [mise] /'
+}
+
+install_mise

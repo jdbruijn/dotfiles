@@ -1,8 +1,3 @@
-# Node.js version manager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 # Load the dotfiles' path.zsh files.
 for file ("${HOME}/.config/dotfiles/zsh/"**/path.zsh); do
   . "${file}"
@@ -21,8 +16,9 @@ for file ("${HOME}/.config/dotfiles/zsh/"**/*.zsh); do
   fi
 done
 
-# Load plugins
+# Load plugins.
 . "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 . "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh --cmd cd)"
