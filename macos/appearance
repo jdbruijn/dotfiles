@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# Configure appearance.
+
+configure() {
+  echo " INFO: configure appearance"
+
+  # Automatically switch between Light and Dark mode.
+  defaults write -globalDomain AppleInterfaceStyleSwitchesAutomatically -bool true
+}
+
+configure
