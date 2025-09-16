@@ -60,9 +60,9 @@ configure() {
 
   # Dock apps.
   dock_app "/Applications/Google Chrome.app"
-  dock_app "${HOME}/Applications/Ghostty.app"
+  dock_app "/Applications/Ghostty.app"
   dock_app "/Applications/Visual Studio Code.app"
-  dock_app "${HOME}/Applications/Notion.app"
+  dock_app "/Applications/Notion.app"
 
   # Hide Widgets from the Desktop.
   defaults write com.apple.WindowManager StandardHideWidgets -bool true
