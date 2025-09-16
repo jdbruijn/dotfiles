@@ -63,9 +63,11 @@ sync_dotfiles() {
 
   if is_macos; then
     link_files "vscode/settings.json" "${HOME}/Library/Application Support/Code/User/settings.json"
+    link_files "vscode/keybindings.json" "${HOME}/Library/Application Support/Code/User/keybindings.json"
   else
     mkdir -p "${HOME}/.config/Code/User"
     link_files "vscode/settings.json" "${HOME}/.config/Code/User/settings.json"
+    link_files "vscode/keybindings.json" "${HOME}/.config/Code/User/keybindings.json"
   fi
 }
 
