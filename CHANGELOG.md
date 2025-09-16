@@ -1,3 +1,24 @@
+## [1.11.0](https://github.com/jdbruijn/dotfiles/compare/v1.10.0...v1.11.0) (2025-09-16)
+
+### Features
+
+- add Raycast configuration ([9731732](https://github.com/jdbruijn/dotfiles/commit/9731732df478d5a713c0733ad03d6ab3fef3a4ad))
+- **desktop-dock:** hide Widgets from Desktop ([87de7c7](https://github.com/jdbruijn/dotfiles/commit/87de7c7d16833a7026ecb661254526132b5e0233))
+- **macos:** configure appearance ([8d55108](https://github.com/jdbruijn/dotfiles/commit/8d551084a2d2b34fb79cdce50d1d63e161bafee8))
+- **raycast:** disable macOS Windows management shortcuts ([97276b5](https://github.com/jdbruijn/dotfiles/commit/97276b5cc4f43fc88a4beccad9b586a00baa9469))
+
+### Bug Fixes
+
+- **install:** add warning to suggest a macOS restart to apply the changes ([0026767](https://github.com/jdbruijn/dotfiles/commit/0026767a2ded9d6b1d9d02da456a2c1daaa3c900))
+- **macos:** disable Dock hiding shortcut ([82c0c0b](https://github.com/jdbruijn/dotfiles/commit/82c0c0b19c118318909c132d37673aab970812fd))
+- **macos:** revert `$HOME` in Dock Apps ([49b5975](https://github.com/jdbruijn/dotfiles/commit/49b5975cd888fc24f5a1644119197c68773b5de0))
+- **vscode:** add `keybindings.json` to configure custom key bindings ([e0dec6c](https://github.com/jdbruijn/dotfiles/commit/e0dec6c14dfcea77ddcdaa47439593d129a71b67))
+
+### Code Refactoring
+
+- **macos:** extract `disable_keyboard_shortcut` to a separate file ([9a28f72](https://github.com/jdbruijn/dotfiles/commit/9a28f72bbb16107b8589d2d14d6fd986918096a7))
+- **macos:** move `dock` to `desktop-dock` ([fcc182b](https://github.com/jdbruijn/dotfiles/commit/fcc182b06a6eef713e3a3d94a820b11d5f49c524))
+
 ## [1.10.0](https://github.com/jdbruijn/dotfiles/compare/v1.9.0...v1.10.0) (2025-09-16)
 
 ### Features
