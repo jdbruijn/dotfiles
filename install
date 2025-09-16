@@ -78,6 +78,8 @@ if is_macos; then
   for file in "${DOTFILES}/macos/"*; do
     . "${file}"
   done
+
+  echo " WARN: a restart of macOS may be required to apply all changes"
 fi
 
 exit 0
