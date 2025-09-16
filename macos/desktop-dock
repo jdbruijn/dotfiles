@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Configure the Dock.
+# Configure the Desktop & Dock.
 
 dock_app() {
   local app="${1}"
@@ -22,7 +22,7 @@ dock_app() {
 }
 
 configure() {
-  echo " INFO: configure the Dock"
+  echo " INFO: configure the Desktop & Dock"
 
   # Automatically hide and show the Dock.
   defaults write com.apple.dock autohide -bool true
@@ -57,9 +57,9 @@ configure() {
 
   # Dock apps.
   dock_app "/Applications/Google Chrome.app"
-  dock_app "/Applications/Ghostty.app"
+  dock_app "${HOME}/Applications/Ghostty.app"
   dock_app "/Applications/Visual Studio Code.app"
-  dock_app "/Applications/Notion.app"
+  dock_app "${HOME}/Applications/Notion.app"
 }
 
 configure
