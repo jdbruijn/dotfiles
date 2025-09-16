@@ -1,3 +1,24 @@
+## [1.10.0](https://github.com/jdbruijn/dotfiles/compare/v1.9.0...v1.10.0) (2025-09-16)
+
+### Features
+
+- **brew:** add `dotenvx` ([89f5fea](https://github.com/jdbruijn/dotfiles/commit/89f5fead21968929dfd63a2971fdd414dac0a3f7))
+- configure macOS settings ([da2213d](https://github.com/jdbruijn/dotfiles/commit/da2213d00bd5f39d6ce4dff77242827b6a5d3a45))
+- **macos:** configure the Dock ([d301088](https://github.com/jdbruijn/dotfiles/commit/d301088b0e6b34dda552000ba12bfc2c19d545ae))
+- use `mise` to manage Node.js Rust and Golang versions ([1170437](https://github.com/jdbruijn/dotfiles/commit/1170437922af46941e02498974e53759e074d92d))
+- **zsh:** replace `lsd` with `eza` and configure aliases ([0f6d10b](https://github.com/jdbruijn/dotfiles/commit/0f6d10bad29896c0880161d6e2734c45ee2ec02d))
+
+### Bug Fixes
+
+- **ghostty:** disable auto-update, which causes an annoying popup ([0f32eb1](https://github.com/jdbruijn/dotfiles/commit/0f32eb17f0797327833358bd50c2efbe6fe304ef))
+- **install:** call scripts from the user dotfile directory ([4ff410a](https://github.com/jdbruijn/dotfiles/commit/4ff410a49d87a46465fe75ba24c65d8506972db2))
+- **shottr:** don't close on ⌘Q, keep Shottr in the Menu Bar ([6f640d2](https://github.com/jdbruijn/dotfiles/commit/6f640d22b8e85304edf01a8d52c917f70cbc2dd3))
+- **shottr:** only save on Esc, preventing double files ([76a84d0](https://github.com/jdbruijn/dotfiles/commit/76a84d095e6a86e28e9a89f42a5e5a28c46a7599))
+- **zsh:** load `path.zsh` files at the start of the Zsh configuration ([613fb6c](https://github.com/jdbruijn/dotfiles/commit/613fb6c76e225b9127469d95da9cf6f0ba681880))
+- **zsh:** load brew shell environment, i.a. for completions ([1ed4b5c](https://github.com/jdbruijn/dotfiles/commit/1ed4b5ce40ea74e65a1eef31dcc26ddbd9e93a67))
+- **zsh:** remove aliases to `lsd` ([ce8c298](https://github.com/jdbruijn/dotfiles/commit/ce8c298906f8850b75c37cc8cd1ef758d3d3e89d))
+- **zsh:** remove duplicate starship init ([bb5f188](https://github.com/jdbruijn/dotfiles/commit/bb5f188e5ed00a414cb55940444760c054bc20d0))
+
 ## [1.9.0](https://github.com/jdbruijn/dotfiles/compare/v1.8.0...v1.9.0) (2025-09-14)
 
 ### Features
