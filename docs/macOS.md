@@ -13,22 +13,23 @@ The following keyboard shortcuts are configured.
 
 The following keyboard shortcuts are configured for [**Shottr**][shottr].
 
-- ⇧⌘4 take a fullscreen screenshot.
 - ⇧⌘1 take an area screenshot.
 - ⇧⌘2 take an area screenshot, repeating the previous area.
 - ⇧⌘3 take a window screenshot, with selection of the window.
+- ⇧⌘4 take a fullscreen screenshot.
 
 ## Removed system keyboard shortcuts
 
 The system shortcuts shown in the following table are removed.
 
-| Key  | Functionality                                  | Reason                     |
-| ---- | ---------------------------------------------- | -------------------------- |
-| ⇧⌘3  | Save picture of screen as a file               | Using [**Shottr**][shottr] |
-| ⌃⇧⌘3 | Copy picture of screen to the clipboard        | Using [**Shottr**][shottr] |
-| ⇧⌘4  | Save picture of selected area as a file        | Using [**Shottr**][shottr] |
-| ⌃⇧⌘4 | Copy picture of selected area to the clipboard | Using [**Shottr**][shottr] |
-| ⇧⌘5  | Screenshot and recording options               | Using [**Shottr**][shottr] |
+| Key  | Functionality                                  | Reason                           |
+| ---- | ---------------------------------------------- | -------------------------------- |
+| ⇧⌘3  | Save picture of screen as a file               | Replaced by [**Shottr**][shottr] |
+| ⌃⇧⌘3 | Copy picture of screen to the clipboard        |                                  |
+| ⇧⌘4  | Save picture of selected area as a file        | Replaced by [**Shottr**][shottr] |
+| ⌃⇧⌘4 | Copy picture of selected area to the clipboard |                                  |
+| ⇧⌘5  | Screenshot and recording options               | Replaced by [**Shottr**][shottr] |
+| ⌥⌘D  | Turn Dock hiding on/off                        |                                  |
 
 # Configuration
 

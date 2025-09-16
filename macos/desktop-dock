@@ -24,6 +24,9 @@ dock_app() {
 configure() {
   echo " INFO: configure the Desktop & Dock"
 
+  . "${DOTFILES}/macos/disable-keyboard-shortcut"
+  disable_keyboard_shortcut 'desktop-dock' 53 '⌥⌘D'
+
   # Automatically hide and show the Dock.
   defaults write com.apple.dock autohide -bool true
 
