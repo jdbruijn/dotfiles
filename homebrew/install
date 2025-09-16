@@ -13,7 +13,7 @@ install_homebrew() {
 
 install_software() {
   echo " INFO: installing software with Homebrew Bundle"
-  . ./homebrew/path
+  . "${DOTFILES}/homebrew/path"
   brew bundle \
     --file="homebrew/Brewfile" \
     --quiet \

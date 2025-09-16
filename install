@@ -70,12 +70,12 @@ sync_dotfiles() {
 }
 
 sync_dotfiles
-./homebrew/install
-./mise/install
+. "${DOTFILES}/homebrew/install"
+. "${DOTFILES}/mise/install"
 
 if is_macos; then
   echo " INFO: configuring macOS"
-  for file in ./macos/*; do
+  for file in "${DOTFILES}/macos/"*; do
     . "${file}"
   done
 fi

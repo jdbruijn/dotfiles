@@ -4,8 +4,8 @@
 
 install_mise() {
   echo " INFO: installing mise"
-  . ./homebrew/path
-  mise install | sed -u 's/^/    [mise] /'
+  . "${DOTFILES}/homebrew/path"
+  mise --cd "${HOME}" --quiet install | sed -u 's/^/    [mise] /'
 }
 
 install_mise
