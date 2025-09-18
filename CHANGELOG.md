@@ -1,3 +1,9 @@
+## [1.12.0](https://github.com/jdbruijn/dotfiles/compare/v1.11.0...v1.12.0) (2025-09-18)
+
+### Features
+
+- **macos:** add keyboard configuration ([ce2b338](https://github.com/jdbruijn/dotfiles/commit/ce2b3389e927f0f773bbb0c448cfeb693ccdad96))
+
 ## [1.11.0](https://github.com/jdbruijn/dotfiles/compare/v1.10.0...v1.11.0) (2025-09-16)
 
 ### Features
