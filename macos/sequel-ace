@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# Configure Sequel Ace, https://sequel-ace.com/.
+
+configure() {
+  echo " INFO: configure Sequel Ace"
+
+  # Disable prompt for confirmation before quitting.
+  defaults write com.sequel-ace.sequel-ace ApplicationPromptOnQuit -bool false
+}
+
+configure
+killall -q "Sequel Ace"
