@@ -2,7 +2,7 @@
 
 - [Keyboard shortcuts](#keyboard-shortcuts)
   - [Removed system keyboard shortcuts](#removed-system-keyboard-shortcuts)
-- [Configuration](#configuration)
+- [Configurations](#configurations)
 
 # Keyboard shortcuts
 
@@ -45,7 +45,10 @@ The system shortcuts shown in the following table are removed.
 | ⌃⇧🌐↑   | Windows, arrange top and bottom                |                                    |
 | ⌃⇧🌐↓   | Windows, arrange bottom and top                |                                    |
 
-# Configuration
+# Configurations
+
+> [!NOTE]
+> This section is only relevant for maintainers of this repository or if you want to add your own custom `defaults` configurations.
 
 A lot of the macOS configurations that you can do using a script, are not publicly documented. Some configurations, for example the [Dock](https://developer.apple.com/documentation/devicemanagement/dock), are also documented in the Apple's [Device Management documentation](https://developer.apple.com/documentation/devicemanagement). The best resource however, is the [`macOS-defaults`][macos-defaults] project by [Yann Bertrand](https://github.com/yannbertrand). It contains a list of documented configurations and a great tool to find other configurations.
 
