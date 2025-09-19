@@ -8,6 +8,16 @@ is_macos() {
   [ "$(uname -s)" = "Darwin" ];
 }
 
+assert_zsh_shell() {
+  if [ "$(basename "${SHELL}")" != "zsh" ]; then
+    echo "ERROR: these dotfiles require the Zsh shell and your shell is ${SHELL}."
+    echo '       Please change your shell to Zsh, and make sure SHELL is set.'
+    echo '       To change the shell use e.g. with "chsh -s /bin/zsh".'
+    echo '       After changing the shell to Zsh, re-run this script.'
+    exit 1
+  fi
+}
+
 link_files() {
   local source="${DOTFILES}/${1}"
   local dest="${2}"
@@ -71,6 +81,7 @@ sync_dotfiles() {
   fi
 }
 
+assert_zsh_shell
 sync_dotfiles
 . "${DOTFILES}/homebrew/install"
 . "${DOTFILES}/mise/install"

@@ -13,6 +13,7 @@ dotfiles, software and configurations for Linux and macOS.
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079?style=flat-square)](https://github.com/semantic-release/semantic-release)
 [![License](https://img.shields.io/github/license/jdbruijn/dotfiles?style=flat-square)](LICENSE.md)
 
+- [Prerequisites](#prerequisites)
 - [Install](#install)
 - [Usage](#usage)
   - [Custom **Zsh** configurations](#custom-zsh-configurations)
@@ -20,6 +21,17 @@ dotfiles, software and configurations for Linux and macOS.
 - [Contributing](#contributing)
 - [Security policy](#security-policy)
 - [License](#license)
+
+## Prerequisites
+
+The following list of prerequisites have to be met before you can install install these dotfiles.
+
+1. The shell is Zsh.  
+   The output of `echo $SHELL` should end with `zsh`, e.g. `/bin/zsh`. If this isn't the case, you can change the shell with e.g. `chsh -s /bin/zsh` and reopen the terminal to use the new shell.
+2. The following software is installed and available in the `PATH`.
+   - [**Git**][git], the `git` command in the terminal.
+   - [**Rsync**](https://rsync.samba.org/), the `rsync` command in the terminal.
+   - [**curl**](https://curl.se/), the `curl` command in the terminal.
 
 ## Install
 
@@ -38,6 +50,7 @@ Some manual steps might still be required, depending on your desired setup and c
 
 - [GPG](./docs/GPG.md)
 - [SSH](./docs/SSH.md)
+- [macOS](./docs/macOS.md)
 
 ## Usage
 
