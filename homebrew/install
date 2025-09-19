@@ -20,5 +20,19 @@ install_software() {
     | sed -u 's/^/    [homebrew] /'
 }
 
+configure_autoupdate() {
+  . "${DOTFILES}/macos/is-macos"
+  if is_macos; then
+    echo " INFO: configuring Homebrew autoupdate"
+    . "${DOTFILES}/homebrew/path"
+    brew tap domt4/autoupdate
+
+    mkdir -p "${HOME}/Library/LaunchAgents"
+    brew autoupdate delete
+    brew autoupdate start 604800 --cleanup --upgrade # every 7 days (168 hours).
+  fi
+}
+
 install_homebrew
 install_software
+configure_autoupdate
