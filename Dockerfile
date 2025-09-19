@@ -19,6 +19,7 @@ RUN apt update && \
 RUN echo "ubuntu ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 USER ubuntu
 WORKDIR /home/ubuntu
+ENV SHELL=/bin/zsh
 SHELL ["/bin/zsh", "-c"]
 
 COPY / ./dotfiles
