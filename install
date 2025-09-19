@@ -79,7 +79,7 @@ sync_dotfiles() {
 
 assert_zsh_shell
 
-./macos/is-macos
+. ./macos/is-macos
 sync_dotfiles
 . "${DOTFILES}/homebrew/install"
 . "${DOTFILES}/mise/install"
