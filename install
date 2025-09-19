@@ -4,10 +4,6 @@
 
 DOTFILES="${HOME}/.config/dotfiles"
 
-is_macos() {
-  [ "$(uname -s)" = "Darwin" ];
-}
-
 assert_zsh_shell() {
   if [ "$(basename "${SHELL}")" != "zsh" ]; then
     echo "ERROR: these dotfiles require the Zsh shell and your shell is ${SHELL}."
@@ -82,6 +78,8 @@ sync_dotfiles() {
 }
 
 assert_zsh_shell
+
+./macos/is-macos
 sync_dotfiles
 . "${DOTFILES}/homebrew/install"
 . "${DOTFILES}/mise/install"

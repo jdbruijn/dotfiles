@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# Check if the OS is macOS.
+
+is_macos() {
+  [ "$(uname -s)" = "Darwin" ];
+}
