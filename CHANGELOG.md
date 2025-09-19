@@ -1,3 +1,25 @@
+## [1.13.0](https://github.com/jdbruijn/dotfiles/compare/v1.12.0...v1.13.0) (2025-09-19)
+
+### Features
+
+- **brew:** configure Homebrew autoupdate ([8a56e11](https://github.com/jdbruijn/dotfiles/commit/8a56e11e695e5b2f3366973a4881059bcc171dc3))
+- **macos:** add Sequel Ace configuration ([96f5df0](https://github.com/jdbruijn/dotfiles/commit/96f5df0a5b8a746511555cde552df913372d491d))
+
+### Bug Fixes
+
+- **docker:** set `SHELL` environment variable to `/bin/zsh` ([04cda9f](https://github.com/jdbruijn/dotfiles/commit/04cda9fcf3d71ed71d980bb320af81b763008b4e))
+- **install:** source `macos/is-macos` in the current session ([e1ddd6c](https://github.com/jdbruijn/dotfiles/commit/e1ddd6c8d17b456401c6194447a661abfb68ec40))
+- **install:** validate the shell is Zsh ([6963e6e](https://github.com/jdbruijn/dotfiles/commit/6963e6efb28c22b8550e1e3e6afce741eddf4d9f))
+
+### Documentation
+
+- **macos:** add note about configurations for maintainers or custom defaults ([1cc4e41](https://github.com/jdbruijn/dotfiles/commit/1cc4e41de665300c306bd6759bc98954ac100ca4))
+- **ssh:** pog public key instead of the private ([acee002](https://github.com/jdbruijn/dotfiles/commit/acee0027242dfebcb86d2a6a38c95b224b314a2d))
+
+### Code Refactoring
+
+- **macos:** move macOS check to its own file ([b4f3cea](https://github.com/jdbruijn/dotfiles/commit/b4f3ceace7f90aa0a770ae27321ef62301433bf0))
+
 ## [1.12.0](https://github.com/jdbruijn/dotfiles/compare/v1.11.0...v1.12.0) (2025-09-18)
 
 ### Features
