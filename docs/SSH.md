@@ -18,7 +18,7 @@ ssh-keygen -t ed25519 -C amoore@example.com -f ~/.ssh/id_ed25519
 Export the public key using the following command. This public key can be shared, and will be used by other services like [**GitHub**][github] and remote servers to verify your connection.
 
 ```shell
-cat ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
 ```
 
 <details><summary>Public key example</summary>
