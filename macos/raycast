@@ -27,4 +27,5 @@ configure() {
 }
 
 configure
-killall Raycast && sleep 1 && open -a Raycast
+killall -q Raycast
+sleep 1 && open -a Raycast

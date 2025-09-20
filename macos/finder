@@ -42,4 +42,4 @@ configure() {
 }
 
 configure
-killall Finder
+killall -q Finder

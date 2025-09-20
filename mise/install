@@ -3,7 +3,7 @@
 # Install mise.
 
 install_mise() {
-  echo " INFO: installing mise"
+  echo " INFO: installing mise tools and runtimes"
   . "${DOTFILES}/homebrew/path"
   mise --cd "${HOME}" --quiet install | sed -u 's/^/    [mise] /'
 }

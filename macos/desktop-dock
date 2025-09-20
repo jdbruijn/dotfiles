@@ -69,4 +69,4 @@ configure() {
 }
 
 configure
-killall Dock
+killall -q Dock

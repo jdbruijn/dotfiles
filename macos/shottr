@@ -60,4 +60,5 @@ configure() {
 }
 
 configure
-killall Shottr && sleep 1 && open -a Shottr
+killall -q Shottr
+sleep 1 && open -a Shottr
