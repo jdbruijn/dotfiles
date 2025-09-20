@@ -13,11 +13,14 @@ install_homebrew() {
 
 install_software() {
   echo " INFO: installing software with Homebrew Bundle"
+  local brewfile="${DOTFILES}/homebrew/Brewfile"
+  if [ -n "${DOTFILES_BREWFILE}" ]; then
+    brewfile="${DOTFILES_BREWFILE}"
+    echo "    [homebrew] using custom Brewfile ${brewfile}"
+  fi
+
   . "${DOTFILES}/homebrew/path"
-  brew bundle \
-    --file="homebrew/Brewfile" \
-    --quiet \
-    | sed -u 's/^/    [homebrew] /'
+  brew bundle --file="${brewfile}" --quiet | sed -u 's/^/    [homebrew] /'
 }
 
 configure_autoupdate() {
@@ -28,9 +31,8 @@ configure_autoupdate() {
     brew tap domt4/autoupdate
 
     mkdir -p "${HOME}/Library/LaunchAgents"
-    brew autoupdate delete
+    brew autoupdate delete | sed -u 's/^/    [homebrew] /'
     brew autoupdate start 604800 --cleanup --upgrade # every 7 days (168 hours).
-  fi
 }
 
 install_homebrew
