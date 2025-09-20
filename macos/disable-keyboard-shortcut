@@ -9,5 +9,5 @@ disable_keyboard_shortcut() {
   echo "    [${group}] disable keyboard shortcut ${name} (symbolic hotkey ID ${key})"
 
   defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys \
-    -dict-add "${key}" "<dict><key>enabled</key><false/></dict>"
+    -dict-add "${key}" '<dict><key>enabled</key><false/></dict>'
 }

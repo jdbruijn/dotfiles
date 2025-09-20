@@ -14,7 +14,7 @@ autoload -Uz compinit && compinit
 
 # Load the dotfiles' Zsh files, except the already sourced path.zsh files.
 for file ("${DOTFILES}/zsh/"**/*.zsh "${DOTFILES}/custom/zsh/"**/*.zsh); do
-  if [[ ! "{$file}" =~ "/path.zsh" ]]; then
+  if [[ ! "{$file}" =~ '/path.zsh' ]]; then
     . "${file}"
   fi
 done

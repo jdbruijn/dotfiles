@@ -3,7 +3,7 @@
 # Configure the Finder.
 
 configure() {
-  echo " INFO: configure the Finder"
+  echo ' INFO: configure the Finder'
 
   # Use list view.
   defaults write com.apple.finder FXPreferredViewStyle -string Nlsv

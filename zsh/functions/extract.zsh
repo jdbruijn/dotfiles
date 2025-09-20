@@ -3,6 +3,7 @@
 # Extract archived files.
 #
 # Usage: extract <file>
+
 extract() {
   if [ ! -e "$1" ]; then
     echo "FATAL: file does not exist (file: \"${1}\")"

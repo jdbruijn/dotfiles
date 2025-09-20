@@ -6,7 +6,7 @@ dock_app() {
   local app="${1}"
   echo "    [dock] docking ${app}"
 
-  defaults write com.apple.dock persistent-apps -array-add "
+  defaults write com.apple.dock persistent-apps -array-add '
   <dict>
     <key>tile-data</key>
     <dict>
@@ -18,11 +18,11 @@ dock_app() {
         <integer>0</integer>
       </dict>
     </dict>
-  </dict>"
+  </dict>'
 }
 
 configure() {
-  echo " INFO: configure the Desktop & Dock"
+  echo ' INFO: configure the Desktop & Dock'
 
   . "${DOTFILES}/macos/disable-keyboard-shortcut"
   disable_keyboard_shortcut 'desktop-dock' 53 '⌥⌘D'
@@ -59,10 +59,10 @@ configure() {
   defaults write com.apple.dock minimize-to-application -bool true
 
   # Dock apps.
-  dock_app "/Applications/Google Chrome.app"
-  dock_app "/Applications/Ghostty.app"
-  dock_app "/Applications/Visual Studio Code.app"
-  dock_app "/Applications/Notion.app"
+  dock_app '/Applications/Google Chrome.app'
+  dock_app '/Applications/Ghostty.app'
+  dock_app '/Applications/Visual Studio Code.app'
+  dock_app '/Applications/Notion.app'
 
   # Hide Widgets from the Desktop.
   defaults write com.apple.WindowManager StandardHideWidgets -bool true

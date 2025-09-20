@@ -3,7 +3,7 @@
 # Configure Shottr, https://shottr.cc/.
 
 configure() {
-  echo " INFO: configure Shottr"
+  echo ' INFO: configure Shottr'
 
   . "${DOTFILES}/macos/disable-keyboard-shortcut"
   disable_keyboard_shortcut 'shottr' 28  '⇧⌘3'

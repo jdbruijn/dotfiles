@@ -3,5 +3,5 @@
 # Check if the OS is macOS.
 
 is_macos() {
-  [ "$(uname -s)" = "Darwin" ];
+  [ "$(uname -s)" = 'Darwin' ];
 }

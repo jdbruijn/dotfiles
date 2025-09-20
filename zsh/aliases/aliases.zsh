@@ -2,8 +2,8 @@
 alias cat='bat --paging=never'
 
 # Project folder navigation
-alias p="cd ~/projects"
-alias wp="cd ~/work/projects"
+alias p='cd ~/projects'
+alias wp='cd ~/work/projects'
 
 # Short version to run npm scripts.
 alias nr='npm run --silent'

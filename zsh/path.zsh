@@ -1,4 +1,4 @@
-if [ "$(uname -s)" = "Darwin" ]; then
+if [ "$(uname -s)" = 'Darwin' ]; then
   export PATH="/opt/homebrew/bin:${PATH}"
 else
   export PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
