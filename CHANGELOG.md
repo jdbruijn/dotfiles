@@ -1,3 +1,17 @@
+## [1.14.0](https://github.com/jdbruijn/dotfiles/compare/v1.13.0...v1.14.0) (2025-09-20)
+
+### Features
+
+- **brew:** add option for custom Homebrew configurations ([f4eccbb](https://github.com/jdbruijn/dotfiles/commit/f4eccbb2300135931beb55de3bfbcc5c969e4d91))
+- **install:** add option for custom installation files ([a75fe45](https://github.com/jdbruijn/dotfiles/commit/a75fe450ce08a0d5d7b9bdb2cc4c9f8348963515))
+- **zsh:** move `zsh/custom` directory to `custom/zsh`, allowing for more customisations ([8510e3f](https://github.com/jdbruijn/dotfiles/commit/8510e3fa7e0010ee1c41e78aa266351dd2cdf159))
+
+### Bug Fixes
+
+- **brew:** remove `maccy`, replaced by the Raycast clipboard manager ([f5e44de](https://github.com/jdbruijn/dotfiles/commit/f5e44de97b0e1314b583eebaebc8984f5516d51e))
+- **macos:** kill apps separately ([9759dfe](https://github.com/jdbruijn/dotfiles/commit/9759dfe8569ca3de73525b2bbfb8451d1bd95458))
+- **zsh:** add `bat` aliases ([308bb25](https://github.com/jdbruijn/dotfiles/commit/308bb2590851346077c8b6a09831b8b0d392982e))
+
 ## [1.13.0](https://github.com/jdbruijn/dotfiles/compare/v1.12.0...v1.13.0) (2025-09-19)
 
 ### Features
