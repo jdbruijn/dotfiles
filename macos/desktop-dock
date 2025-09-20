@@ -2,25 +2,6 @@
 #
 # Configure the Desktop & Dock.
 
-dock_app() {
-  local app="${1}"
-  echo "    [dock] docking ${app}"
-
-  defaults write com.apple.dock persistent-apps -array-add '
-  <dict>
-    <key>tile-data</key>
-    <dict>
-      <key>file-data</key>
-      <dict>
-        <key>_CFURLString</key>
-        <string>${app}</string>
-        <key>_CFURLStringType</key>
-        <integer>0</integer>
-      </dict>
-    </dict>
-  </dict>'
-}
-
 configure() {
   echo ' INFO: configure the Desktop & Dock'
 
@@ -59,6 +40,7 @@ configure() {
   defaults write com.apple.dock minimize-to-application -bool true
 
   # Dock apps.
+  . "${DOTFILES}/macos/dock-app"
   dock_app '/Applications/Google Chrome.app'
   dock_app '/Applications/Ghostty.app'
   dock_app '/Applications/Visual Studio Code.app'
@@ -70,3 +52,4 @@ configure() {
 
 configure
 killall -q Dock
+sleep 1

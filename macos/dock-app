@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# Add an App to the Dock.
+
+dock_app() {
+  local app="${1}"
+  echo "    [dock] docking ${app}"
+
+  defaults write com.apple.dock persistent-apps -array-add "
+  <dict>
+    <key>tile-data</key>
+    <dict>
+      <key>file-data</key>
+      <dict>
+        <key>_CFURLString</key>
+        <string>${app}</string>
+        <key>_CFURLStringType</key>
+        <integer>0</integer>
+      </dict>
+    </dict>
+  </dict>"
+}

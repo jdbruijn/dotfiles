@@ -33,6 +33,7 @@ configure_autoupdate() {
     mkdir -p "${HOME}/Library/LaunchAgents"
     brew autoupdate delete | sed -u 's/^/    [homebrew] /'
     brew autoupdate start 604800 --cleanup --upgrade # every 7 days (168 hours).
+  fi
 }
 
 install_homebrew

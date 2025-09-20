@@ -11,3 +11,4 @@ configure() {
 
 configure
 killall -q 'Sequel Ace'
+sleep 1

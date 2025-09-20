@@ -43,3 +43,4 @@ configure() {
 
 configure
 killall -q Finder
+sleep 1

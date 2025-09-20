@@ -61,4 +61,4 @@ configure() {
 
 configure
 killall -q Shottr
-sleep 1 && open -a Shottr
+sleep 1 && open -a Shottr && sleep 1

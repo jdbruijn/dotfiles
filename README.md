@@ -16,6 +16,7 @@ dotfiles, software and configurations for Linux and macOS.
 - [Prerequisites](#prerequisites)
 - [Install](#install)
 - [Usage](#usage)
+  - [Custom installation](#custom-installation)
   - [Custom **Homebrew** configurations](#custom-homebrew-configurations)
   - [Custom **Zsh** configurations](#custom-zsh-configurations)
   - [**Git** configuration](#git-configuration)
@@ -56,7 +57,35 @@ Some manual steps might still be required, depending on your desired setup and c
 
 ## Usage
 
-Using the [Install](#install) steps, you'll get exactly the setup I have myself. If you want to include some custom configurations, those are described in more detail in the following sections. In the [Update](#update) section, the manual update procedure is explained. Other than that, there is no specific usage of these dotfiles.
+Using the [Install](#install) steps, you'll get exactly the setup I have myself. You can, however, add custom configurations to these dotfiles. The configurations can be extended using the [`custom/`](./custom/) directory, which will be synchronised to `$HOME/.config/dotfiles/custom/`, or directly in the `$HOME/.config/dotfiles/custom/`directory. Using either directory, the synchronisation step of the installation will honour your custom configuration and not delete any of the files in these directories. This means that files in the `$HOME/.config/dotfiles/custom/`directory will not be removed by the synchronisation, so you're responsible for removing files you no longer use.
+
+### Custom installation
+
+In the `custom/install` file, which must be executable, you can specify custom installation steps that will be run after all other installation steps. You can use this to install and configure additional software or change configurations, e.g. add different applications to the Dock as shown in the following example.
+
+<details><summary>Custom installation example</summary>
+
+```shell
+#!/bin/sh
+
+# Wipe all, default, app icons.
+defaults write com.apple.dock persistent-apps -array
+defaults write com.apple.dock persistent-others -array
+
+# Dock apps.
+. "${DOTFILES}/macos/dock-app"
+dock_app '/Applications/1Password.app'
+dock_app '/Applications/Google Chrome.app'
+dock_app "/Applications/Ghostty.app"
+dock_app "/Applications/Notion.app"
+dock_app '/Applications/Sequel Ace.app'
+dock_app '/Applications/Visual Studio Code.app'
+
+killall -q Dock
+sleep 1
+```
+
+</details>
 
 ### Custom [**Homebrew**][brew] configurations
 
@@ -81,9 +110,7 @@ DOTFILES_BREWFILE="${HOME}/.config/dotfiles/custom/homebrew/Brewfile" ./install
 
 ### Custom [**Zsh**][zsh] configurations
 
-The [**Zsh**][zsh] configuration can be extended using the [`custom/zsh/`](./custom/zsh/) directory. You can place additional [**Zsh**][zsh] files in [`custom/zsh/`](./custom/zsh/) directory of the cloned repository, which will be synchronised to `$HOME/.config/dotfiles/custom/zsh`, or directly in the `$HOME/.config/dotfiles/custom/zsh/` directory. Using either directory for the custom [**Zsh**][zsh] configuration, the synchronisation step of the installation will honour your custom configuration and not delete any of the files in this directory.
-
-`path.zsh` files in the custom configuration are sourced at the beginning of the [**Zsh**][zsh] configuration. These files should only be used to export the `PATH`.
+The [**Zsh**][zsh] configuration can be extended using the [`custom/zsh/`](./custom/zsh/) directory, where you can place additional [**Zsh**][zsh] files. `path.zsh` files in the this directory are sourced at the beginning of the [**Zsh**][zsh] configuration. These files should only be used to export the `PATH`.
 
 ### [**Git**][git] configuration
 
