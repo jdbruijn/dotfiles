@@ -1,5 +1,8 @@
+export DOTFILES="${HOME}/.config/dotfiles"
+
 # Load the dotfiles' path.zsh files.
-for file ("${HOME}/.config/dotfiles/zsh/"**/path.zsh); do
+setopt NULL_GLOB # Disable error when no matches are found.
+for file ("${DOTFILES}/zsh/"**/path.zsh "${DOTFILES}/custom/zsh/"**/path.zsh); do
   . "${file}"
 done
 
@@ -10,11 +13,12 @@ eval "$(brew shellenv)"
 autoload -Uz compinit && compinit
 
 # Load the dotfiles' Zsh files, except the already sourced path.zsh files.
-for file ("${HOME}/.config/dotfiles/zsh/"**/*.zsh); do
+for file ("${DOTFILES}/zsh/"**/*.zsh "${DOTFILES}/custom/zsh/"**/*.zsh); do
   if [[ ! "{$file}" =~ "/path.zsh" ]]; then
     . "${file}"
   fi
 done
+unsetopt NULL_GLOB
 
 # Load plugins.
 . "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"

@@ -63,7 +63,7 @@ $ ./install
 
 ### Custom [**Zsh**][zsh] configurations
 
-The [**Zsh**][zsh] configuration can be extended using the [`zsh/custom/`](./zsh/custom/) directory. You can place additional [**Zsh**][zsh] files in [`zsh/custom/`](./zsh/custom/) directory of the cloned repository, which will be synchronised to `$HOME/.config/dotfiles/zsh/custom/`, or directly in the `$HOME/.config/dotfiles/zsh/custom/` directory. Using either directory for the custom [**Zsh**][zsh] configuration, the synchronisation step of the installation will honour your custom configuration and not delete any of the files in this directory.
+The [**Zsh**][zsh] configuration can be extended using the [`custom/zsh/`](./custom/zsh/) directory. You can place additional [**Zsh**][zsh] files in [`custom/zsh/`](./custom/zsh/) directory of the cloned repository, which will be synchronised to `$HOME/.config/dotfiles/custom/zsh`, or directly in the `$HOME/.config/dotfiles/custom/zsh/` directory. Using either directory for the custom [**Zsh**][zsh] configuration, the synchronisation step of the installation will honour your custom configuration and not delete any of the files in this directory.
 
 `path.zsh` files in the custom configuration are sourced at the beginning of the [**Zsh**][zsh] configuration. These files should only be used to export the `PATH`.
 
@@ -110,5 +110,6 @@ The full text of the license is available in the [LICENSE](LICENSE.md) file in t
 
 </details>
 
+[brew]: https://brew.sh/
 [git]: https://git-scm.com/
 [zsh]: https://www.zsh.org/
