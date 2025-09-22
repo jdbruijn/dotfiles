@@ -1,3 +1,9 @@
+## [1.16.0](https://github.com/jdbruijn/dotfiles/compare/v1.15.0...v1.16.0) (2025-09-22)
+
+### Features
+
+- **macos:** prefer tabs when opening documents ([bddab8d](https://github.com/jdbruijn/dotfiles/commit/bddab8d58e1e378fe3a1ab30241daf8307a36810))
+
 ## [1.15.0](https://github.com/jdbruijn/dotfiles/compare/v1.14.0...v1.15.0) (2025-09-22)
 
 ### Features
