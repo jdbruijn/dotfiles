@@ -1,4 +1,4 @@
 [tools]
-node = { version = 'lts', postinstall = "npm install -g npm-check-updates tsx typescript wscat" }
+node = { version = 'lts', postinstall = "npm install -g tsx" }
 rust = 'latest'
 go = 'latest'
