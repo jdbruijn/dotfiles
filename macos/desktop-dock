@@ -48,6 +48,9 @@ configure() {
 
   # Hide Widgets from the Desktop.
   defaults write com.apple.WindowManager StandardHideWidgets -bool true
+
+  # Prefer tabs when opening documents.
+  defaults write -globalDomain AppleWindowTabbingMode -string always
 }
 
 configure
