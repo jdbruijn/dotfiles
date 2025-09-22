@@ -1,6 +1,6 @@
 {
   "name": "dotfiles",
-  "version": "1.16.0",
+  "version": "1.16.1",
   "private": true,
   "description": "dotfiles, software and macOS defaults",
   "homepage": "https://github.com/jdbruijn/dotfiles#readme",

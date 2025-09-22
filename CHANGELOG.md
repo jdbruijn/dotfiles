@@ -1,3 +1,9 @@
+## [1.16.1](https://github.com/jdbruijn/dotfiles/compare/v1.16.0...v1.16.1) (2025-09-22)
+
+### Bug Fixes
+
+- **mise:** remove the `npm-check-updates`, `typescript` and `wscat` Node.js packages ([9b96fe6](https://github.com/jdbruijn/dotfiles/commit/9b96fe6daf85f998a1b9037a964f484b4b366460))
+
 ## [1.16.0](https://github.com/jdbruijn/dotfiles/compare/v1.15.0...v1.16.0) (2025-09-22)
 
 ### Features
