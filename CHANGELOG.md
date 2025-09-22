@@ -1,3 +1,13 @@
+## [1.15.0](https://github.com/jdbruijn/dotfiles/compare/v1.14.0...v1.15.0) (2025-09-22)
+
+### Features
+
+- add AltTab configuration ([8f3dec2](https://github.com/jdbruijn/dotfiles/commit/8f3dec2e0672ab34e2b15cd0bd5c5450df87db5e))
+
+### Bug Fixes
+
+- **brew:** remove `coreutils`, which was not needed by itself ([5a5187d](https://github.com/jdbruijn/dotfiles/commit/5a5187dbec0eea644bc0354a4dec2b209bd3ce0d))
+
 ## [1.14.0](https://github.com/jdbruijn/dotfiles/compare/v1.13.0...v1.14.0) (2025-09-20)
 
 ### Features
