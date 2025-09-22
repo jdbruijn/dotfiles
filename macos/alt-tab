@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# Configure AltTab, https://alt-tab-macos.netlify.app/.
+
+configure() {
+  echo ' INFO: configure AltTab'
+
+  # Start at login.
+  defaults write com.lwouis.alt-tab-macos startAtLogin -bool true
+
+  # Use thumbnails.
+  defaults write com.lwouis.alt-tab-macos appearanceSize -int 0
+
+  # Use the Small thumbnail size.
+  defaults write com.lwouis.alt-tab-macos appearanceSize -int 0
+
+  # Disable update check, which will be managed by Homebrew.
+  defaults write com.lwouis.alt-tab-macos updatePolicy -bool false
+  defaults write com.lwouis.alt-tab-macos SUEnableAutomaticChecks -bool false
+}
+
+configure
