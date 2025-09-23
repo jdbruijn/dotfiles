@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# Configure the trackpad.
+
+configure() {
+  echo ' INFO: configure the trackpad'
+
+  # Swipe between pages using scroll left or right with two fingers.
+  defaults write -globalDomain AppleEnableSwipeNavigateWithScrolls -int 1
+}
+
+configure

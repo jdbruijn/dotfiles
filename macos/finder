@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# Configure the Finder.
+# Configure Finder.
 
 configure() {
-  echo ' INFO: configure the Finder'
+  echo ' INFO: configure Finder'
 
   # Use list view.
   defaults write com.apple.finder FXPreferredViewStyle -string Nlsv
