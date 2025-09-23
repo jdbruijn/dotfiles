@@ -1,3 +1,9 @@
+## [1.17.1](https://github.com/jdbruijn/dotfiles/compare/v1.17.0...v1.17.1) (2025-09-23)
+
+### Bug Fixes
+
+- **brew:** add missing `dotenvx/brew` tap ([01c97d9](https://github.com/jdbruijn/dotfiles/commit/01c97d9d4e0e1331c2909005524b078e57dd332e))
+
 ## [1.17.0](https://github.com/jdbruijn/dotfiles/compare/v1.16.1...v1.17.0) (2025-09-23)
 
 ### Features
