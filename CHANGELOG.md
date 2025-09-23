@@ -1,3 +1,9 @@
+## [1.17.0](https://github.com/jdbruijn/dotfiles/compare/v1.16.1...v1.17.0) (2025-09-23)
+
+### Features
+
+- **macos:** configure trackpad swipe between pages with two fingers ([0882de2](https://github.com/jdbruijn/dotfiles/commit/0882de2330454ed9a147507b20bd0f36a3c6610e))
+
 ## [1.16.1](https://github.com/jdbruijn/dotfiles/compare/v1.16.0...v1.16.1) (2025-09-22)
 
 ### Bug Fixes
