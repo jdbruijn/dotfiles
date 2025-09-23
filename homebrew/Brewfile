@@ -1,5 +1,7 @@
 cask_args appdir: '/Applications'
 
+tap 'dotenvx/brew'
+
 brew 'bat'
 brew 'curl'
 brew 'eza'
