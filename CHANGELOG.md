@@ -1,3 +1,15 @@
+## [1.18.0](https://github.com/jdbruijn/dotfiles/compare/v1.17.1...v1.18.0) (2025-09-25)
+
+### Features
+
+- **brew:** include casks in the automatic Homebrew upgrades ([ac8efa3](https://github.com/jdbruijn/dotfiles/commit/ac8efa3879db0316c1dc140dbd723a27d2dc6f94))
+
+### Bug Fixes
+
+- **ghostty:** increase scrollback size to 100 MiB per terminal surface ([9fdccfa](https://github.com/jdbruijn/dotfiles/commit/9fdccfa6c53941a65bac692494e21ef241313ae6))
+- **ghostty:** update theme names for v1.2.0 ([d6997df](https://github.com/jdbruijn/dotfiles/commit/d6997df8e3a9f3c27eb54df0db07207f7a82c9a6))
+- **vscode:** hide right-sidebar by default ([9a08b28](https://github.com/jdbruijn/dotfiles/commit/9a08b28a65f7fc2276c21daa4962e0b2465f0cea))
+
 ## [1.17.1](https://github.com/jdbruijn/dotfiles/compare/v1.17.0...v1.17.1) (2025-09-23)
 
 ### Bug Fixes
