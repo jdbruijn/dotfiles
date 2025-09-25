@@ -1,3 +1,16 @@
+## [1.19.0](https://github.com/jdbruijn/dotfiles/compare/v1.18.0...v1.19.0) (2025-09-25)
+
+### Features
+
+- **macos:** configure the Keyboard key repeat settings ([f91cc4b](https://github.com/jdbruijn/dotfiles/commit/f91cc4b8738d0b91ae9be249ad8ccf3a523fc536))
+- **macos:** configure the Sound System Settings, mute the alert volume ([d67a8c5](https://github.com/jdbruijn/dotfiles/commit/d67a8c52021bd7651f1e87b833fa6a1e79f78f7d))
+- **macos:** configure the Trackpad speed and clicking ([5acaf6e](https://github.com/jdbruijn/dotfiles/commit/5acaf6e28112c0432ec704199a2775e7468408b5))
+
+### Bug Fixes
+
+- **macos:** hide AltTab from the Menu Bar ([b6dff6b](https://github.com/jdbruijn/dotfiles/commit/b6dff6b6bc4bbe7dbdbb9864f11e4a3ab90e4f3f))
+- **macos:** hide Spotlight from the Menu Bar ([43a6c53](https://github.com/jdbruijn/dotfiles/commit/43a6c532cd6b4a684cf4013514d458cada66bbe5))
+
 ## [1.18.0](https://github.com/jdbruijn/dotfiles/compare/v1.17.1...v1.18.0) (2025-09-25)
 
 ### Features
