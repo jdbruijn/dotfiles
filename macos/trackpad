@@ -1,9 +1,19 @@
 #!/bin/sh
-#
-# Configure the trackpad.
 
 configure() {
-  echo ' INFO: configure the trackpad'
+  echo ' INFO: configure the Trackpad System Settings'
+
+  # Set tracking speed to medium range.
+  defaults write -globalDomain com.apple.trackpad.scaling -int 1
+
+  # Set click to light.
+  defaults write com.apple.AppleMultitouchTrackpad FirstClickThreshold -int 0
+  defaults write com.apple.AppleMultitouchTrackpad SecondClickThreshold -int 0
+
+  # Enable tap to click.
+  defaults -currentHost write -globalDomain com.apple.mouse.tapBehavior -int 1
+  defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+  defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 
   # Swipe between pages using scroll left or right with two fingers.
   defaults write -globalDomain AppleEnableSwipeNavigateWithScrolls -int 1
