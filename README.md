@@ -2,10 +2,12 @@
 
 dotfiles, software and configurations for Linux and macOS.
 
-- Install applications using [**Homebrew**](https://brew.sh/).
+- Install applications using [**Homebrew**][brew].
 - Setup terminal environment with [**Starship**](https://starship.rs/).
 - Manage tool versions using [**mise**](https://mise.jdx.dev/).
-- Configure macOS default settings.
+- Configure [**Zsh**][zsh] with useful plugins and aliases.
+- Automatically update [**Homebrew**][brew] applications _(macOS only)_.
+- Configure macOS default settings _(macOS only)_.
 
 ---
 
@@ -124,6 +126,8 @@ To update the dotfiles, pull the latest changes and run the installation script 
 $ git pull
 $ ./install
 ```
+
+Formulae installed with [**Homebrew**][brew], including casks, will be automatically updated using [Homebrew Autoupdate](https://github.com/DomT4/homebrew-autoupdate/). If you do not wish to update casks automatically, you can add `unset HOMEBREW_UPGRADE_GREEDY` using the [Custom **Zsh** configurations](#custom-zsh-configurations).
 
 ## Contributing
 

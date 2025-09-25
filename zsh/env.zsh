@@ -10,5 +10,8 @@ export LC_ALL='en_GB.UTF-8';
 export HISTSIZE='1000000'
 export HISTFILESIZE="${HISTSIZE}"
 
+# Pass the "--greedy" option to all Homebrew cask upgrade commands.
+export HOMEBREW_UPGRADE_GREEDY=1
+
 # Set the TTY for GPG, so it can use interactive prompts.
 export GPG_TTY="$(tty)"
