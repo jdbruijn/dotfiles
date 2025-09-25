@@ -49,6 +49,12 @@ configure() {
 
   # Prefer tabs when opening documents.
   defaults write -globalDomain AppleWindowTabbingMode -string always
+
+  # Disable Hot Corners.
+  defaults write com.apple.dock wvous-tl-corner -int 1
+  defaults write com.apple.dock wvous-tr-corner -int 1
+  defaults write com.apple.dock wvous-bl-corner -int 1
+  defaults write com.apple.dock wvous-br-corner -int 1
 }
 
 configure
