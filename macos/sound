@@ -1,0 +1,10 @@
+#!/bin/sh
+
+configure() {
+  echo ' INFO: configure the Sound System Settings'
+
+  # Mute the alert volume.
+  defaults write -globalDomain com.apple.sound.beep.volume -int 0
+}
+
+configure
