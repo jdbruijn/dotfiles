@@ -3,6 +3,15 @@
 configure() {
   echo ' INFO: configure the Keyboard System Settings'
 
+  # Set a fast key repeat rate.
+  defaults write -globalDomain KeyRepeat -int 5
+
+  # Set a low delay until repeat.
+  defaults write -globalDomain InitialKeyRepeat -int 25
+
+  # Hide Input menu in the Menu Bar.
+  defaults write com.apple.TextInputMenu visible -bool false
+
   # Disable add period with double-space.
   defaults write -globalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 }
