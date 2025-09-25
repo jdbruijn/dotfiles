@@ -1,3 +1,9 @@
+## [1.19.1](https://github.com/jdbruijn/dotfiles/compare/v1.19.0...v1.19.1) (2025-09-25)
+
+### Bug Fixes
+
+- **macos:** disable Hot Corners ([863eb2d](https://github.com/jdbruijn/dotfiles/commit/863eb2d0c84d748543b07fac32fb7f179ca88f44))
+
 ## [1.19.0](https://github.com/jdbruijn/dotfiles/compare/v1.18.0...v1.19.0) (2025-09-25)
 
 ### Features
