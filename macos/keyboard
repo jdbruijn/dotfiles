@@ -1,9 +1,7 @@
 #!/bin/sh
-#
-# Configure the keyboard.
 
 configure() {
-  echo ' INFO: configure the keyboard'
+  echo ' INFO: configure the Keyboard System Settings'
 
   # Disable add period with double-space.
   defaults write -globalDomain NSAutomaticPeriodSubstitutionEnabled -bool false

@@ -1,9 +1,7 @@
 #!/bin/sh
-#
-# Configure the Desktop & Dock.
 
 configure() {
-  echo ' INFO: configure the Desktop & Dock'
+  echo ' INFO: configure the Desktop & Dock System Settings'
 
   . "${DOTFILES}/macos/disable-keyboard-shortcut"
   disable_keyboard_shortcut 'desktop-dock' 53 '⌥⌘D'
