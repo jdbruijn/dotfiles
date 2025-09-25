@@ -5,6 +5,9 @@ configure() {
 
   # Display the time with seconds.
   defaults write com.apple.menuextra.clock ShowSeconds -bool true
+
+  # Hide Spotlight.
+  defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1
 }
 
 configure
