@@ -8,6 +8,9 @@ configure() {
   # Start at login.
   defaults write com.lwouis.alt-tab-macos startAtLogin -bool true
 
+  # Hide Menu Bar icon.
+  defaults write com.lwouis.alt-tab-macos menubarIconShown -bool false
+
   # Use thumbnails.
   defaults write com.lwouis.alt-tab-macos appearanceSize -int 0
 
