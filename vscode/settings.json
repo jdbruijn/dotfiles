@@ -26,5 +26,6 @@
   "terminal.integrated.minimumContrastRatio": 1,
   "window.titleBarStyle": "custom",
   "workbench.startupEditor": "none",
-  "xo.format.enable": true
+  "xo.format.enable": true,
+  "workbench.secondarySideBar.defaultVisibility": "hidden"
 }
