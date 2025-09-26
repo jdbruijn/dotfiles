@@ -6,10 +6,6 @@ export EDITOR='vim'
 export LANG='en_GB.UTF-8';
 export LC_ALL='en_GB.UTF-8';
 
-# Increase the shell history size.
-export HISTSIZE='1000000'
-export HISTFILESIZE="${HISTSIZE}"
-
 # Pass the "--greedy" option to all Homebrew cask upgrade commands.
 export HOMEBREW_UPGRADE_GREEDY=1
 
