@@ -1,3 +1,9 @@
+## [1.20.0](https://github.com/jdbruijn/dotfiles/compare/v1.19.1...v1.20.0) (2025-09-26)
+
+### Features
+
+- **zsh:** configure history, properly ([fce3be1](https://github.com/jdbruijn/dotfiles/commit/fce3be14deccadf800f256cb43cb6bea386cc66a))
+
 ## [1.19.1](https://github.com/jdbruijn/dotfiles/compare/v1.19.0...v1.19.1) (2025-09-25)
 
 ### Bug Fixes
