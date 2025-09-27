@@ -94,10 +94,16 @@ sleep 1
 The [**Homebrew**][brew] configuration, specifically which packages are installed, can be customised using the [`custom`](./custom/) directory and the `DOTFILES_BREWFILE` environment variable. When the `DOTFILES_BREWFILE` is set when doing the [Install](#install), the [`homebrew/Brewfile`](./homebrew/Brewfile) file will not be used for the command to install [**Homebrew**][brew] packages and the file referenced by `DOTFILES_BREWFILE` will be used instead. This allows you to configure exactly which [**Homebrew**][brew] packages you want to install and where to install casks. The following list of packages are still required to be included in your custom list of [**Homebrew**][brew] packages. This is not enforced by the installation though. If you don't include these [**Homebrew**][brew] packages, you likely get errors and/or weird behaviour in the terminal.
 
 - [`bat`](https://github.com/sharkdp/bat) - A `cat` clone with syntax highlighting and [**Git**][git] integration.
+- [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html) - A code formatter for C/C++.
+- [`cmake`](https://cmake.org/) - A powerful software build system, de-facto standard for building C++ code.
 - [`eza`](https://github.com/eza-community/eza) - A modern replacement for `ls`.
 - [`font-fira-code-nerd-font`](https://github.com/tonsky/FiraCode) - A free monospaced font with programming ligatures with [**Nerd Fonts**](https://www.nerdfonts.com/) patches.
 - [`fzf`](https://github.com/junegunn/fzf) - A general-purpose command-line fuzzy finder.
+- [`make`](https://www.gnu.org/software/make/) - A tool which controls the generation of executables and other non-source files of a program from the program's source.
 - [`mise`](https://mise.jdx.dev/) - A development environment setup tool.
+- [`ninja`](https://ninja-build.org/) - A small build system with a focus on speed, for use with CMake.
+- [`prettierd`](https://github.com/fsouza/prettierd) - A daemon for [**Prettier**](https://prettier.io/), an opinionated code formatter.
+- [`ripgrep`](https://github.com/BurntSushi/ripgrep/) - A line-oriented search tool that recursively searches the current directory for a regex pattern.
 - [`starship`](https://starship.rs/) - The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 - [`stylua`](https://github.com/JohnnyMorganz/StyLua) - An opinionated Lua code formatter.
 - [`zoxide`](https://github.com/ajeetdsouza/zoxide) - A smarter `cd` command.

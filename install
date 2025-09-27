@@ -65,6 +65,7 @@ sync_dotfiles() {
   link_files "ghostty/config" "${HOME}/.config/ghostty/config"
   mkdir -p "${HOME}/.config/mise"
   link_files "mise/config.toml" "${HOME}/.config/mise/config.toml"
+  link_files "nvim/" "${HOME}/.config/nvim"
   link_files "zsh/starship.toml" "${HOME}/.config/starship.toml"
 
   if is_macos; then
