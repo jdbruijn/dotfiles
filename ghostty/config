@@ -1,5 +1,6 @@
 # See https://ghostty.org/docs/config/reference for the available options.
 
+font-family = FiraCode Nerd Font Mono
 theme = light:Catppuccin Latte,dark:Catppuccin Frappe
 
 # Disable the auto-update functionality as updates will be handled by Homebrew.
