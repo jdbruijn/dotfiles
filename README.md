@@ -95,9 +95,11 @@ The [**Homebrew**][brew] configuration, specifically which packages are installe
 
 - [`bat`](https://github.com/sharkdp/bat) - A `cat` clone with syntax highlighting and [**Git**][git] integration.
 - [`eza`](https://github.com/eza-community/eza) - A modern replacement for `ls`.
+- [`font-fira-code-nerd-font`](https://github.com/tonsky/FiraCode) - A free monospaced font with programming ligatures with [**Nerd Fonts**](https://www.nerdfonts.com/) patches.
 - [`fzf`](https://github.com/junegunn/fzf) - A general-purpose command-line fuzzy finder.
 - [`mise`](https://mise.jdx.dev/) - A development environment setup tool.
 - [`starship`](https://starship.rs/) - The minimal, blazing-fast, and infinitely customizable prompt for any shell!
+- [`stylua`](https://github.com/JohnnyMorganz/StyLua) - An opinionated Lua code formatter.
 - [`zoxide`](https://github.com/ajeetdsouza/zoxide) - A smarter `cd` command.
 - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) - Fish-like fast/unobtrusive autosuggestions for Zsh.
 - [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) - Fish shell-like syntax highlighting for Zsh.
