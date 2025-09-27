@@ -6,28 +6,28 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "cSpell.language": "en-GB",
   "dotenv.enableAutocloaking": true,
   "editor.fontFamily": "FiraCode Nerd Font Mono",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.rulers": [80],
+  "editor.semanticHighlighting.enabled": true,
   "files.associations": {
     ".env*": "dotenv",
     "*.mdx": "markdown"
   },
-  "terminal.integrated.fontLigatures.enabled": true,
-  "terminal.integrated.scrollback": 1000000,
-  "cSpell.language": "en-GB",
-  "window.autoDetectColorScheme": true,
-  "icontheme.lightIconTheme": "catppuccin-latte",
   "icontheme.darkIconTheme": "catppuccin-frappe",
-  "workbench.iconTheme": "catppuccin-latte",
-  "workbench.preferredLightColorTheme": "Catppuccin Latte",
-  "workbench.preferredDarkColorTheme": "Catppuccin Frappé",
-  "editor.semanticHighlighting.enabled": true,
+  "icontheme.lightIconTheme": "catppuccin-latte",
+  "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.minimumContrastRatio": 1,
+  "terminal.integrated.scrollback": 1000000,
+  "window.autoDetectColorScheme": true,
   "window.titleBarStyle": "custom",
+  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.preferredDarkColorTheme": "Catppuccin Frappé",
+  "workbench.preferredLightColorTheme": "Catppuccin Latte",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.startupEditor": "none",
-  "xo.format.enable": true,
-  "workbench.secondarySideBar.defaultVisibility": "hidden"
+  "xo.format.enable": true
 }
