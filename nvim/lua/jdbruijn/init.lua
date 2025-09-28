@@ -1,4 +1,5 @@
 require('jdbruijn.filetypes')
+require('jdbruijn.highlight-yank')
 require('jdbruijn.keymaps')
 require('jdbruijn.lsp')
 require('jdbruijn.options')
