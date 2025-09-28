@@ -1,3 +1,26 @@
+## [2.0.0](https://github.com/jdbruijn/dotfiles/compare/v1.20.0...v2.0.0) (2025-09-28)
+
+### ⚠ BREAKING CHANGES
+
+- **install:** move Ghostty config to a symlinked directory. Before running the install script, run `rm -r "${HOME}/.config/ghostty"` to clean up the previous configuration. Without cleaning the previous configuration, the new Ghostty folder will not be linked.
+
+### Features
+
+- add basic Neovim setup, currently without the LSP ([85858e6](https://github.com/jdbruijn/dotfiles/commit/85858e63fba51a8716655be029a74d75fc272922))
+- add support for the Lua language ([a40a0f6](https://github.com/jdbruijn/dotfiles/commit/a40a0f6e022b35e8cd0c969df921a44aba320fcb))
+- change font to Fira Code and configure it in VSCode and Ghostty ([5ab18e1](https://github.com/jdbruijn/dotfiles/commit/5ab18e14ee9ca78f1fa97aea58264b8b3682729c))
+- **neovim:** add plugin to show keys pressed ([2c3cc64](https://github.com/jdbruijn/dotfiles/commit/2c3cc6424b2a48039cc22db437b5a88a87853982))
+- **neovim:** add yank keymaps and highlighting ([c76bd5b](https://github.com/jdbruijn/dotfiles/commit/c76bd5b14b46bff4838e1b27969d63a22429de6c))
+- **neovim:** setup LSP for C, C++, Go, Lua, Rust and TypeScript ([ccdb60e](https://github.com/jdbruijn/dotfiles/commit/ccdb60e2125e8432d4c0f8a5ba8c1b2df9bf8639))
+
+### Bug Fixes
+
+- **install:** move Ghostty config to a symlinked directory, instead of only the config file ([c112b5f](https://github.com/jdbruijn/dotfiles/commit/c112b5f0cd1972c0d3080236cb26c08eaf3849f5))
+
+### Code Refactoring
+
+- **vscode:** sort settings ([211abb4](https://github.com/jdbruijn/dotfiles/commit/211abb4cdc9120d8cc54bec829cfe88c6d32dbc9))
+
 ## [1.20.0](https://github.com/jdbruijn/dotfiles/compare/v1.19.1...v1.20.0) (2025-09-26)
 
 ### Features
