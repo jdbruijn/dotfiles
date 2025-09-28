@@ -1,3 +1,9 @@
+## [2.0.1](https://github.com/jdbruijn/dotfiles/compare/v2.0.0...v2.0.1) (2025-09-28)
+
+### Bug Fixes
+
+- **neovim:** warning `vim.highlight is deprecated. Feature will be removed in Nvim 2.0.0` ([9a54b5b](https://github.com/jdbruijn/dotfiles/commit/9a54b5b104a9eecaac77bdc103031d2528ddfd17))
+
 ## [2.0.0](https://github.com/jdbruijn/dotfiles/compare/v1.20.0...v2.0.0) (2025-09-28)
 
 ### ⚠ BREAKING CHANGES
