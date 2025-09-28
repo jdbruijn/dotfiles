@@ -6,6 +6,8 @@ dotfiles, software and configurations for Linux and macOS.
 - Setup terminal environment with [**Starship**](https://starship.rs/).
 - Manage tool versions using [**mise**](https://mise.jdx.dev/).
 - Configure [**Zsh**][zsh] with useful plugins and aliases.
+- Configure [**Neovim**][neovim] and [**Visual Studio Code**][vscode] as modern IDEs.
+- Setup programming languages [**C**](https://www.c-language.org/), [**C++**](https://isocpp.org/), [**Go**](https://go.dev/), [**Lua**][lua], [**Rust**](https://rust-lang.org/) and [**TypeScript**](https://www.typescriptlang.org/).
 - Automatically update [**Homebrew**][brew] applications _(macOS only)_.
 - Configure macOS default settings _(macOS only)_.
 
@@ -94,11 +96,12 @@ sleep 1
 The [**Homebrew**][brew] configuration, specifically which packages are installed, can be customised using the [`custom`](./custom/) directory and the `DOTFILES_BREWFILE` environment variable. When the `DOTFILES_BREWFILE` is set when doing the [Install](#install), the [`homebrew/Brewfile`](./homebrew/Brewfile) file will not be used for the command to install [**Homebrew**][brew] packages and the file referenced by `DOTFILES_BREWFILE` will be used instead. This allows you to configure exactly which [**Homebrew**][brew] packages you want to install and where to install casks. The following list of packages are still required to be included in your custom list of [**Homebrew**][brew] packages. This is not enforced by the installation though. If you don't include these [**Homebrew**][brew] packages, you likely get errors and/or weird behaviour in the terminal.
 
 - [`bat`](https://github.com/sharkdp/bat) - A `cat` clone with syntax highlighting and [**Git**][git] integration.
-- [`clang-format`](https://clang.llvm.org/docs/ClangFormat.html) - A code formatter for C/C++.
 - [`cmake`](https://cmake.org/) - A powerful software build system, de-facto standard for building C++ code.
 - [`eza`](https://github.com/eza-community/eza) - A modern replacement for `ls`.
 - [`font-fira-code-nerd-font`](https://github.com/tonsky/FiraCode) - A free monospaced font with programming ligatures with [**Nerd Fonts**](https://www.nerdfonts.com/) patches.
 - [`fzf`](https://github.com/junegunn/fzf) - A general-purpose command-line fuzzy finder.
+- [`llvm`](https://llvm.org/) - A collection of modular and reusable compiler and toolchain technologies.
+- [`lua-language-server`](https://github.com/LuaLS/lua-language-server) - A language server that offers [**Lua**][lua] language support.
 - [`make`](https://www.gnu.org/software/make/) - A tool which controls the generation of executables and other non-source files of a program from the program's source.
 - [`mise`](https://mise.jdx.dev/) - A development environment setup tool.
 - [`ninja`](https://ninja-build.org/) - A small build system with a focus on speed, for use with CMake.
@@ -107,8 +110,8 @@ The [**Homebrew**][brew] configuration, specifically which packages are installe
 - [`starship`](https://starship.rs/) - The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 - [`stylua`](https://github.com/JohnnyMorganz/StyLua) - An opinionated Lua code formatter.
 - [`zoxide`](https://github.com/ajeetdsouza/zoxide) - A smarter `cd` command.
-- [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) - Fish-like fast/unobtrusive autosuggestions for Zsh.
-- [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) - Fish shell-like syntax highlighting for Zsh.
+- [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) - Fish-like fast/unobtrusive autosuggestions for [**Zsh**][zsh].
+- [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) - Fish shell-like syntax highlighting for [**Zsh**][zsh].
 - [`raycast`](https://www.raycast.com/) cask - A collection of powerful productivity tools all within an extendable launcher.
 - [`shottr`](https://shottr.cc/) cask - A tiny and fast mac screenshot tool with annotations, beautiful backgrounds, scrolling screenshots and cloud upload capabilities.
 
@@ -178,4 +181,7 @@ The full text of the license is available in the [LICENSE](LICENSE.md) file in t
 
 [brew]: https://brew.sh/
 [git]: https://git-scm.com/
+[lua]: https://www.lua.org/
+[neovim]: https://neovim.io/
+[vscode]: https://code.visualstudio.com/
 [zsh]: https://www.zsh.org/

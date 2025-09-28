@@ -1,5 +1,6 @@
 require('jdbruijn.filetypes')
 require('jdbruijn.keymaps')
+require('jdbruijn.lsp')
 require('jdbruijn.options')
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'

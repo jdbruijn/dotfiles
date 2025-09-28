@@ -1,4 +1,4 @@
 [tools]
-node = { version = 'lts', postinstall = "npm install -g tsx" }
-rust = 'latest'
-go = 'latest'
+node = { version = 'lts', postinstall = 'npm install -g tsx typescript typescript-language-server' }
+rust = { version = 'latest', components = 'clippy,rust-analyzer,rust-docs,rustfmt' }
+go = { version = 'latest', postinstall = 'go install golang.org/x/tools/gopls@latest' }
