@@ -1,0 +1,18 @@
+#!/bin/sh
+
+configure() {
+  echo ' INFO: configure the General System Settings'
+
+  # Set the number format to "1,234,567.89".
+  defaults write -globalDomain AppleICUNumberSymbols -dict-add 0 '.'
+  defaults write -globalDomain AppleICUNumberSymbols -dict-add 1 ','
+  defaults write -globalDomain AppleICUNumberSymbols -dict-add 10 '.'
+  defaults write -globalDomain AppleICUNumberSymbols -dict-add 17 ','
+
+  # Use metric units.
+  defaults write -globalDomain AppleTemperatureUnit -string Celsius
+  defaults write -globalDomain AppleMeasurementUnits -string Centimeters
+  defaults write -globalDomain AppleMetricUnits -int 1
+}
+
+configure
