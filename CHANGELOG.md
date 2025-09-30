@@ -1,3 +1,13 @@
+## [2.1.0](https://github.com/jdbruijn/dotfiles/compare/v2.0.1...v2.1.0) (2025-09-30)
+
+### Features
+
+- **macos:** set General System Settings, currently for the language & region only ([25ec846](https://github.com/jdbruijn/dotfiles/commit/25ec84692a1bbc2c62ad847af84fe9b962f87c1c))
+
+### Bug Fixes
+
+- **macos:** set keyboard repeat rate as fast as possible ([6a488cf](https://github.com/jdbruijn/dotfiles/commit/6a488cfd0b71acf7bfb21c7a3a4f7678ed3281b3))
+
 ## [2.0.1](https://github.com/jdbruijn/dotfiles/compare/v2.0.0...v2.0.1) (2025-09-28)
 
 ### Bug Fixes
