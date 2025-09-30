@@ -3,8 +3,8 @@
 configure() {
   echo ' INFO: configure the Keyboard System Settings'
 
-  # Set a fast key repeat rate.
-  defaults write -globalDomain KeyRepeat -int 5
+  # Set the fastest key repeat rate.
+  defaults write -globalDomain KeyRepeat -int 2
 
   # Set a low delay until repeat.
   defaults write -globalDomain InitialKeyRepeat -int 25
