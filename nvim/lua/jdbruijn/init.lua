@@ -1,3 +1,4 @@
+require('jdbruijn.diagnostics')
 require('jdbruijn.filetypes')
 require('jdbruijn.highlight-yank')
 require('jdbruijn.keymaps')
