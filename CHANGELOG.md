@@ -1,3 +1,9 @@
+## [2.1.1](https://github.com/jdbruijn/dotfiles/compare/v2.1.0...v2.1.1) (2025-10-01)
+
+### Bug Fixes
+
+- **zsh:** remove `/` from characters considered to be a single word ([5bc07c4](https://github.com/jdbruijn/dotfiles/commit/5bc07c4bd0794f9fc7f6fd8fdb7aad42fdfb6024))
+
 ## [2.1.0](https://github.com/jdbruijn/dotfiles/compare/v2.0.1...v2.1.0) (2025-09-30)
 
 ### Features
