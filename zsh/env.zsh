@@ -11,3 +11,7 @@ export HOMEBREW_UPGRADE_GREEDY=1
 
 # Set the TTY for GPG, so it can use interactive prompts.
 export GPG_TTY="$(tty)"
+
+# Remove "/" from the characters considered to be a single word.
+export WORDCHARS="${WORDCHARS//\/}"
+
