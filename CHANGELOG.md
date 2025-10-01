@@ -1,3 +1,10 @@
+## [2.2.0](https://github.com/jdbruijn/dotfiles/compare/v2.1.1...v2.2.0) (2025-10-01)
+
+### Features
+
+- **neovim:** add language diagnostics ([70d8b14](https://github.com/jdbruijn/dotfiles/commit/70d8b143cf94a1842e82e5dfe13b15aed4f33c33))
+- **neovim:** add oil plugin to create and manage files ([cd2bffc](https://github.com/jdbruijn/dotfiles/commit/cd2bffc1cf5c4160ab87bacf3dbd902172508b87))
+
 ## [2.1.1](https://github.com/jdbruijn/dotfiles/compare/v2.1.0...v2.1.1) (2025-10-01)
 
 ### Bug Fixes
