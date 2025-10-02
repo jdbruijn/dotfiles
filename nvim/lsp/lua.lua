@@ -7,4 +7,5 @@ return {
     '.git',
     '.editorconfig',
   },
+  settings = { Lua = { diagnostics = { globals = { 'vim' } } } },
 }
