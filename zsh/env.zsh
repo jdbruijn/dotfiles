@@ -15,3 +15,7 @@ export GPG_TTY="$(tty)"
 # Remove "/" from the characters considered to be a single word.
 export WORDCHARS="${WORDCHARS//\/}"
 
+if [ "$(uname -s)" = 'Darwin' ]; then
+  export SSH_AUTH_SOCK="${HOME}/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh"
+fi
+

@@ -112,7 +112,11 @@ The [**Homebrew**][brew] configuration, specifically which packages are installe
 - [`zoxide`](https://github.com/ajeetdsouza/zoxide) - A smarter `cd` command.
 - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) - Fish-like fast/unobtrusive autosuggestions for [**Zsh**][zsh].
 - [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) - Fish shell-like syntax highlighting for [**Zsh**][zsh].
+
+For macOS, the following list of casks are still required to be included in your custom list of [**Homebrew**][homebrew] packages.
+
 - [`raycast`](https://www.raycast.com/) cask - A collection of powerful productivity tools all within an extendable launcher.
+- [`secretive`](https://secretive.dev/) cask - A fully native Mac app that lets you protect and manage SSH keys with your Mac's Secure Enclave.
 - [`shottr`](https://shottr.cc/) cask - A tiny and fast mac screenshot tool with annotations, beautiful backgrounds, scrolling screenshots and cloud upload capabilities.
 
 The following command is an example of using the `custom/homebrew/Brewfile` for the installation.
