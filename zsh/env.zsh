@@ -15,7 +15,8 @@ export GPG_TTY="$(tty)"
 # Remove "/" from the characters considered to be a single word.
 export WORDCHARS="${WORDCHARS//\/}"
 
+# Set the SSH authentication socket for Secretive on macOS.
 if [ "$(uname -s)" = 'Darwin' ]; then
+  export DOTFILES_SSH_AUTH_SOCK="${SSH_AUTH_SOCK}"
   export SSH_AUTH_SOCK="${HOME}/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh"
 fi
-

@@ -1,5 +1,7 @@
 [commit]
   gpgSign = true
+[gpg]
+  format = ssh
 [tag]
   gpgSign = true
 [url "ssh://git@github.com/"]
@@ -7,4 +9,4 @@
 [user]
   name = Alan Moore
   email = amoore@example.com
-  signingKey = 12345678
+  signingKey = /Users/AlanMoore/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/PublicKeys/35fee608a4a091553bd6dd91053c347b.pub
