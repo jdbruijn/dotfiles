@@ -1,3 +1,23 @@
+## [2.3.0](https://github.com/jdbruijn/dotfiles/compare/v2.2.0...v2.3.0) (2025-10-03)
+
+### Features
+
+- **macos:** use a Secretive SSH key for Git signing ([c5b7c1a](https://github.com/jdbruijn/dotfiles/commit/c5b7c1ab19d66a1e99944f3049e2223722e9ee2e))
+- **macos:** use Secretive to store SSH keys ([b3f5210](https://github.com/jdbruijn/dotfiles/commit/b3f52109cc8617e21ab75e171333124b6722c332))
+- **neovim:** add `<leader>sF` keymapping to navigation for searching hidden files ([f38a2d0](https://github.com/jdbruijn/dotfiles/commit/f38a2d05eaf1fc85e1047a3d19ff07a5a29e01f5))
+- **neovim:** add `nvim-treesitter-context` plugin to keep the class/method/... context on top ([9ff31ca](https://github.com/jdbruijn/dotfiles/commit/9ff31ca3df22c3910c4e199aca4a25ad981c1bb0))
+- **neovim:** add detailed diagnostics view ([c025ce6](https://github.com/jdbruijn/dotfiles/commit/c025ce6ea253783a2d492a964d75df8b05d07989))
+- **neovim:** add Markdown previews ([6ef94de](https://github.com/jdbruijn/dotfiles/commit/6ef94dedd80e181db0a714f02998efa3f525da63))
+
+### Bug Fixes
+
+- **neovim:** configure `vim` as a Lua global ([0cce281](https://github.com/jdbruijn/dotfiles/commit/0cce2813938db6b4d73ca940d3d927a30d2c4a77))
+
+### Code Refactoring
+
+- **mise:** simplify Rust languages using the default profile and additional component ([3da9cab](https://github.com/jdbruijn/dotfiles/commit/3da9cab33f6774a1fbad287572141ebc4d5871c1))
+- **neovim:** renamve Oil to `file-explorer` for better recognition ([bac3f9a](https://github.com/jdbruijn/dotfiles/commit/bac3f9ad302a2d0cc7750dc807771e8c2f15a115))
+
 ## [2.2.0](https://github.com/jdbruijn/dotfiles/compare/v2.1.1...v2.2.0) (2025-10-01)
 
 ### Features
