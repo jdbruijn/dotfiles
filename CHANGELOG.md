@@ -1,3 +1,9 @@
+## [2.3.1](https://github.com/jdbruijn/dotfiles/compare/v2.3.0...v2.3.1) (2025-10-07)
+
+### Bug Fixes
+
+- **macos:** jump to the clicked spot in the scoll bar ([73e782b](https://github.com/jdbruijn/dotfiles/commit/73e782b696da451da25374277252e6ac60db0d16))
+
 ## [2.3.0](https://github.com/jdbruijn/dotfiles/compare/v2.2.0...v2.3.0) (2025-10-03)
 
 ### Features
