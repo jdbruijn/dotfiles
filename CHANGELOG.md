@@ -1,3 +1,13 @@
+## [2.4.0](https://github.com/jdbruijn/dotfiles/compare/v2.3.1...v2.4.0) (2025-10-07)
+
+### Features
+
+- **zsh:** add `cd` aliases ([674ea0c](https://github.com/jdbruijn/dotfiles/commit/674ea0c21b8eb41bda17c452496e4befd5045e55))
+
+### Bug Fixes
+
+- **zsh:** set case-insensitive completion ([ab129f8](https://github.com/jdbruijn/dotfiles/commit/ab129f87d1f8839dd4c9fa945828288f88a15c97))
+
 ## [2.3.1](https://github.com/jdbruijn/dotfiles/compare/v2.3.0...v2.3.1) (2025-10-07)
 
 ### Bug Fixes
