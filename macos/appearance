@@ -5,6 +5,9 @@ configure() {
 
   # Automatically switch between Light and Dark mode.
   defaults write -globalDomain AppleInterfaceStyleSwitchesAutomatically -bool true
+
+  # Click in the scoll bar to jump to the spot that's clicked.
+  defaults write -globalDomain AppleScrollerPagingBehavior -bool true
 }
 
 configure
