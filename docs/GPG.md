@@ -7,7 +7,7 @@
 
 Create a new GPG key, interactively, using the following command. For most purposes, the default options are good to use.
 
-```shell
+```sh
 gpg --full-generate-key
 ```
 
@@ -19,7 +19,7 @@ At the time of writing, September 2025, these were the default options.
 
 Show the fingerprint and key ID using the following command. A lot of commands use the key ID to specify the key, so it's useful to have this on hand. The key ID is the hexadecimal characters after the cryptographic algorithm in the `pub` section and is just the last sixteen characters of the fingerprint, without spaces. In the rest of the document we'll use `06B4B8C3D53C9037` as an example of the key ID.
 
-```shell
+```sh
 gpg --fingerprint --keyid-format=long
 ```
 
@@ -27,7 +27,7 @@ gpg --fingerprint --keyid-format=long
 
 In this example the key ID is `06B4B8C3D53C9037` and the fingerprint is `F587 57F4 1B4F 5D2B 30FB  B376 06B4 B8C3 D53C 9037`.
 
-```shell
+```sh
 pub   ed25519/06B4B8C3D53C9037 2025-09-13 [SC]
       Key fingerprint = F587 57F4 1B4F 5D2B 30FB  B376 06B4 B8C3 D53C 9037
 uid                 [ultimate] Alan Moore <amoore@example.com>
@@ -38,7 +38,7 @@ sub   cv25519/74BF2268D4468146 2025-09-13 [E]
 
 Export the public key using the following command.
 
-```shell
+```sh
 gpg --armor --export 06B4B8C3D53C9037
 ```
 
@@ -71,13 +71,13 @@ To prevent your keys from getting lost, it's recommended to backup both the secr
 
 Export the secret key using the following command. This will export the secret key directly into an file, `06B4B8C3D53C9037-secret.asc`. If you prefer to store it as text, you can remove the `--output` option or `cat` the file. Be careful with this as the terminal sessions might be recorded.
 
-```shell
+```sh
 gpg --output 06B4B8C3D53C9037-secret.asc --armor --export-secret-key 06B4B8C3D53C9037
 ```
 
 <details><summary>Secret key example</summary>
 
-```shell
+```sh
 $ cat 06B4B8C3D53C9037-secret.asc
 -----BEGIN PGP PRIVATE KEY BLOCK-----
 
@@ -102,13 +102,13 @@ tUdqL2XBEF9zUD9e5HkFQgwdIgD/eXqYhfqMIicK/rkDdM+DESoJCm1CBMIFYDrw
 
 Create the revocation certificate, interactively, using the following command. It will ask for a reason, which we of course don't have at this point in time. You can create a revocation certificate with no reason specified, or even create one for each reason.
 
-```shell
+```sh
 gpg --output 06B4B8C3D53C9037-revoke.asc --armor --gen-revoke 06B4B8C3D53C9037
 ```
 
 <details><summary>Revocation certificate example</summary>
 
-```shell
+```sh
 $ cat 06B4B8C3D53C9037-revoke.asc
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Comment: This is a revocation certificate

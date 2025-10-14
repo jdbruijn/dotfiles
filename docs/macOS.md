@@ -55,11 +55,11 @@ A lot of the macOS configurations that you can do using a script, are not public
 To use the [`macOS-defaults`][macos-defaults] tool to record configuration changes, you need to clone the [`macos-defaults`][macos-defaults] repository.
 
 1. Clone the [`macos-defaults`][macos-defaults] repository.
-   ```shell
+   ```sh
    gh repo clone yannbertrand/macos-defaults
    ```
 2. Start recording configuration changes and give the diff a name when prompted.
-   ```shell
+   ```sh
    ./diff.sh
    ```
 3. Make the configuration changes you want. Note that this is only able to record changes to the `defaults`, so not all changes might be recorded.

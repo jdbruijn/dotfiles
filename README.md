@@ -47,7 +47,7 @@ The following list of prerequisites have to be met before you can install instal
 
 Install the dotfiles using [**Git**][git] and the installation script. The dotfiles will be installed in `$HOME/.config/dotfiles` and linked to the `HOME` directory as needed. During the the synchronisation step of the installation, non-excluded files will be deleted from the destination directory, `$HOME/.config/dotfiles`, to prevent lingering dotfiles. Please see the [Usage](#usage) sections for customisations before installing.
 
-```shell
+```sh
 $ git clone https://github.com/jdbruijn/dotfiles.git
 $ cd dotfiles
 $ ./install
@@ -70,7 +70,7 @@ In the `custom/install` file, which must be executable, you can specify custom i
 
 <details><summary>Custom installation example</summary>
 
-```shell
+```sh
 #!/bin/sh
 
 # Wipe all, default, app icons.
@@ -122,7 +122,7 @@ For macOS, the following list of casks are still required to be included in your
 
 The following command is an example of using the `custom/homebrew/Brewfile` for the installation.
 
-```shell
+```sh
 DOTFILES_BREWFILE="${HOME}/.config/dotfiles/custom/homebrew/Brewfile" ./install
 ```
 
@@ -138,7 +138,7 @@ For the [**Git**][git] user configuration, please create a new `.gitconfig.local
 
 To update the dotfiles, pull the latest changes and run the installation script again. The installation is idempotent, making it possible to use the installation script for updates as well. The `DOTFILES_SYNC_ONLY` environment variable can be set to skip all installation steps, including the [Custom installation](#custom-installation), and only synchronise the files.
 
-```shell
+```sh
 $ git pull
 $ ./install
 # Alternative call of the install script, only synchronising the files.

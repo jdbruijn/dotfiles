@@ -52,13 +52,13 @@ Create a new SSH key with the following command. This uses the Ed25519 algorithm
 > [!CAUTION]
 > The secret key should be kept in a secure place and never shared. If you keep a backup of the private key, keep it in a secure place. This can, for example, be in a secure [**VeraCrypt**](https://veracrypt.jp/) container on cloud service, like Google Drive, or a USB drive.
 
-```shell
+```sh
 ssh-keygen -t ed25519 -C amoore@example.com -f ~/.ssh/id_ed25519
 ```
 
 Export the public key using the following command. This public key can be shared, and will be used by other services like [**GitHub**][github] and remote servers to verify your connection.
 
-```shell
+```sh
 cat ~/.ssh/id_ed25519.pub
 ```
 
@@ -102,7 +102,7 @@ Set [`url.<base>.insteadOf`](https://git-scm.com/docs/git-config#Documentation/g
 
 With these settings [**GitHub**][github] is able to validate who we are using the SSH key. However, we haven't validated [**GitHub**][github] yet. Use the following command to connect to `github.com` using SSH. With the `-v` flag added, you can also see which SSH keys are tried and which key is used for authentication.
 
-```shell
+```sh
 ssh -T git@github.com
 ```
 
