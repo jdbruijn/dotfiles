@@ -1,3 +1,13 @@
+## [2.5.0](https://github.com/jdbruijn/dotfiles/compare/v2.4.0...v2.5.0) (2025-10-14)
+
+### Features
+
+- **nvim:** add statusline using `lualine` ([163eed3](https://github.com/jdbruijn/dotfiles/commit/163eed3a3d6223b07213722714bf91d101b7c45d))
+
+### Bug Fixes
+
+- **nvim:** set Markdown syntax highlight language aliases for `shell` and `ts` ([c757bfe](https://github.com/jdbruijn/dotfiles/commit/c757bfe15685b0d5c53713bf284ae3d4f1417c17))
+
 ## [2.4.0](https://github.com/jdbruijn/dotfiles/compare/v2.3.1...v2.4.0) (2025-10-07)
 
 ### Features
