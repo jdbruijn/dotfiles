@@ -1,3 +1,17 @@
+## [2.6.0](https://github.com/jdbruijn/dotfiles/compare/v2.5.0...v2.6.0) (2025-10-14)
+
+### Features
+
+- **install:** add option to skip the installation steps, only synchronising the files ([d6d5369](https://github.com/jdbruijn/dotfiles/commit/d6d53694a7618cc4dadcf267086d29e9bc7d071a))
+
+### Bug Fixes
+
+- **zsh:** don't truncate the directory to the root of the current Git repository ([3e6763a](https://github.com/jdbruijn/dotfiles/commit/3e6763a662a068f07df8a38575a57508023c2ad6))
+
+### Documentation
+
+- use `sh` instead of `shell` for the language of shell code blocks ([f70e8ae](https://github.com/jdbruijn/dotfiles/commit/f70e8ae93f874bdd440bd337b99987d76556d3fb))
+
 ## [2.5.0](https://github.com/jdbruijn/dotfiles/compare/v2.4.0...v2.5.0) (2025-10-14)
 
 ### Features
