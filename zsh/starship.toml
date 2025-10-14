@@ -3,6 +3,9 @@
 # Don't inserts a blank line between shell prompts.
 add_newline = false
 
+# Don't truncate to the root of the current Git repository.
+directory.truncate_to_repo = false
+
 # Add time, without the "at" prefix.
 time.disabled = false
 time.format = '[$time]($style) '
