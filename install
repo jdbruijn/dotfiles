@@ -81,6 +81,11 @@ assert_zsh_shell
 
 . ./macos/is-macos
 sync_dotfiles
+
+if [ -n "${DOTFILES_SYNC_ONLY}" ]; then
+  exit 0
+fi
+
 . "${DOTFILES}/homebrew/install"
 . "${DOTFILES}/mise/install"
 

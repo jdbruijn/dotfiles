@@ -62,7 +62,7 @@ Some manual steps might still be required, depending on your desired setup and c
 
 ## Usage
 
-Using the [Install](#install) steps, you'll get exactly the setup I have myself. You can, however, add custom configurations to these dotfiles. The configurations can be extended using the [`custom/`](./custom/) directory, which will be synchronised to `$HOME/.config/dotfiles/custom/`, or directly in the `$HOME/.config/dotfiles/custom/`directory. Using either directory, the synchronisation step of the installation will honour your custom configuration and not delete any of the files in these directories. This means that files in the `$HOME/.config/dotfiles/custom/`directory will not be removed by the synchronisation, so you're responsible for removing files you no longer use.
+Using the [Install](#install) steps, you'll get exactly the setup I have myself. You can, however, add custom configurations to these dotfiles. The configurations can be extended using the [`custom/`](./custom/) directory, which will be synchronised to `$HOME/.config/dotfiles/custom/`, or directly in the `$HOME/.config/dotfiles/custom/` directory. Using either directory, the synchronisation step of the installation will honour your custom configuration and not delete any of the files in these directories. This means that files in the `$HOME/.config/dotfiles/custom/`directory will not be removed by the synchronisation, so you're responsible for removing files you no longer use.
 
 ### Custom installation
 
@@ -94,7 +94,7 @@ sleep 1
 
 ### Custom [**Homebrew**][brew] configurations
 
-The [**Homebrew**][brew] configuration, specifically which packages are installed, can be customised using the [`custom`](./custom/) directory and the `DOTFILES_BREWFILE` environment variable. When the `DOTFILES_BREWFILE` is set when doing the [Install](#install), the [`homebrew/Brewfile`](./homebrew/Brewfile) file will not be used for the command to install [**Homebrew**][brew] packages and the file referenced by `DOTFILES_BREWFILE` will be used instead. This allows you to configure exactly which [**Homebrew**][brew] packages you want to install and where to install casks. The following list of packages are still required to be included in your custom list of [**Homebrew**][brew] packages. This is not enforced by the installation though. If you don't include these [**Homebrew**][brew] packages, you likely get errors and/or weird behaviour in the terminal.
+The [**Homebrew**][brew] configuration, specifically which packages are installed, can be customised using the [`custom`](./custom/) directory and the `DOTFILES_BREWFILE` environment variable. When the `DOTFILES_BREWFILE` environment variable is set when doing the [Install](#install), the [`homebrew/Brewfile`](./homebrew/Brewfile) file will not be used for the command to install [**Homebrew**][brew] packages and the file referenced by `DOTFILES_BREWFILE` will be used instead. This allows you to configure exactly which [**Homebrew**][brew] packages you want to install and where to install casks. The following list of packages are still required to be included in your custom list of [**Homebrew**][brew] packages. This is not enforced by the installation though. If you don't include these [**Homebrew**][brew] packages, you likely get errors and/or weird behaviour in the terminal.
 
 - [`bat`](https://github.com/sharkdp/bat) - A `cat` clone with syntax highlighting and [**Git**][git] integration.
 - [`cmake`](https://cmake.org/) - A powerful software build system, de-facto standard for building C++ code.
@@ -136,11 +136,13 @@ For the [**Git**][git] user configuration, please create a new `.gitconfig.local
 
 ### Update
 
-To update the dotfiles, pull the latest changes and run the installation script again. The installation is idempotent, making it possible to use the installation script for updates as well.
+To update the dotfiles, pull the latest changes and run the installation script again. The installation is idempotent, making it possible to use the installation script for updates as well. The `DOTFILES_SYNC_ONLY` environment variable can be set to skip all installation steps, including the [Custom installation](#custom-installation), and only synchronise the files.
 
 ```shell
 $ git pull
 $ ./install
+# Alternative call of the install script, only synchronising the files.
+$ DOTFILES_SYNC_ONLY=1 ./install
 ```
 
 Formulae installed with [**Homebrew**][brew], including casks, will be automatically updated using [Homebrew Autoupdate](https://github.com/DomT4/homebrew-autoupdate/). If you do not wish to update casks automatically, you can add `unset HOMEBREW_UPGRADE_GREEDY` using the [Custom **Zsh** configurations](#custom-zsh-configurations).
