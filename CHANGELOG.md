@@ -1,3 +1,13 @@
+## [2.7.0](https://github.com/jdbruijn/dotfiles/compare/v2.6.0...v2.7.0) (2025-10-15)
+
+### Features
+
+- **neovim:** add `neoclip` to manage the clipboard ([1c3fddd](https://github.com/jdbruijn/dotfiles/commit/1c3fddde669f85a75d4999b6b8c626318f6e6a84))
+
+### Bug Fixes
+
+- **neovim:** don't show the default mode as we have a status line ([81e1305](https://github.com/jdbruijn/dotfiles/commit/81e130563ab79c0ac9de2b309f41a552c42cd942))
+
 ## [2.6.0](https://github.com/jdbruijn/dotfiles/compare/v2.5.0...v2.6.0) (2025-10-14)
 
 ### Features
