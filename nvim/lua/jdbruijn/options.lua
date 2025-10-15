@@ -17,5 +17,8 @@ vim.opt.relativenumber = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Don't show the default mode as wel have a status line.
+vim.opt.showmode = false
+
 -- Always show the sign column, https://neovim.io/doc/user/sign.html.
 vim.opt.signcolumn = 'yes'
