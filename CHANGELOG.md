@@ -1,3 +1,9 @@
+## [2.8.0](https://github.com/jdbruijn/dotfiles/compare/v2.7.0...v2.8.0) (2025-12-05)
+
+### Features
+
+- **nvim:** add linting, starting with ESLint and clang-tidy ([afdbe1b](https://github.com/jdbruijn/dotfiles/commit/afdbe1b46bbb5e7adbf61536b6ae9b30bbbbad6e))
+
 ## [2.7.0](https://github.com/jdbruijn/dotfiles/compare/v2.6.0...v2.7.0) (2025-10-15)
 
 ### Features
