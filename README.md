@@ -98,6 +98,7 @@ The [**Homebrew**][brew] configuration, specifically which packages are installe
 
 - [`bat`](https://github.com/sharkdp/bat) - A `cat` clone with syntax highlighting and [**Git**][git] integration.
 - [`cmake`](https://cmake.org/) - A powerful software build system, de-facto standard for building C++ code.
+- [`eslint_d`](https://cmake.org/) - A deamon for [ESLint](https://eslint.org/), a tool to find and fix problems in your JavaScript code.
 - [`eza`](https://github.com/eza-community/eza) - A modern replacement for `ls`.
 - [`font-fira-code-nerd-font`](https://github.com/tonsky/FiraCode) - A free monospaced font with programming ligatures with [**Nerd Fonts**](https://www.nerdfonts.com/) patches.
 - [`fzf`](https://github.com/junegunn/fzf) - A general-purpose command-line fuzzy finder.
@@ -114,7 +115,7 @@ The [**Homebrew**][brew] configuration, specifically which packages are installe
 - [`zsh-autosuggestions`](https://github.com/zsh-users/zsh-autosuggestions) - Fish-like fast/unobtrusive autosuggestions for [**Zsh**][zsh].
 - [`zsh-syntax-highlighting`](https://github.com/zsh-users/zsh-syntax-highlighting) - Fish shell-like syntax highlighting for [**Zsh**][zsh].
 
-For macOS, the following list of casks are still required to be included in your custom list of [**Homebrew**][homebrew] packages.
+For macOS, the following list of casks are still required to be included in your custom list of [**Homebrew**][brew] packages.
 
 - [`raycast`](https://www.raycast.com/) cask - A collection of powerful productivity tools all within an extendable launcher.
 - [`secretive`](https://secretive.dev/) cask - A fully native Mac app that lets you protect and manage SSH keys with your Mac's Secure Enclave.
