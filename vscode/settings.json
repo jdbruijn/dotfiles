@@ -26,6 +26,7 @@
   "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.minimumContrastRatio": 1,
   "terminal.integrated.scrollback": 1000000,
+  "terminal.integrated.suggest.enabled": false,
   "window.autoDetectColorScheme": true,
   "window.titleBarStyle": "custom",
   "workbench.iconTheme": "catppuccin-latte",
