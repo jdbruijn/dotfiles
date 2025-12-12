@@ -1,3 +1,9 @@
+## [2.8.1](https://github.com/jdbruijn/dotfiles/compare/v2.8.0...v2.8.1) (2025-12-12)
+
+### Bug Fixes
+
+- **vscode:** disable terminal auto suggestions ([865cca2](https://github.com/jdbruijn/dotfiles/commit/865cca27508a9a5c4ec52bbc2c7cf32354329299))
+
 ## [2.8.0](https://github.com/jdbruijn/dotfiles/compare/v2.7.0...v2.8.0) (2025-12-05)
 
 ### Features
