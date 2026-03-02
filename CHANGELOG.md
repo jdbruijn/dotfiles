@@ -1,3 +1,9 @@
+## [2.9.0](https://github.com/jdbruijn/dotfiles/compare/v2.8.1...v2.9.0) (2026-03-02)
+
+### Features
+
+- **zsh:** add `ag` alias for `alias | grep` ([822f841](https://github.com/jdbruijn/dotfiles/commit/822f841d81cc9c869b36ba9607aef352e3b61bfc))
+
 ## [2.8.1](https://github.com/jdbruijn/dotfiles/compare/v2.8.0...v2.8.1) (2025-12-12)
 
 ### Bug Fixes
