@@ -1,3 +1,9 @@
+## [2.10.1](https://github.com/jdbruijn/dotfiles/compare/v2.10.0...v2.10.1) (2026-03-05)
+
+### Documentation
+
+- package `font-fira-code-nerd-font` is a cask ([79a0826](https://github.com/jdbruijn/dotfiles/commit/79a0826fe37b3da3aeea2064e56679a89703aced))
+
 ## [2.10.0](https://github.com/jdbruijn/dotfiles/compare/v2.9.1...v2.10.0) (2026-03-05)
 
 ### Features
