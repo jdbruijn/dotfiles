@@ -1,3 +1,9 @@
+## [2.9.1](https://github.com/jdbruijn/dotfiles/compare/v2.9.0...v2.9.1) (2026-03-05)
+
+### Bug Fixes
+
+- **zsh:** illegal option error in `mcd` function ([fdbea86](https://github.com/jdbruijn/dotfiles/commit/fdbea86f8d4abfaf5a6a023bb94acce87e7c15f5))
+
 ## [2.9.0](https://github.com/jdbruijn/dotfiles/compare/v2.8.1...v2.9.0) (2026-03-02)
 
 ### Features
