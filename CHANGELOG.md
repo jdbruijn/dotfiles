@@ -1,3 +1,17 @@
+## [2.10.0](https://github.com/jdbruijn/dotfiles/compare/v2.9.1...v2.10.0) (2026-03-05)
+
+### Features
+
+- **zsh:** add `gclb` alias to create a bare `Git` clone ([5bc3b0b](https://github.com/jdbruijn/dotfiles/commit/5bc3b0b902dd74369ef6500eba5b2ce88c8a334e))
+
+### Styles
+
+- **zsh:** format `extract` function ([ba95d82](https://github.com/jdbruijn/dotfiles/commit/ba95d82595d59c14a458880ee2460119fbc05496))
+
+### Code Refactoring
+
+- **zsh:** move `mcd` function to `cd` aliases file ([4f8818b](https://github.com/jdbruijn/dotfiles/commit/4f8818be3a97547c26833b128ea904aa3d8ba91c))
+
 ## [2.9.1](https://github.com/jdbruijn/dotfiles/compare/v2.9.0...v2.9.1) (2026-03-05)
 
 ### Bug Fixes
