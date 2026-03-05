@@ -100,7 +100,6 @@ The [**Homebrew**][brew] configuration, specifically which packages are installe
 - [`cmake`](https://cmake.org/) - A powerful software build system, de-facto standard for building C++ code.
 - [`eslint_d`](https://cmake.org/) - A deamon for [ESLint](https://eslint.org/), a tool to find and fix problems in your JavaScript code.
 - [`eza`](https://github.com/eza-community/eza) - A modern replacement for `ls`.
-- [`font-fira-code-nerd-font`](https://github.com/tonsky/FiraCode) - A free monospaced font with programming ligatures with [**Nerd Fonts**](https://www.nerdfonts.com/) patches.
 - [`fzf`](https://github.com/junegunn/fzf) - A general-purpose command-line fuzzy finder.
 - [`llvm`](https://llvm.org/) - A collection of modular and reusable compiler and toolchain technologies.
 - [`lua-language-server`](https://github.com/LuaLS/lua-language-server) - A language server that offers [**Lua**][lua] language support.
@@ -117,6 +116,7 @@ The [**Homebrew**][brew] configuration, specifically which packages are installe
 
 For macOS, the following list of casks are still required to be included in your custom list of [**Homebrew**][brew] packages.
 
+- [`font-fira-code-nerd-font`](https://github.com/tonsky/FiraCode) - A monospaced font with programming ligatures with [**Nerd Fonts**](https://www.nerdfonts.com/) patches.
 - [`raycast`](https://www.raycast.com/) cask - A collection of powerful productivity tools all within an extendable launcher.
 - [`secretive`](https://secretive.dev/) cask - A fully native Mac app that lets you protect and manage SSH keys with your Mac's Secure Enclave.
 - [`shottr`](https://shottr.cc/) cask - A tiny and fast mac screenshot tool with annotations, beautiful backgrounds, scrolling screenshots and cloud upload capabilities.
