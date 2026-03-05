@@ -5,6 +5,6 @@
 # Usage: mcd <path>
 
 mcd() {
-  mkdir --parents "${1}"
+  mkdir -p "${1}"
   cd "${1}"
 }
