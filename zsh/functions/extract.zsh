@@ -4,27 +4,29 @@
 #
 # Usage: extract <file>
 
-extract() {
-  if [ ! -e "$1" ]; then
-    echo "FATAL: file does not exist (file: \"${1}\")"
+function extract() {
+  local file="${1}"
+
+  if [ ! -e "${file}" ]; then
+    echo "FATAL: file does not exist (file: \"${file}\")"
     exit 1
   fi
-  if [ ! -f "$1" ]; then
-    echo "FATAL: file is not a regular file (file: \"${1}\")"
+  if [ ! -f "${file}" ]; then
+    echo "FATAL: file is not a regular file (file: \"${file}\")"
     exit 1
   fi
 
-  case "$1" in
-  *.tar.bz2) tar -jxvf "$1" ;;
-  *.tar.gz) tar -zxvf "$1" ;;
-  *.bz2) bunzip2 "$1" ;;
-  *.gz) gunzip "$1" ;;
-  *.tar) tar -xvf "$1" ;;
-  *.tbz2) tar -jxvf "$1" ;;
-  *.tgz) tar -zxvf "$1" ;;
-  *.zip) unzip "$1" ;;
-  *.ZIP) unzip "$1" ;;
-  *.rar) rar x "$1" ;;
-  *) echo 'FATAL: unsuported file extension' ;;
+  case "${file}" in
+    *.tar.bz2) tar -jxvf "${file}" ;;
+    *.tar.gz) tar -zxvf "${file}" ;;
+    *.bz2) bunzip2 "${file}" ;;
+    *.gz) gunzip "${file}" ;;
+    *.tar) tar -xvf "${file}" ;;
+    *.tbz2) tar -jxvf "${file}" ;;
+    *.tgz) tar -zxvf "${file}" ;;
+    *.zip) unzip "${file}" ;;
+    *.ZIP) unzip "${file}" ;;
+    *.rar) rar x "${file}" ;;
+    *) echo 'FATAL: unsuported file extension' ;;
   esac
 }
