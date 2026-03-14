@@ -16,8 +16,8 @@
   "type": "module",
   "scripts": {
     "build": "",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.{vue,css,less,scss,html,htm,json,md,markdown,yml,yaml}\" --log-level warn",
-    "format:check": "prettier --ignore-path .gitignore --check \"**/*.{vue,css,less,scss,html,htm,json,md,markdown,yml,yaml}\" --log-level warn",
+    "format": "prettier --write \"**/*.{vue,css,less,scss,html,htm,json,md,markdown,yml,yaml}\" --log-level warn",
+    "format:check": "prettier --check \"**/*.{vue,css,less,scss,html,htm,json,md,markdown,yml,yaml}\" --log-level warn",
     "lint": "npm run format:check",
     "lint:fix": "npm run format",
     "prepare": "husky .github/husky",
@@ -32,128 +32,15 @@
     "singleQuote": true
   },
   "release": {
-    "branches": [
-      "main",
-      {
-        "name": "beta",
-        "prerelease": true
-      }
-    ],
-    "plugins": [
-      [
-        "@semantic-release/commit-analyzer",
-        {
-          "releaseRules": [
-            {
-              "type": "perf",
-              "release": "patch"
-            },
-            {
-              "type": "revert",
-              "release": "patch"
-            },
-            {
-              "type": "docs",
-              "release": "patch"
-            },
-            {
-              "type": "chore",
-              "release": false
-            },
-            {
-              "type": "refactor",
-              "release": "patch"
-            },
-            {
-              "type": "test",
-              "release": "patch"
-            },
-            {
-              "type": "build",
-              "release": "patch"
-            },
-            {
-              "type": "ci",
-              "release": "patch"
-            }
-          ]
-        }
-      ],
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      [
-        "@semantic-release/exec",
-        {
-          "prepareCmd": "prettier --write CHANGELOG.md"
-        }
-      ],
-      "@semantic-release/npm",
-      "@semantic-release/git",
-      "@semantic-release/github"
-    ],
-    "preset": "conventionalcommits",
-    "presetConfig": {
-      "types": [
-        {
-          "type": "feat",
-          "section": "Features"
-        },
-        {
-          "type": "fix",
-          "section": "Bug Fixes"
-        },
-        {
-          "type": "perf",
-          "section": "Performance Improvements"
-        },
-        {
-          "type": "revert",
-          "section": "Reverts"
-        },
-        {
-          "type": "docs",
-          "section": "Documentation"
-        },
-        {
-          "type": "style",
-          "section": "Styles"
-        },
-        {
-          "type": "chore",
-          "section": "Miscellaneous Chores",
-          "hidden": true
-        },
-        {
-          "type": "refactor",
-          "section": "Code Refactoring"
-        },
-        {
-          "type": "test",
-          "section": "Tests"
-        },
-        {
-          "type": "build",
-          "section": "Build System"
-        },
-        {
-          "type": "ci",
-          "section": "Continuous Integration"
-        }
-      ]
-    }
+    "extends": "@vidavidorra/semantic-release-config"
   },
   "devDependencies": {
     "@commitlint/cli": "20.4.4",
-    "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/exec": "7.1.0",
-    "@semantic-release/git": "10.0.1",
     "@vidavidorra/commitlint-config": "7.1.15",
+    "@vidavidorra/semantic-release-config": "1.0.4",
     "husky": "9.1.7",
     "lint-staged": "16.4.0",
     "prettier": "3.8.1",
     "semantic-release": "25.0.3"
-  },
-  "overrides": {
-    "conventional-changelog-conventionalcommits": ">= 8.0.0"
   }
 }
