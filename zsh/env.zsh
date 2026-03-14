@@ -2,6 +2,9 @@
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+# Set terminal capabilities for a consistent experience acros environments.
+export TERM='xterm-256color'
+
 # Prefer British English with UTF-8.
 export LANG='en_GB.UTF-8';
 export LC_ALL='en_GB.UTF-8';
