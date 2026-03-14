@@ -1,6 +1,6 @@
-# Use Visual Studio Code as visual editor and Vim otherwise.
-export VISUAL='code --wait --new-window'
-export EDITOR='vim'
+# Prefer Neovim as the text editing utility.
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 # Prefer British English with UTF-8.
 export LANG='en_GB.UTF-8';
