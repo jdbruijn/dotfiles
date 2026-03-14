@@ -1,3 +1,24 @@
+## [3.0.0](https://github.com/jdbruijn/dotfiles/compare/v2.10.1...v3.0.0) (2026-03-14)
+
+### ⚠ BREAKING CHANGES
+
+- **zsh:** set `EDITOR` to `nvim`.
+  The current behaviour can be kept by using the custom Zsh configuration as documented in the readme, and include the following line in e.g. the `custom/zsh/env.zsh` file.
+
+```
+export VISUAL='code --wait --new-window'
+```
+
+### Continuous Integration
+
+- remove `lint-commit-messages` action ([6ddb0c0](https://github.com/jdbruijn/dotfiles/commit/6ddb0c0f73b1a4aff81911b67040fa851c3d2f84))
+- replace semantic-release config with `@vidavidorra/semantic-release-config` ([f338820](https://github.com/jdbruijn/dotfiles/commit/f338820c7fa51608cd89977d56cae4f5f8007fc2))
+
+### Features
+
+- **zsh:** set `EDITOR` to `nvim` ([37cadbd](https://github.com/jdbruijn/dotfiles/commit/37cadbdf34787f56f9911b0036f12de94b9c2836))
+- **zsh:** set `TERM` for a consistent experience ([e29e68f](https://github.com/jdbruijn/dotfiles/commit/e29e68f3eab4c2992ebc7f6f5fb6853fd89b6868))
+
 ## [2.10.1](https://github.com/jdbruijn/dotfiles/compare/v2.10.0...v2.10.1) (2026-03-05)
 
 ### Documentation
