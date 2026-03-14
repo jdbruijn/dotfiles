@@ -7,14 +7,11 @@ on:
       - renovate/**
   pull_request: null
 jobs:
-  lint-commit-messages:
-    uses: vidavidorra/.github/.github/workflows/lint-commit-messages.yml@046f87bfdc3ffeccb93a54c6083946408e3805e7 # v5.0.62
   lint:
     uses: vidavidorra/.github/.github/workflows/node-lint.yml@046f87bfdc3ffeccb93a54c6083946408e3805e7 # v5.0.62
   release:
     uses: vidavidorra/.github/.github/workflows/release.yml@046f87bfdc3ffeccb93a54c6083946408e3805e7 # v5.0.62
     needs:
-      - lint-commit-messages
       - lint
     secrets:
       privateKey: ${{ secrets.RELEASE_PRIVATE_KEY }}

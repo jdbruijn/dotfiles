@@ -2,7 +2,7 @@
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-# Set terminal capabilities for a consistent experience acros environments.
+# Set terminal capabilities for a consistent experience across environments.
 export TERM='xterm-256color'
 
 # Prefer British English with UTF-8.
