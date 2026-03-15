@@ -1,3 +1,13 @@
+## [3.1.0](https://github.com/jdbruijn/dotfiles/compare/v3.0.0...v3.1.0) (2026-03-15)
+
+### Features
+
+- **mise:** upgrade installed tools and runtimes when the install script is called ([a4273eb](https://github.com/jdbruijn/dotfiles/commit/a4273ebb6c75ce7600042e3efbacbdadc29b8276))
+
+### Bug Fixes
+
+- **mise:** install global packages using `npm:` in config instead of `postinstall` hook ([26a40a5](https://github.com/jdbruijn/dotfiles/commit/26a40a577ffe6894c74d41952b5717ec244e65a6))
+
 ## [3.0.0](https://github.com/jdbruijn/dotfiles/compare/v2.10.1...v3.0.0) (2026-03-14)
 
 ### ⚠ BREAKING CHANGES
