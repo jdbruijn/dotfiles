@@ -5,7 +5,10 @@
 install_mise() {
   echo ' INFO: installing mise tools and runtimes'
   . "${DOTFILES}/homebrew/path"
+
   mise --cd "${HOME}" --quiet install | sed -u 's/^/    [mise] /'
+  echo '    [mise] upgrade tools and runtimes'
+  mise --cd "${HOME}" --quiet upgrade | sed -u 's/^/    [mise] /'
 }
 
 install_mise
