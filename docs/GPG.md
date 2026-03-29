@@ -1,33 +1,44 @@
 # GPG <!-- omit in toc -->
 
-- [Generate your GPG key](#generate-your-gpg-key)
-- [Secret key and revocation certificate](#secret-key-and-revocation-certificate)
+[**GPG**][gpg], also known as [**GnuPG**][gpg], is a common tool for encrypting and signing sensitive data.
 
-# Generate your GPG key
+- [**GPG** keys](#gpg-keys)
+  - [Generate a **GPG** key](#generate-a-gpg-key)
+  - [Export a public key](#export-a-public-key)
+  - [Export a secret key](#export-a-secret-key)
+  - [Generate revocation certificates](#generate-revocation-certificates)
+  - [Import a key into the keyring](#import-a-key-into-the-keyring)
+  - [Remove a key from the keyring](#remove-a-key-from-the-keyring)
+- [Encrypt a file](#encrypt-a-file)
+- [Decrypt a file](#decrypt-a-file)
 
-Create a new GPG key, interactively, using the following command. For most purposes, the default options are good to use.
+# [**GPG**][gpg] keys
+
+The [**GPG**][gpg] key is a cryptographic pair of public and private (secret) keys, and can be used to encrypt, decrypt and sign data.
+
+## Generate a [**GPG**][gpg] key
+
+Generate a [**GPG**][gpg] key, interactively, using the following command abd enter the following information.
 
 ```sh
 gpg --full-generate-key
 ```
 
-At the time of writing, September 2025, these were the default options.
+- Please select what kind of key you want: `ECC (sign and encrypt)`.
+- Please select which elliptic curve you want: `Curve 25519`.
+- Please specify how long the key should be valid: `0` (the key does not expire).
+- Real name: enter your name, for example `Alan Moore`.
+- Email address: enter your email, for example `amoore@example.com`.
+- Comment: enter a comment explaining the key's usage, if needed.
+- Passphrase: generate something strong, for example using the `openssl rand -base64 24` command, and store it in the password manager.
 
-- Cryptographic algorithm: `ECC (sign and encrypt)`.
-- Elliptic curve: `Curve 25519`.
-- Key is valid for: `0` (does not expire).
+The long key ID and the fingerprint of the generated key are logged after the key is created and are used to identify the key. In the rest of this document, `06B4B8C3D53C9037` is used as the key ID.
 
-Show the fingerprint and key ID using the following command. A lot of commands use the key ID to specify the key, so it's useful to have this on hand. The key ID is the hexadecimal characters after the cryptographic algorithm in the `pub` section and is just the last sixteen characters of the fingerprint, without spaces. In the rest of the document we'll use `06B4B8C3D53C9037` as an example of the key ID.
+<details><summary>Fingerprint and key ID</summary>
 
-```sh
-gpg --fingerprint --keyid-format=long
+In this example the key ID is 06B4B8C3D53C9037 and the fingerprint is F587 57F4 1B4F 5D2B 30FB B376 06B4 B8C3 D53C 9037.
+
 ```
-
-<details><summary>Fingerprint and key ID example</summary>
-
-In this example the key ID is `06B4B8C3D53C9037` and the fingerprint is `F587 57F4 1B4F 5D2B 30FB  B376 06B4 B8C3 D53C 9037`.
-
-```sh
 pub   ed25519/06B4B8C3D53C9037 2025-09-13 [SC]
       Key fingerprint = F587 57F4 1B4F 5D2B 30FB  B376 06B4 B8C3 D53C 9037
 uid                 [ultimate] Alan Moore <amoore@example.com>
@@ -36,10 +47,12 @@ sub   cv25519/74BF2268D4468146 2025-09-13 [E]
 
 </details>
 
-Export the public key using the following command.
+## Export a public key
+
+Export a public key using the following command, exporting directly into the `06B4B8C3D53C9037-public.asc` file.. This key is public information and can therefore be safely shared with anyone.
 
 ```sh
-gpg --armor --export 06B4B8C3D53C9037
+gpg --armor --export --output 06B4B8C3D53C9037-public.asc 06B4B8C3D53C9037
 ```
 
 <details><summary>Public key example</summary>
@@ -62,23 +75,22 @@ epiF+owiJwr+uQN0z4MRKgkKbUIEwgVgOvDtia26Bw==
 
 </details>
 
-# Secret key and revocation certificate
+## Export a secret key
+
+> [!CAUTION]
+> Always keep the secret key and the revocation certificate in a secure place. This can, for example, be in a secure [**VeraCrypt**](https://veracrypt.io/) container on cloud service, like Google Drive, or a USB drive.
 
 To prevent your keys from getting lost, it's recommended to backup both the secret key and a revocation certificate in a secure place.
 
-> [!CAUTION]
-> Always keep the secret key and the revocation certificate in a secure place. This can, for example, be in a secure [**VeraCrypt**](https://veracrypt.jp/) container on cloud service, like Google Drive, or a USB drive.
-
-Export the secret key using the following command. This will export the secret key directly into an file, `06B4B8C3D53C9037-secret.asc`. If you prefer to store it as text, you can remove the `--output` option or `cat` the file. Be careful with this as the terminal sessions might be recorded.
+Export a secret key using the following command, exporting directly into the `06B4B8C3D53C9037-secret.asc` file.
 
 ```sh
-gpg --output 06B4B8C3D53C9037-secret.asc --armor --export-secret-key 06B4B8C3D53C9037
+gpg --armor --export-secret-key --output 06B4B8C3D53C9037-secret.asc 06B4B8C3D53C9037
 ```
 
 <details><summary>Secret key example</summary>
 
-```sh
-$ cat 06B4B8C3D53C9037-secret.asc
+```
 -----BEGIN PGP PRIVATE KEY BLOCK-----
 
 lIYEaMXCSBYJKwYBBAHaRw8BAQdA71YnGIYHbIJS/d2p66J9X8X6pEezU8+zKsJY
@@ -100,16 +112,20 @@ tUdqL2XBEF9zUD9e5HkFQgwdIgD/eXqYhfqMIicK/rkDdM+DESoJCm1CBMIFYDrw
 
 </details>
 
+## Generate revocation certificates
+
+> [!CAUTION]
+> Always keep the secret key and the revocation certificate in a secure place. This can, for example, be in a secure [**VeraCrypt**](https://veracrypt.io/) container on cloud service, like Google Drive, or a USB drive.
+
 Create the revocation certificate, interactively, using the following command. It will ask for a reason, which we of course don't have at this point in time. You can create a revocation certificate with no reason specified, or even create one for each reason.
 
 ```sh
-gpg --output 06B4B8C3D53C9037-revoke.asc --armor --gen-revoke 06B4B8C3D53C9037
+gpg --armor --generate-revocation --output 06B4B8C3D53C9037-revoke.asc 06B4B8C3D53C9037
 ```
 
 <details><summary>Revocation certificate example</summary>
 
-```sh
-$ cat 06B4B8C3D53C9037-revoke.asc
+```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Comment: This is a revocation certificate
 
@@ -120,5 +136,50 @@ UnSi4oJ6v/HTsBsJG8I9AmZ3tbH0CvGEnQ8=
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-[git]: https://git-scm.com/
-[github]: https://github.com/
+</details>
+
+## Import a key into the keyring
+
+[**GPG**][gpg] stores the keys in its keyring. For restoring a key, use the following command to import the keys from [Export a public key](#export-a-public-key) and [Export a secret key](#export-a-secret-key) into the keychain. To import a public key, for example to use it to encrypt data, simply provide just the public key file.
+
+```sh
+gpg --import ./06B4B8C3D53C9037-public.asc 06B4B8C3D53C9037-secret.asc
+```
+
+## Remove a key from the keyring
+
+[**GPG**][gpg] stores the keys in its keyring. For security reasons, for example in case of a highly sensitive key used for backups, removing a key could benefit security. Using the following command a key can be removed from the keyring.
+
+> [!CAUTION]
+> This deletes the secret and public key. Without the exported secret and public keys, the key and its trust is permanently lost. Therefore, make sure you have the files from [Export a public key](#export-a-public-key) and [Export a secret key](#export-a-secret-key) securely stored somewhere.
+
+```sh
+gpg --delete-secret-and-public-key 2CCAB25D3BBE3651
+```
+
+# Encrypt a file
+
+Encrypt a file, `test.txt` in this example, using the following command. The `--recipient` option specifies the key ID to encrypt the file with. Only the person with the secret key of that key can decrypt the file.
+
+```sh
+gpg --encrypt --output test.txt.gpg --recipient 06B4B8C3D53C9037 test.txt
+```
+
+When encrypting a file in CI/CD or on a server, the key is most likely not in the agent but in a file. In that case the following command can be used to specify the key using a file.
+
+```sh
+gpg --encrypt --output test.txt.gpg --recipient-file 2CCAB25D3BBE3651-public.asc --yes test.txt
+```
+
+# Decrypt a file
+
+> [!TIP]
+> The `gpg --list-packets --pinentry-mode cancel test.txt.gpg` command can be used to show the recipient of the encrypted file, i.e. the public key it was encrypted with.
+
+Decrypt a file, `test.txt.gpg` in this example, using the following command. [**GPG**][gpg] can only decrypt using a file in its keystore. To use a key from a file, first [Import a key into the keyring](#import-a-key-into-the-keyring).
+
+```sh
+gpg --decrypt --output test.txt test.txt.gpg
+```
+
+[gpg]: https://www.gnupg.org/
