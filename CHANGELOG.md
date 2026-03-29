@@ -1,3 +1,9 @@
+## [3.1.1](https://github.com/jdbruijn/dotfiles/compare/v3.1.0...v3.1.1) (2026-03-29)
+
+### Documentation
+
+- add details on GPG, including usage to encrypt and decrypt files ([b66a07b](https://github.com/jdbruijn/dotfiles/commit/b66a07b27315cbbac7f533c1681d78a24ee1a175))
+
 ## [3.1.0](https://github.com/jdbruijn/dotfiles/compare/v3.0.0...v3.1.0) (2026-03-15)
 
 ### Features
