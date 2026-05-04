@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "20.5.3",
-    "@vidavidorra/commitlint-config": "7.1.18",
+    "@vidavidorra/commitlint-config": "7.1.19",
     "@vidavidorra/semantic-release-config": "2.0.1",
     "husky": "9.1.7",
     "lint-staged": "16.4.0",
