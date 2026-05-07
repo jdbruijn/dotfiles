@@ -8,9 +8,9 @@ on:
   pull_request: null
 jobs:
   lint:
-    uses: vidavidorra/.github/.github/workflows/node-lint.yml@1866a7bcc88ebb513c8fa2bc2f4d849d4ded7e2f # v8.1.14
+    uses: vidavidorra/.github/.github/workflows/node-lint.yml@6b851b5837f95e18ab75a012b184a09e115270d3 # v8.1.15
   release:
-    uses: vidavidorra/.github/.github/workflows/release.yml@1866a7bcc88ebb513c8fa2bc2f4d849d4ded7e2f # v8.1.14
+    uses: vidavidorra/.github/.github/workflows/release.yml@6b851b5837f95e18ab75a012b184a09e115270d3 # v8.1.15
     needs:
       - lint
     secrets:
