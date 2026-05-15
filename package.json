@@ -35,7 +35,7 @@
     "extends": "@vidavidorra/semantic-release-config"
   },
   "devDependencies": {
-    "@commitlint/cli": "21.0.0",
+    "@commitlint/cli": "21.0.1",
     "@vidavidorra/commitlint-config": "7.1.19",
     "@vidavidorra/semantic-release-config": "2.0.2",
     "husky": "9.1.7",
