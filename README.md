@@ -98,7 +98,6 @@ The [**Homebrew**][brew] configuration, specifically which packages are installe
 
 - [`bat`](https://github.com/sharkdp/bat) - A `cat` clone with syntax highlighting and [**Git**][git] integration.
 - [`cmake`](https://cmake.org/) - A powerful software build system, de-facto standard for building C++ code.
-- [`eslint_d`](https://cmake.org/) - A deamon for [ESLint](https://eslint.org/), a tool to find and fix problems in your JavaScript code.
 - [`eza`](https://github.com/eza-community/eza) - A modern replacement for `ls`.
 - [`fzf`](https://github.com/junegunn/fzf) - A general-purpose command-line fuzzy finder.
 - [`llvm`](https://llvm.org/) - A collection of modular and reusable compiler and toolchain technologies.
@@ -106,7 +105,6 @@ The [**Homebrew**][brew] configuration, specifically which packages are installe
 - [`make`](https://www.gnu.org/software/make/) - A tool which controls the generation of executables and other non-source files of a program from the program's source.
 - [`mise`](https://mise.jdx.dev/) - A development environment setup tool.
 - [`ninja`](https://ninja-build.org/) - A small build system with a focus on speed, for use with CMake.
-- [`prettierd`](https://github.com/fsouza/prettierd) - A daemon for [**Prettier**](https://prettier.io/), an opinionated code formatter.
 - [`ripgrep`](https://github.com/BurntSushi/ripgrep/) - A line-oriented search tool that recursively searches the current directory for a regex pattern.
 - [`starship`](https://starship.rs/) - The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 - [`stylua`](https://github.com/JohnnyMorganz/StyLua) - An opinionated Lua code formatter.
