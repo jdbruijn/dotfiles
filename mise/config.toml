@@ -7,7 +7,7 @@ node = 'lts'
 'npm:eslint_d' = 'latest'
 'npm:npm-check-updates' = 'latest'
 'npm:tsx' = 'latest'
-'npm:typescript' = 'latest'
+'npm:typescript' = '6'
 'npm:typescript-language-server' = 'latest'
 
 rust = { version = 'latest', profile = 'default', components = 'rust-analyzer' }
