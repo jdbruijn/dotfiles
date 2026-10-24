@@ -77,7 +77,7 @@ export VISUAL='code --wait --new-window'
 
 ### Features
 
-- **nvim:** add linting, starting with ESLint and clang-tidy ([afdbe1b](https://github.com/jdbruijn/dotfiles/commit/afdbe1b46bbb5e7adbf61536b6ae9b30bbbbad6e))
+- **neovim:** add linting, starting with ESLint and clang-tidy ([afdbe1b](https://github.com/jdbruijn/dotfiles/commit/afdbe1b46bbb5e7adbf61536b6ae9b30bbbbad6e))
 
 ## [2.7.0](https://github.com/jdbruijn/dotfiles/compare/v2.6.0...v2.7.0) (2025-10-15)
 
@@ -107,11 +107,11 @@ export VISUAL='code --wait --new-window'
 
 ### Features
 
-- **nvim:** add statusline using `lualine` ([163eed3](https://github.com/jdbruijn/dotfiles/commit/163eed3a3d6223b07213722714bf91d101b7c45d))
+- **neovim:** add statusline using `lualine` ([163eed3](https://github.com/jdbruijn/dotfiles/commit/163eed3a3d6223b07213722714bf91d101b7c45d))
 
 ### Bug Fixes
 
-- **nvim:** set Markdown syntax highlight language aliases for `shell` and `ts` ([c757bfe](https://github.com/jdbruijn/dotfiles/commit/c757bfe15685b0d5c53713bf284ae3d4f1417c17))
+- **neovim:** set Markdown syntax highlight language aliases for `shell` and `ts` ([c757bfe](https://github.com/jdbruijn/dotfiles/commit/c757bfe15685b0d5c53713bf284ae3d4f1417c17))
 
 ## [2.4.0](https://github.com/jdbruijn/dotfiles/compare/v2.3.1...v2.4.0) (2025-10-07)
 
@@ -176,7 +176,7 @@ export VISUAL='code --wait --new-window'
 
 ### Bug Fixes
 
-- **neovim:** warning `vim.highlight is deprecated. Feature will be removed in Nvim 2.0.0` ([9a54b5b](https://github.com/jdbruijn/dotfiles/commit/9a54b5b104a9eecaac77bdc103031d2528ddfd17))
+- **neovim:** warning `vim.highlight is deprecated. Feature will be removed in Neovim 2.0.0` ([9a54b5b](https://github.com/jdbruijn/dotfiles/commit/9a54b5b104a9eecaac77bdc103031d2528ddfd17))
 
 ## [2.0.0](https://github.com/jdbruijn/dotfiles/compare/v1.20.0...v2.0.0) (2025-09-28)
 
