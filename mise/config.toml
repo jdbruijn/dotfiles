@@ -12,3 +12,4 @@ node = 'lts'
 
 rust = { version = 'latest', profile = 'default', components = 'rust-analyzer' }
 
+tree-sitter = 'latest'
