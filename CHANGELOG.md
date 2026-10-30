@@ -1,3 +1,26 @@
+## [3.2.0](https://github.com/jdbruijn/dotfiles/compare/v3.1.1...v3.2.0) (2026-10-30)
+
+### Documentation
+
+- reference to Neovim instead of nvim, as it is the official name ([28d1f9b](https://github.com/jdbruijn/dotfiles/commit/28d1f9b8f0149bf50b7ddc6c5a3aceadd7ecf155))
+
+### Features
+
+- **mise:** add `npm-check-updates`, `ncu` for short, npm package to manage npm updates ([20bb430](https://github.com/jdbruijn/dotfiles/commit/20bb430368198c96714bcbaf4926a68370c8ea96))
+- **mise:** install `eslint_d` and `prettierd` with mise instead of Homebrew ([5330adf](https://github.com/jdbruijn/dotfiles/commit/5330adfee126111b9bef34dcfe2d4f551d9e87a5))
+- **neovim:** add spell checker ([1d2cc93](https://github.com/jdbruijn/dotfiles/commit/1d2cc93a9b338f4ce6b39ece5e882be1fd3415c2))
+- **nvim:** add `gitlinker` to create shareable file permalinks ([6e37bf1](https://github.com/jdbruijn/dotfiles/commit/6e37bf1a8c20898319cb4f732a723220e0e707f4))
+
+### Bug Fixes
+
+- **mise:** pin `npm:typescript` to version 6 ([38905fc](https://github.com/jdbruijn/dotfiles/commit/38905fcc05c9dccb6d0f194506928aa797de3578))
+- **neovim:** update `nvim-treesitter` to the main branch rewrite ([bd44bac](https://github.com/jdbruijn/dotfiles/commit/bd44bac92bc542fc866e83a49e613695ce73640c))
+- **neovim:** use the treesitter `master` branch for the time being ([c437761](https://github.com/jdbruijn/dotfiles/commit/c437761e4d47e4fdfb5b60e1ec5f8bf256457333))
+
+### Code Refactoring
+
+- **neovim:** rename `gitsigns` to `git`, for a more generic name ([553c6e1](https://github.com/jdbruijn/dotfiles/commit/553c6e124e11d558cbd78d8f018478d6d7df7d38))
+
 ## [3.1.1](https://github.com/jdbruijn/dotfiles/compare/v3.1.0...v3.1.1) (2026-03-29)
 
 ### Documentation
